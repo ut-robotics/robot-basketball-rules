@@ -1,7 +1,10 @@
 :figure-caption: Joonis
+:table-caption: Tabel
 :sectnums:
 :stem:
 :last-update-label!:
+:xrefstyle: short
+:section-refsig:
 
 :toc:
 :toclevels: 4
@@ -17,92 +20,100 @@ Väljakul on korraga 2 robotit, kelle eesmärgiks on teatud aja jooksul saada v�
 == Väljak
 
 === Üldine
+Võistlusväljaku üldist plaani vaata <<image_court_angle>>.
 
-Võistlusväljaku üldist plaani vaata _Joonis 1 Väljak ruumiliselt_.
-
-.Väljak ruumiliselt.
+[#image_court_angle]
+.Väljak ruumiliselt
 image::images/court_angle.jpg[width=600]
 
 === Mõõtmed
 
-Kogu väljak on jagatud kolmeks erinevaks tsooniks.
+Väljak on jagatud kolmeks erinevaks tsooniks.
 
 . Võistlusala on ristkülikukujuline, pikkusega 4600 mm ja laiusega 3100 mm.
-Ääremärgistus (valge joon + must joon) kuulub võistlusala sisse.
+Ääremärgistus (valged ja mustad jooned) kuulub võistlusala sisse.
 . Mänguala sisaldab võistlusala ja lisatsooni robotitele liikumiseks.
 Ala pikkus on 6100 mm ja laius 4000 mm.
 . Võistlejateala on 950 - 1000 mm laiune musta värvi vaip mänguala ümber.
 
+[#court_surface]
 === Väljaku kate
-
-==== Väljaku kate
 
 Väljaku mänguala katteks on oranž viltmatt (ExpoRips 2007).
 Vaibaalune pind on ühtlane ja kõva.
 Väljaku võistlejateala on must vaip.
-Võistlejateala välispiiril ehk väljaku kattest 950 - 1000 mm kaugusel on vähemalt 450 mm kõrgused valged seinad.
-Kõrgemal osal võivad asuda võistluse sponsorite logod.
-Võistlejatealal tohivad liikuda ainult korraldav võistkond, kohtunikud ja toimuva mängu võistlejad, pealtvaatajatele on seal liikumine keelatud.
+Võistlejateala välispiiril on vähemalt 450 mm kõrgused valged seinad.
+Seintel võivad asuda sponsorite logod, kui need on kõrgemal kui 450 mm.
+Võistlejatealal tohivad liikuda ainult kohtunikud, toimuva mängu võistlejad ja võistluse korraldajad, pealtvaatajatele on seal liikumine keelatud.
 Võistluse ajal vastava alal liikujate riietuses ei tohi olla väljaku ega korvide värve (v.a must).
 
 ==== Võistlusala märgistus
 
-Detailset võistlusala vaata _Joonis 2 Väljaku mõõtmed_.
+Võistlusala mõõtmeid vaata <<image_court_dimensions>>.
 
+[#image_court_dimensions]
 .Väljaku mõõtmed
 image::images/court_dimensions_est.jpg[width=600]
 
-Võistlusala on märgistatud valgete (värvi toon 2) joontega ning lisaks ka musta joonega võistlusala välimises servas.
-Jooned (must ja valge) kuuluvad võistlusala juurde.
+Võistlusala on märgistatud valgete joontega ning lisaks ka mustade joontega võistlusala välimises servas.
+Jooned (mustad ja valged) kuuluvad võistlusala juurde.
 Kõik jooned on 50 mm laiused.
-Väljak on keskjoonega jagatud kaheks pooleks.
+Väljak on valge keskjoonega jagatud kaheks pooleks.
 
 == AR markerid
 
-Mõlema korvilaua külge on kinnitatud kaks ARUCO markerit, mis on mõõtmetelt 160x160 mm ning millele lisandub 20mm padding.
-ARUCO markeritel on olemas OpenCV tugi (Juhend on leitav - http://docs.opencv.org/3.1.0/d5/dae/tutorial_aruco_detection.html).
-Markerid on kinnitatud korvilaua külge, mis ulatub võistlusväljakuni.
-Markerite täpne asetus koos mõõtmetega on leitav jooniselt 5.
+Mõlema korvilaua külge on kinnitatud kaks 160 x 160 mm suurust ARUCO markerit.
+Markerid on kinnitatud tagalaua alumistele nurkadele.
+Markerite täpne asetus koos mõõtmetega on leitav <<image_basket_dimensions>>.
 
-Markerid on tuvastatavad markerite ID järgi.
-Magenta värvi korvi vasakul ja paremal pool on markerid ID-ga vastavalt 11 ja 12 ning sinist värvi korvi vasakul ja paremal pool on markerid ID-ga vastavalt 21 ja 22.
-ARUCO markerite generaator on leitav: http://keystone.umd.edu/html/markergen.html
+Markerid on tuvastatavad markeri ID järgi:
+
+* *11* *vasakul* pool *magenta* korvi
+* *12* *paremal* pool *magenta* korvi
+* *21* *vasakul* pool *sinist* korvi
+* *22* *paremal* pool *sinist* korvi
+
+ARUCO markerite generaator on leitav: http://chev.me/arucogen/.
 
 == Korvid
 
-Korvid on paigutatud väljaku lühemate servade keskele väljakuga samale tasapinnale.
-Korvilaua korvipoolne sein on kohakuti musta joone välimise servaga.
+Korvid on paigutatud väljaku otsajoonte (lühemate servade) keskele väljakuga samale tasapinnale.
+Tagalaua korvipoolne sein on kohakuti musta joone välimise servaga.
 Väljakul on üks korv märgistatud sinise (värvikood: RAL5015) ning teine korv magenta (värvikood: RAL4010) mattvärviga.
-Väljakuid on võimalik näha joonistel 3 ja 4.
+Väljakut koos korvidega on võimalik näha <<image_court_top>> ja <<image_court_side_angle>>.
 
+[#image_court_top]
 .Korvide asetus pealtvaates
 image::images/court_top.jpg[width=600]
 
+[#image_court_side_angle]
 .Korvide asetus külgvaates
 image::images/court_side_angle.jpg[width=600]
 
-Korv on 500 mm kõrge ning 160 mm diameetriga värviline pealt avatud silinder.
-Korvi küljes on maani ulatuv põrkelaud mõõtmetega 660x800 mm.
-Silindri põhjas on raskus tagamaks stabiilsust.
-Prototüüpi on näha joonisel 5.
+Korv on värviline toru järgmiste mõõtudega:
 
-.Korv eestvaates
+* kõrgus 500 mm
+* välisdiameeter 160 mm
+* sisediameeter 152 mm
+
+Korvi küljes on maani ulatuv valget värvi tagalaud mõõtmetega 660 x 800 mm.
+Korvi mõõtmed on näha <<image_basket_dimensions>>.
+
+[#image_basket_dimensions]
+.Korvi mõõtmed
 image::images/basket_dimensions.jpg[width=600]
 
+[#balls]
 == Pallid
 
 === Mõõdud ja omadused
 
-Pall on roheline mini squashi pall. See on:
-
-* rohelist värvi;
-* massiga ligikaudu 24 g;
-* diameetriga ligikaudu 40 mm.
+Pallid on rohelised mini squashi pallid massiga ligikaudu 24 g ja diameetriga ligikaudu 40 mm.
 
 === Pallide asetus
 
-Iga vooru alguses on väljakul 11 palli.
-Pallide asetus on juhuslik, aga mõlema mängija jaoks sümmeetriline väljaku diagonaali suhtes.
+Iga vooru alguses on väljakul 11 palli. 
+Pallide asetus on juhuslik, aga mõlema roboti jaoks sümmeetriline väljaku diagonaali suhtes.
 Mängude jaoks koostatakse vähemalt 10 erinevat pallide paiknemise kombinatsiooni.
 
 == Robotite arv ja võistkonna suurus
@@ -110,174 +121,164 @@ Mängude jaoks koostatakse vähemalt 10 erinevat pallide paiknemise kombinatsioo
 Mängu jooksul on väljakul korraga võistlemas 2 robotit, 1 robot kummagi võistkonna kohta.
 Võistkonna suurus registreerimisel on kuni 6 liiget.
 
+[#robot_requirements]
 == Robotile esitatavad nõuded
 
+[#robot_requirements_general]
 === Üldised nõuded
+:xrefstyle: basic
 
 Robot on täielikult autonoomne masin, mis kannab oma energiaallikat, liikumismehhanisme ja oma juhtimis- ning kontrollsüsteeme.
-Robotit ei tohi võistluse ajal kaugjuhtida (lubatud on ühesuunaline side robotist välja ja stardimärguande saatmine).
+Robotit ei tohi mängu ajal kaugjuhtida.
+lubatud on ühesuunaline side robotist välja ja stardimärguande saatmine.
+Robot ei tohi raadiomooduli kaudu saata midagi muud peale ACK signaali kohtuniku signaalile vastamiseks (vaata <<referee_signals>>).
 
+[#robot_requirements_mechanical]
 === Roboti mehaanilised nõuded
 
-. Robot peab mahtuma terve võistluse jooksul mängusituatsioonis püstisesse silindrisse, mille diameeter on 350 mm ja kõrgus on 350 mm.
+. Robot peab mahtuma terve võistluse jooksul mängusituatsioonis püstisesse silindrisse, mille diameeter on 350 mm ja kõrgus 350 mm.
 . Roboti mass ei tohi olla suurem kui 8 kg.
-. Robot ei tohi jäljendada järgmisi väljaku osasid:
-* roboti väliskujunduses peab kasutama suuremas osas musta, valget või halli värvi
-* robot ei tohi sisaldada endas pallide ega korvide värve
+. Roboti väliskujunduses peab kasutama suuremas osas musta, valget või halli värvi.
+Keelatud on kasutada väliskujunduses pallide ja korvide värve.
 . Robot ei tohi võistluse ajal väljakule tahtlikult enda küljest osasid eraldada.
 
+[#robot_requirements_electrical]
 === Roboti elektroonilised nõuded
+:xrefstyle: short
 
 . Võistlusvoorude ajal ei tohi robot kasutada LED-e (välja arvatud võistlejate vastastikusel nõusolekul).
-Indikaatorid ja andurites kasutatavad LED-id on lubatud.
+Indikaatorid ja andurites kasutatavad LED-id on lubatud, kui need vastavad väliskujunduse nõuetele (vaata <<robot_requirements_mechanical>>).
 . Juhul kui kasutatakse valgust levitavaid elemente, siis ei tohi nende intensiivsus olla inimese silmale ohtlik või peab olema varjestatud otsevaatluse eest.
 . Juhul kui kasutatakse laserit, siis ei tohi laseri poolt kiiratud kiirgus (keskmistatud üle 1 sekundi) olla suurem kui 1 mW/mm^2^.
 . Robot ei tohi tahtlikult petta vastasroboti optilisi andureid (sealhulgas ka roboti kaamerat).
 . Robot peab suutma startida ja peatuda iseseisvalt kohtuniku juhtpuldi käskude peale.
-Juhtpuldi poolt saadetavad käsud ja info nõutud ühendusliidese kohta leiab punktist 7.6.
-. Juhul, kui robot 10 sekundi jooksul ei käivitu, on lubatud see käivitada manuaalselt.
+Juhtpuldi poolt saadetavad käsud ja info nõutud ühendusliidese kohta leiab punktist <<referee_signals>>.
+. Robot on lubatud käivitada manuaalselt 10 sekundit pärast vooru algust.
 
 === Roboti pääs võistlusele
+:xrefstyle: short
 
-Robot, mis ei vasta punktides 7.1 - 7.3 nimetatud nõuetele, ei pääse võistlusele.
+Robot, mis ei vasta punktides <<robot_requirements_general>> - <<robot_requirements_electrical>> nimetatud nõuetele, ei pääse võistlusele.
 Samade nõuete vastu eksimine turniiri käigus toob kaasa roboti kõrvaldamise kogu turniirilt.
 
+[#robot_control_requirements]
 === Roboti juhtimise nõuded
 
 ==== Mõisted
 
-. Audis pall - on võistlusala piiravast mustast joonest pealtvaates 100% väljaspool käinud pall.
+. Audis pall - vähemalt korra võistlusala piiravast mustast joonest pealtvaates täielikult väljaspool käinud pall.
 
 ==== Üldine
 
 Palli käsitlemisel roboti poolt otseseid piiranguid ei ole.
-Olukord, mille korral korvi ei loeta, on järgmine: robot on haaranud võistlusalast täielikult väljunud ehk audis palli ja visanud selle korvi.
-Palli ei tohi korvi tõsta, pall peab olema korvi visatud.
-Viskamine tähendab, et palli õhku paiskamisel peab palli ülemine serv olema madalamal kui 300mm.
+Audis palliga visatud korvi ei loeta.
 
 ==== Roboti karistamine ja eemaldamine
+:xrefstyle: basic
 
-. Järgnevalt on toodud nõuded, mille vastu mängu ajal eksimise korral määratakse robotile viga:
-* robot ei tohi korraga opereerida rohkem kui ühe palliga;
-* robot ei tohi füüsiliselt liigutada korvi;
-* robot ei tohi kahjustada väljakut ega selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid ega teisi võistlusväljakut ümbritsevaid inimesi;
-* lubatud on mittepahatahtlik nügimine. 
+. Robotile määratakse viga kui robot:
+* hoiab korraga rohkem kui ühte palli;
+* liigutab korvi;
+* kahjustab väljakut või selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid või teisi võistlusväljakut ümbritsevaid inimesi.
+Lubatud on mittepahatahtlik nügimine. 
 Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelatud;
-* robot ei tohi väljakult lahkuda (robot loetakse välja sõitnuks, kui üle poole roboti kerest on pealtvaates väljaku kattelt maha sõitnud).
-. Kui robotile määratakse viga siis:
+* lahkub väljakult (üle poole roboti kerest on pealtvaates mängualast väljas).
+
+. Esimese vea korral:
 * kohtunik peatab mängu ning ajavõtt peatatakse;
 * robotid peavad peatuma;
-* karistuse saanud robot tuleb paigutada oma väljakupoole paremasse nurka stardipositsioonile (vt punkti 8 Vooru korraldus);
+* karistuse saanud *robot tuleb paigutada oma stardipositsioonile* (vaata <<game_round>>);
 * vastasrobot jääb samale asukohale;
 * kohtunik jätkab mängu ning aja võtmine jätkub.
-. Kui robotile määratakse teine viga, siis:
+
+. Teise vea korral:
 * kohtunik peatab mängu ning ajavõtt peatatakse;
 * robotid peavad peatuma;
-* karistuse saanud robot tuleb eemaldada väljakult;
+* karistuse saanud *robot tuleb eemaldada väljakult*;
 * vastasrobot jääb samale asukohale;
 * kohtunik jätkab mängu ning aja võtmine jätkub.
+
 . Vead kehtivad vooru lõpuni.
+
 . Kohtunikul on lubatud mäng peatada ja robotid lahutada ka ilma viga andmata. 
 Sel juhul peatatakse ka ajavõtt.
 
+[#referee_signals]
 === Kohtuniku signaalid
 
 ==== Raadiomoodul ja seadistamine
 
-. Robotitel on nõutud kasutada Digi Internationali 2.4 Ghz sagedusel töötavat XBee raadiomoodulit toote nime algusega XB24.
-Moodulitele pakutakse erinevaid antennitüüpe, mis on täpsustatud Digi XBee https://www.digi.com/pdf/ds_xbeemultipointmodules.pdf[datasheetil].
-Tegemist on Digi XBee S1 mooduliga.
-. Sobivaid mooduleid on võimalik tellida järgnevatelt pakkujatelt
-* https://www.mouser.ee/ProductDetail/Digi-International/XB24-AWI-001?qs=sGAEpiMZZMtJacPDJcUJY7VcaAKGQu1gHInEUFlTTaA%3D[Mouser]
-* http://uk.farnell.com/digi-international/xb24-awi-001/rf-module-txrx-xbee-wire-ant/dp/1337912[Farnell]
-. Raadiomooduleid saab seadistada AT käskudega.
-Selleks on võimalik kasutada XBee moodulite seadistamiseks ettenähtud programmi XCTU, mille kohta leiab informatsiooni ja allalaadimise linke https://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu[siit].
-. Raadiomooduli seaded:
-* Baud: valitav vastavalt enda süsteemile, ei mängi rolli moodulite omavahelisel suhtlemisel
-* Node ID: "vastavalt punkti 7.6.2 nõutele. (Peab olema võistluse ajal muudetav)"
-. Kõik ülejäänud seaded, mida ei ole eraldi välja toodud, tuleb jätta tehase seadetele vastavaks.
-Oluliste raadio seadete muutumise korral annab peakohtunik sellest viivitamatult kõigile osalistele teada.
+. Robotitel on nõutud kasutada Digi Internationali XBee 802.15.4 raadiomoodulit (S1, S2C või XBee3).
+. S1 raadiomoodulid ei vaja seadistamist.
+S2C ja XBee3 moodulitele tuleb paigaldada 802.15.4 püsivara.
+Seadeid võib muuta, aga tuleb arvestada, et kohtunikumoodul kasutab 802.15.4 püsivara vaikeseadeid.
+Raadiomooduleid saab seadistada AT käskudega.
+Selleks on võimalik kasutada XBee moodulite seadistamiseks ettenähtud programmi https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/xctu[XCTU].
 
 ==== Kohtuniku puldi saadetavad käsud ja neile vastamine
 
-Juhtpult kasutab sõnumite saatmiseks Ciseco poolt välja arendatud LLAP protokolli.
+Juhtpult saadab kohtuniku käske järgmise struktuuriga:
 
-Protokolli üldine kirjeldus:
+* Iga käsk sisaldab 12 baiti.
+** 1 start-bait: `a` (`0x61`, `97`)
+** 1 väljaku ID bait vahemikus `A` - `W` (`0x41` - `0x57`, `65` - `87`)
+** 1 roboti ID bait vahemikus `A` - `W` (`0x41` - `0x57`, `65` - `87`)
+** 9 andmebaiti
+* Puuduolevad baidid täidetakse sidekriipsudega: `-` (`0x2d`, `45`).
+* Käsud roboti ID-ga `X` (`0x58`, `88`) on mõeldud kõikidele robotitele.
 
-* Iga pakett sisaldab 12 tähemärki ( char );
-* 1 start-bait;
-* 2 baiti seadme ID kohta;
-* 9 data-baiti;
-* Puuduolevad charid täidetakse kriipsudega '-'.
-
-Tabel 1 Käskude kirjeldused
-
+.Käskude kirjeldused
 []
 |===
-3+|*Käsk* 3+|*Kirjeldus*
-|*Start* |*ID* |*Data* |*Väljak* |*Signaal* |*Robot(id)*
-|`a` |`AX` |`START----` |A |START |Kõik
-|`a` |`AX` |`STOP-----` |A |STOP |Kõik
-|`a` |`An` |`START----` |A |START |n- A,B,C,D (Roboti tähis)
-|`a` |`An` |`PING-----` |A |PING |n- A,B,C,D (Roboti tähis)
-|`a` |`BX` |`START----` |B |START |Kõik
-|`a` |`BX` |`STOP-----` |B |STOP |Kõik
-|`a` |`Bn` |`START----` |B |START |n- A,B,C,D (Roboti tähis)
-|`a` |`Bn` |`STOP-----` |B |STOP |n- A,B,C,D (Roboti tähis)
-|`a` |`Bn` |`PING-----` |B |PING |n- A,B,C,D (Roboti tähis)
+4+|*Käsk* 3+|*Kirjeldus*
+|*Start* |*Väljaku ID* |*Roboti ID* |*Andmed* |*Väljak* |*Signaal* |*Robot(id)*
+|`a` |`A` - `W` |`X` |`START----` |A - W |START |Kõik
+|`a` |`A` - `W` |`X` |`STOP-----` |A - W |STOP |Kõik
+|`a` |`A` - `W` |`A` - `W` |`START----` |A - W |START |A - W
+|`a` |`A` - `W` |`A` - `W` |`STOP-----` |A - W |STOP |A - W
+|`a` |`A` - `W` |`A` - `W` |`PING-----` |A - W |PING |A - W
 |===
 
-Näiteks käsk aBCSTART---- käivitab B väljakul asuva roboti C, käsk aABPING----- küsib väljakul A asetseva roboti B valmisolekut.
+Näiteks käsk `aBCSTART----` käivitab B väljakul asuva roboti C ja käsk `aABPING-----` küsib väljakul A asetseva roboti B valmisolekut.
 
-Kõikidele käskudele, mis saadetakse kindlale robotile, peab see robot vastama:
+Kõikidele käskudele, mis saadetakse kindlale robotile, peab see robot vastama: `aXXACK------`
 
-* aXXACK-----
-
-Vastuses tuleb XX asendada vastust saatva roboti ID-ga.
-ACK signaaliga tuleb vastata 40 ms jooksul paketi kätte saamise hetkest (umbes 50 ms paketi välja saatmise hetkest).
-Käskudele, mis on saadetud kõikidele robotitele korraga ACK vastata ei tohi.
-
-Tagamaks robotite kindlama käivituse võistlusel saadetakse enne starti kohtuniku puldist välja mõlemale robotile korda mööda PING käsku, millele samuti ACK signaaliga vastata tuleb.
-Selle signaali järgi näeb kohtunik kas robotid on valmis võistluseks (e kas raadiosignaal jõuab robotini ja tagasi).
-
-Kogu väljakule mõeldud stardi- ja stopsignaali saadab pult välja 10 paketti 10 ms vahedega.
+Vastuses tuleb esimene `X` asendada väljaku ID-ga ja teine `X` vastust saatva roboti ID-ga.
+ACK signaaliga tuleb vastata 40 ms jooksul käsu kätte saamise hetkest.
+Käskudele, mis on saadetud kõikidele robotitele korraga, ACK vastata ei tohi.
+Tagamaks robotite kindlama käivituse võistlusel võib kohtuniku pult saata mõlemale robotile PING käsku enne mängu algust.
+Kogu väljakule mõeldud stardi- ja stopsignaali saadab pult välja 3 korda 100 ms vahedega.
+Ülejäänud signaale saadetakse korraga 1.
 
 ==== Kohtuniku pult
 
-.kohtuniku pult
-image::images/ref_remote.jpg[width=400]
+Kohtunikupult koosneb:
 
-Puldi tehniline kirjeldus:
-
-* pult sisaldab XB24-AWI-001 raadiomoodulit;
-* puldi ajuks on AVR mikrokontroller;
-* pult töötab kahe AAA mõõtu patarei peal.
-
-Puldi kasutajaliides:
-
-* on/off lüliti;
-* neli suurt nuppu (iga nupu all on RGB led);
-* võistlusväljaku vahetamise lüliti.
+* XBee 802.15.4 raadiomoodulist
+* XBee USB adapterist
+* Arvutist koos kohtunikupuldi tarkvaraga:
+** https://github.com/ut-robotics/robot-basketball-ref
 
 == Kohtunikud
 
 Iga mängu koordineerib peakohtunik, kes tagab võistluse ja mängude vastavuse võistlusreeglitele.
-Peakohtunikku abistavad kaks abikohtunikku, kes kumbki vastutavad ühe korvi eest.
+Peakohtunikku abistavad 3 abikohtunikku, kellest 2 vastutavad kummagi korvi eest ja 1 kohtuniku signaalide saatmise eest.
 
 === Peakohtunik
+:xrefstyle: basic
 
-Peakohtuniku ülesanded on järgmised.
+Peakohtuniku ülesanded on järgmised:
 
-* Viib läbi kõigi robotite tehnilise ülevaatuse ning otsustab, millised neist lubatakse võistlema (vaata peatükk 13).
-* Tagab, et pallid ja nende asetus võistlusel vastaksid võistlusreeglitele (vaata peatükk 5).
+* Viib läbi kõigi robotite tehnilise ülevaatuse ning otsustab, millised neist lubatakse võistlema (vaata <<qualification>>).
+* Tagab, et pallid ja nende asetus võistlusel vastaksid võistlusreeglitele (vaata <<balls>>).
 * Alustab, peatab ja lõpetab mängu.
-* Informeerib mängijaid ja korvikohtunikke vooru algusest ja lõpust (vaata peatükk 11).
-* Annab käsu võistkonnaliikmele roboti eemaldamiseks mängust vooru lõpuni peatükis 7.5 toodud nõuete eksimisel.
-* Lõpetab mänguvooru, kui mõlemad robotid on rikkunud punktis 7.5 toodud nõudeid.
+* Informeerib mängijaid ja abikohtunikke vooru algusest ja lõpust (vaata <<game_round>>).
+* Annab käsu võistkonnaliikmele roboti eemaldamiseks mängust vooru lõpuni peatükis <<robot_control_requirements>> toodud nõuete eksimisel.
+* Lõpetab mänguvooru, kui mõlemad robotid on rikkunud peatükis <<robot_control_requirements>> toodud nõudeid.
 * Võib auti läinud pallid mängu jooksul ära korjata eeldusel, et ükski robot seda palli hetkel ei käsitle.
 * Võib vajadusel peatada või lõpetada mängu väliste segavate tegurite ilmnemisel.
-* Võib eemaldada võistlusväljakult halvasti käituvaid võistkonnaliikmeid.
-* Tagab, et pealtvaatajad ei sisene võistlejate alasse (vt Väljaku kate).
+* Võib eemaldada võistlejate alast halvasti käituvaid võistkonnaliikmeid.
+* Tagab, et pealtvaatajad ei sisene võistlejate alasse (vaata <<court_surface>>).
 * Pärast mängu edastab võistluse korraldajatele mängu tulemuse ja muu olulise info, mis võiks mõjutada võistlustulemust.
 
 Peakohtuniku otsused seoses mängu ja voorudega on lõplikud.
@@ -285,58 +286,78 @@ Peakohtunikul on õigus muuta oma otsust olulise lisainfo ilmnemisel.
 
 == Võistluskorraldus
 
-Võistluse läbiviimisel on kasutusel kaks erinevat turniirisüsteemi ehk võistlus toimub hübriidformaadis.
-Esialgu viiakse võistlus läbi Swiss-system tournament reeglite järgi, kuni selgub 4 parimat võistlejat.
-Swiss-system tournamenti järgi on esimeses voorus vastasrobot juhuslikult valitud.
+Võistluse läbiviimisel on kasutusel kaks erinevat turniirisüsteemi.
+Esialgu viiakse võistlus läbi Šveitsi süsteemi reeglite järgi 4 parima roboti selgitamiseks.
+Šveitsi süsteemi järgi on esimeses voorus robotid juhuslikult valitud.
 Kõigi järgnevate voorude puhul pannakse vastamisi robotid, kellel on varasemad võistlustulemused sarnased.
-Paaritu arvu võistlejate puhul on võimalik saada ühes voorus "bye", mis tähendab automaatset võitu.
-Mitte ükski robot ei võistle teise robotiga kaks korda ning ei saa võistluse jooksul kahte "bye'd".
+Paaritu arvu võistlejate puhul on võimalik saada ühes voorus _bye_, mis tähendab automaatset võitu.
+Mitte ükski robot ei võistle teise robotiga kaks korda ning ei saa võistluse jooksul kahte _bye_'d.
 
-Seejärel toimub 4 parima võistleja vahel Double-elimination tournament, mille käigus selgub lõplik pingerida.
+Minimaalne Šveitsi süsteemi voorude arv on asciimath:[ceil(log_2 n_(rob\ot))]:
+
+* 1 - 4 robotiga Šveitsi süsteemi mänge ei toimu.
+* 5 - 8 robotiga mängitakse 3 vooru.
+* 9 - 16 robotiga mängitakse 4 vooru.
+* 17 - 32 robotiha mängitakse 5 vooru.
+
+Seejärel toimub 4 parima võistleja vahel kahe kaotuse süsteemis turniir, mille käigus selgub lõplik pingerida.
 
 == Mängukorraldus
 
-Mäng koosneb kolmest põhivoorust (erandjuhul kahest põhivoorust, kui mõlemad voorud on võitnud sama robot) ja vajadusel kuni kolmest lisavoorust ning vabaviskevooru(de)st.
-Mängu võitjaks on rohkem põhivoorude võite kogunud robot, põhivoorude viigi korral esimesena lisavooru võitnud robot ja lisavoorude viigi korral vabaviskevooru(de) võitja.
+Mäng koosneb kolmest või kahest (kui mõlemad voorud on võitnud sama robot) põhivoorust ja vajadusel kuni kolmest lisavoorust ning vabaviskevoorudest.
+Mängu võitjaks on rohkem põhivoorude võite kogunud robot,
+põhivoorude viigi korral esimesena lisavooru võitnud robot 
+ja lisavoorude viigi korral vabaviskevoorude võitja.
+Šveitsi süsteemi mängud võivad lõppeda viigiga ehk  lisavoore ja vabaviskeid ei mängita.
 
-=== Vabavisete korraldus
+Robotid peavad vahetama iga vooru järel pooli.
+Poolte vahetamiseks on aega 2 minutit.
 
-Vabaviskevoore mängitakse minimaalselt 3 ja maksimaalselt 10 korda.
-Robotid peavad igas vabaviskevoorus vaheldumisi teostama vabaviske, vooru võidab robot, kes antud voorus rohkem korve viskab.
-Vabavisete jaoks kasutatakse ühte korvi, mis valitakse kohtuniku poolt mündiviskega.
-Vabaviskevoorus asetseb väljakul ainult 1 pall, mis paikneb korvi ning keskjoone keskpunktivahelisel kujutletaval sirgjoonel 1300 mm kaugusel korvist.
-Robot alustab vabaviskekatset väljaku keskelt.
-Katse sooritamiseks on aega 10 sekundit.
-Katse algab kohtuniku käsu peale.
-Katse lõppeb kui vise on sooritatud või kui kohtunik peatab katse.
-Mängu võitjaks on vabaviskevoorudes rohkem korve visanud robot.
-Kui esimese kolme vabaviskevooruga pole võitja selgunud, toimuvad järgnevad viskevoorud esimese vooru võiduni.
-Juhul kui vabaviskevoorud lõppevad viigiga, korratakse vabavisete voore.
-
-.vabaviske kaugus
-image::images/free_throw_distance.png[width=400]
-
+[#game_round]
 == Vooru korraldus
 
 Põhivooru pikkus on 60 sekundit.
 Lisavooru pikkus on 30 sekundit.
-Vooru alguses asuvad robotid oma väljaku poole paremas nurgas (vaadatuna oma korvi tagant), puudutades võistlusväljaku välimise musta otsajoone ja küljejoone ühenduskohta (stardipositsioon).
+Vooru alguses asuvad robotid oma väljaku poole paremas nurgas (vaadatuna oma korvi tagant).
+Robotid peavad puudutama võistlusväljaku musta otsajoone ja küljejoone ühenduskohta (stardipositsioon).
 Voor algab ja lõpeb peakohtuniku märguandega.
-Peale lõpu märguannet peavad võistkonnad roboti seiskama.
+Peale lõpu märguannet peavad robotid seisma jääma.
 Vigade korral pannakse seisma ka aeg.
 
 == Punktiarvestus
 
 Punkte loetakse vooru lõpus.
 Iga korvi visatud pall annab ühe punkti.
-Kõiki palle, mis peale viset põrkavad korvist, korvilauast või teisest robotist tagasi võistlusalale, ilma, et käiks vahepeal audis, võib uuesti visata.
-Pallidega, mis on olnud audis punkte teenida ei saa.
+Audis pallidega punkte teenida ei saa.
 Vooru võidab võistkond, kellel on vooru lõpus rohkem punkte.
 
+== Vabavisete korraldus
+:xrefstyle: short
+
+Vabaviskevoore mängitakse minimaalselt 3 korda.
+Robotid peavad igas vabaviskevoorus teostama ühe vabaviske.
+Vabavisete jaoks kasutatakse ühte korvi, mis valitakse kohtuniku poolt mündiviskega.
+Väljakul asetseb ainult 1 pall, mis paikneb 1300 mm kaugusel korvist ja on mõlema korviga ühel joonel (vaata <<image_free_throw_distance>>).
+Vabaviskevoorude võitjaks on rohkem korve visanud robot.
+Kui esimese kolme vabaviskevooruga pole võitja selgunud, toimuvad järgnevad viskevoorud esimese vooru võiduni.
+
+Vabaviske sooritus:
+
+. Robot alustab vabaviskekatset väljaku keskelt.
+. Katse sooritamiseks on aega 10 sekundit.
+. Katse algab kohtuniku käsu peale.
+. Katse lõppeb kui vise on sooritatud või kui kohtunik peatab katse.
+
+[#image_free_throw_distance]
+.Palli kaugus vabaviskel
+image::images/free_throw_distance.png[width=400]
+
+[#qualification]
 == Tehniline ülevaatus
+:xrefstyle: basic
 
 Tehniline ülevaatus toimub võistluspäeva hommikul.
-Tehnilise ülevaatuse käigus kontrollib peakohtunik roboti vastavust nõuetele (vt Robotile esitatavad nõuded) ning testib võistlusvõimekust.
+Tehnilise ülevaatuse käigus kontrollib peakohtunik roboti vastavust nõuetele (vaata <<robot_requirements>>) ning testib võistlusvõimekust.
 Võistlusvõimekuse näitamiseks peab robot üksinda 5 palliga võistlusväljakul suutma 60 sekundi jooksul visata korvi vähemalt 1 palli.
 Nõuetele mittevastavad või võistlusvõimetud robotid võistlusele ei pääse.
 
@@ -346,7 +367,9 @@ Registreerimisvorm avatakse vähemalt kuu aega enne võistlust.
 
 == Organiseerimine
 
+. Robot peab olema registreeritud enne võistlust.
+Registreerimine sisaldab tehnilist ülevaatust ja roboti märgistamist numbriga.
+. Tehniline ülevaatus peab olema läbitud enne korraldajate poolt määratud aega.
 . Võistlusel tekkivaid küsimusi ja probleeme lahendab kohtunik.
-. Pretentsioone saab esitada võistkonna esimesena registreeritud liige.
 . Pretentsioone võib esitada kuni järgmise mängu alguseni.
 . Ebakõlade või vaidluste tekkimisel jääb lõppsõna kohtunikele ja/või korraldajatele.

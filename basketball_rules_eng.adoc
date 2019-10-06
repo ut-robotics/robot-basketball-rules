@@ -1,7 +1,10 @@
 :figure-caption: Figure
+:table-caption: Table
 :sectnums:
 :stem:
 :last-update-label!:
+:xrefstyle: short
+:section-refsig:
 
 :toc:
 :toclevels: 4
@@ -12,353 +15,353 @@
 == Introduction
 
 The purpose of this competition is to imitate a real basketball game.
-There are 2 robots on the court, which try to get as many balls into the opponents basket as possible.
+There are 2 robots on the court, which try to get as many balls into the opponent's basket as possible.
 
 == Court
 
 === General
 
-See the general view of the basketball court – Figure 1 Court.
+General view of the basketball court is shown in <<image_court_angle>>.
 
+[#image_court_angle]
 .Court
 image::images/court_angle.jpg[width=600]
 
-=== Measurements
+=== Dimensions
 
-The whole court has been divided into three different zones.
+The court is divided into three different zones.
 
 . Playing court is 4600 mm long and 3100 mm wide rectangular area.
-Edge markings (white and black line) are included into the playing court.
+Edge markings (white and black lines) are part of the playing court.
 . Playing area includes playing court and extra zone for robots to move around.
 Playing area is 6100 mm long and 4000 mm wide.
 . Competitors area is an 950 – 1000 mm wide black carpet around the playing area.
 
-=== Court coating
+[#court_surface]
+=== Court surface
 
-==== Court coating
-
-Playing area is coated with orange mat (ExpoRips 2007).
-Surface beneath the mat is hard and even.
+The surface of the playing area is orange needle felt carpet (ExpoRips 2007).
+Surface beneath the carpet is hard and even.
 Competitors area is covered with a black carpet.
-Competitors area is surrounded by white walls which are up to 450 mm high.
-There could be sponsors logos higher than 450 mm.
-Only referees, competitors and organizing team are allowed to move in the competitors area, spectators are not allowed into that area.
-During the competition, everyone who moves in that area must wear clothes which do not have the same colours that are present in the playing area or baskets (except for black).
+Competitors area is surrounded by white walls which are at least 450 mm high.
+There can be sponsor logos on the walls if the logos are higher than 450 mm.
+Only referees, competitors of the current game and organizing team are allowed to move in the competitors area, spectators are not allowed into that area.
+During the competition, everyone in that area must wear clothes which do not have the same colours that are present in the playing area or baskets (except for black).
 
 ==== Court markings
 
-For the detailed playing court, see Figure 2 Court measurements.
+Court dimensions are shown in <<image_court_dimensions>>.
 
+[#image_court_dimensions]
 .Court measurements
-image::images/court_dimensions_eng.jpg[width=600]
+image::images/court_dimensions_eng.png[width=600]
 
-Playing court is marked with white (colour tone is 2) and black lines.
-Lines (black and white) belong to playing area.
+Playing court is marked with white and black lines.
+Lines (black and white) are part of the playing court.
 All lines are 50 mm wide.
 Court is divided into two halves with a white centerline.
 
 == AR markers
 
-There are two ARUCO markers on both basket boards, 160x160 mm in size with an additional 20 mm padding.
-ARUCO markers have OpenCV support (instructions can be found here: http://docs.opencv.org/3.1.0/d5/dae/tutorial_aruco_detection.html).
-Markers are attached to the basket board which reaches the playing court.
-Exact marker position can be found in figure 5.
+There are two 160 x 160 mm ARUCO markers on both backboards.
+Markers are attached to the bottom corners of the backboard.
+Exact marker positions and dimensions can be found in <<image_basket_dimensions>>.
 
-Markers are identified by markers ID.
-On the left and right sides of the magenta coloured basket are respectively markers with ID 11 and 12.
-On the left and right sides of the blue coloured basket are respectively markers with ID 21 and 22.
-ARUCO markers generator can be found here: http://keystone.umd.edu/html/markergen.html.
+Markers are identified by marker's ID:
+
+* *11* on the *left* of the *magenta* basket
+* *12* on the *right* of the *magenta* basket
+* *21* on the *left* of the *blue* basket
+* *22* on the *right* of the *blue* basket
+
+ARUCO marker generator can be found here: http://chev.me/arucogen/.
 
 == Baskets
 
-Baskets are placed in the middle of the shorter edges of the court.
-Basket board is in line with the black lines outer edge.
+Baskets are placed in the middle of the endlines (shorter edges) on the court.
+Backboard's side with the basket is in line with the black line's outer edge.
 The colours of the baskets are matt blue (colour code: RAL5015) and matt magenta (colour code: RAL4010).
-Courts with baskets can be seen in figures 3 and 4.
+Court with baskets can be seen in <<image_court_top>> and <<image_court_side_angle>>.
 
-.Baskets position in top view
+[#image_court_top]
+.Baskets positions in top view
 image::images/court_top.jpg[width=600]
 
-.Baskets postion in side view
+[#image_court_side_angle]
+.Baskets positions in side view
 image::images/court_side_angle.jpg[width=600]
 
-The basket is 500 mm high and with a 160 mm diameter, coloured and open on the top cylinder.
-Attached to the basket is a basket board 660 x 800 mm.
-In the bottom of the basket is a weight to keep the basket stable.
-Prototype is shown in figure 5.
+Basket is a painted pipe with following dimensions:
 
+* height 500 mm
+* outside diameter 160 mm
+* inside diameter 152 mm
+
+Attached to the basket is a backboard with dimensions of 660 x 800 mm.
+Basket dimension can be seen in <<image_basket_dimensions>>.
+
+[#image_basket_dimensions]
 .Basket in front view
 image::images/basket_dimensions.jpg[width=600]
 
+[#balls]
 == Balls
 
 === Dimensions and properties
 
-A green mini squash ball is used for the competition. 
-The ball is:
-
-* green;
-* weighs around 24 grams;
-* 40 mm in diameter.
+Balls are green mini squash balls with a mass of around 24 grams and a diamater of around 40 mm.
 
 === Placement of the balls
 
-Each round starts with 11 balls on the field.
-The placement of the balls is random, but symmetrical to the diagonal of the field for both players.
-At least 10 different combinations of the placement of balls shall be compiled for the games.
+Each round starts with 11 balls on the court.
+The placement of the balls is random, but symmetrical for both robots with respect to the diagonal of the court.
+At least 10 different ball placement combinations must be prepared for the games.
 
 == Number of robots and team size
 
-Each team is allowed to have 1 robot at a time on the field during the game.
-Team size is up to 6 members when signing up for the game.
+2 robots are on the court during the game, 1 per each team.
+Up to 6 members can be registered to a team.
 
+[#robot_requirements]
 == Requirements for the robot
 
+[#robot_requirements_general]
 === General requirements
+:xrefstyle: basic
 
-Robot is a fully autonomous machine that carries its own energy source, movement mechanisms, own management and control systems.
-It is not allowed to use remote control to move the robot (only one-way connection out of the robot and sending a start signal is allowed).
+Robot is a fully autonomous machine that carries its own energy source, movement mechanisms, management and control systems.
+It is not allowed to use remote control to move the robot during a game.
+Only one-way connection out of the robot and sending a start signal is allowed.
+Robot is not allowed to send anything else than ACK signal in response to referee's signal through radio module (see <<referee_signals>>).
 
+[#robot_requirements_mechanical]
 === Mechanical requirements for the robot
 
-. During the game situation in the course of the whole competition, the robot has to fit in an upright cylinder with a diameter of 350 mm and height of 350 mm.
-. Robot weight must not exceed 8 kg.
-. It is not allowed for the robot to copy the following parts of the playing field:
-* in the external design of the robot it is mandatory to use mostly black, white or grey colours;
-* in the external design of the robot it is forbidden to use colours of the baskets or the balls.
-. The robot must not intentionally segregate any parts during the game.
+. Robot has to fit in an upright cylinder with a diameter of 350 mm and height of 350 mm the entire time during the game.
+. Robot's mass must not exceed 8 kg.
+. Majority of robot's external design must consist of black, white or gray colours.
+It is not allowed to use ball and basket colours in the external design.
+. The robot is not allowed to intentionally detach any parts during the game onto the court.
 
+[#robot_requirements_electrical]
 === Electronic requirements for the robot
+:xrefstyle: short
 
-. The robot is not allowed to use LEDs during the game rounds (except by mutual agreement between the players).
-Indicators and LEDs used in sensors are allowed.
+. The robot is not allowed to use LEDs during the game rounds (except by mutual agreement between the opposing teams).
+Indicators and LEDs used in sensors are allowed if the LEDs do not violate the external design requirements (see <<robot_requirements_mechanical>>).
 . If light spreading elements are used, their intensity must not be harmful to the human eye or they should be shielded from direct observation.
 . If a laser is used, the emission of the laser (averaged over 1 second) must not be more than 1 mW/mm^2^.
 . The robot must not intentionally deceive the optical sensors of the opponent robot (including the camera of the robot).
 . Robot must be able to independently start and stop according to the commands from the referee’s remote control.
-The commands sent by the remote control and information on the required connection interface can be found in Clause 7.6
-. If the robot does not start by the referee’s remote control then it is allowed to start the robot manually after 10 seconds after the round start.
+The commands sent by the remote control and information on the required connection interface can be found in <<referee_signals>>
+. Robot is allowed to be started manually after 10 seconds of the start of the round.
 
 === Robot access to the competition
+:xrefstyle: short
 
-The robot, which does not comply with the requirements stated in clauses 7.1–7.3, is not allowed to participate in the competition.
-The violation of the same requirements during the tournament will lead to total removal from the game.
+The robot, which does not comply with the requirements stated in sections <<robot_requirements_general>> - <<robot_requirements_electrical>>, is not allowed to participate in the competition.
+Violating these requirements during the tournament will lead to removal from the competition.
 
+[#robot_control_requirements]
 === Requirements for robot control
 
 ==== Definitions
 
-* "Ball out of play" – is the ball that has completely passed over the black touchline when viewed from the above.
+. Ball out of play – ball that has at least once completely passed over the black line when viewed from the top.
 
 ==== General
 
-The are no direct restrictions when the robot is holding a ball; the only situation in which the goal does not count is as follows:
-the robot has snapped the ball that has completely passed over the touchline of the playing court or the ball is out of play and threw it inside the basket.
-It is not allowed to lift the ball into the basket.
-The has to be thrown into the basket.
-This means that when the ball is thrown then
-the upper edge of the ball must be below 300 mm.
+The are no direct restrictions for operating a ball.
+Basket is not counted when a ball that is out of play is thrown in the basket.
 
 ==== Robot penalization and disqualification
+:xrefstyle: basic
 
-. The following list includes requirements, which result in a fault if these are violated during the game:
-* the robot is not allowed to operate with more than one ball;
-* the robot must not damage the field or its parts, other robots, balls, referees, the opponent team, spectators or other people surrounding the game field;
-* non-malicious pushing is allowed.
-It is prohibited to damage the field parts and the opponent by the confused robot;
-* the robot is not allowed to leave the playing area (robot it out of court when half of the robot is out of the playing area, viewed from the top).
-. The robot is given a fault, then:
+. Robot receives a fault when the robot:
+* holds more than one ball at a time;
+* moves a basket:
+* damages the court or its parts, other robots, balls, referees, the opponent's team, spectators or other people surrounding the court.
+Non-malicious pushing is allowed.
+It is not allowed to damage the court and the opponent by the confused robot;
+* leaves the playing area (over half of the robot is out of the playing area, viewed from the top).
+
+. On first fault:
 * the referee stops the game and the time;
 * the robots must stop;
-* the robot, which got the fault must be positioned in the right corner of its playing side (check clause 8 – round arrangement);
+* the robot, which received the fault, *must be moved to the starting position* (see <<game_round>>);
 * the opponent robot stays in the same place;
-* if everything is in position then the referee starts the game again and the time will be started from the time it was stopped.
-. If the robot is given a second fault, then:
+* referee will resume the game and the game's time will continue from where it was stopped.
+
+. On second fault:
 * the referee stops the game and the time;
 * the robots must stop;
-* the robot, which got the fault will be removed from the playing area;
+* the robot, which received the fault, *must be removed from the playing area*;
 * the opponent robot stays in the same place;
-* if everything is in position then the referee starts the game again and the time will be started from the time it was stopped.
+* referee will resume the game and the game's time will continue from where it was stopped.
+
 . The faults are valid until the end of the round.
-. The referee can stop the game and separate the robots from each other without issuing a fault.
-In that case the time is stopped aswell.
 
+. The referee can stop the game and separate the robots from each other without issuing a fault.
+In that case the time is stopped as well.
+
+[#referee_signals]
 === Referee’s signals
 
-==== Radio module and adjustment
+==== Radio module and configuration
 
-. It is required for the robots to use XBee radio (product starts with a code – XB24) module that operates on Digi International 2.4 Ghz frequency.
-There are many different antenna types for the module, which can be found on Digi Xbee https://www.digi.com/pdf/ds_xbeemultipointmodules.pdf[datasheet].
-It is Digi Xbee model S1.
-. Suitable modules can be ordered from the following providers:
-* https://www.mouser.ee/ProductDetail/Digi-International/XB24-AWI-001?qs=sGAEpiMZZMtJacPDJcUJY7VcaAKGQu1gHInEUFlTTaA%3D[Mouser]
-* http://uk.farnell.com/digi-international/xb24-awi-001/rf-module-txrx-xbee-wire-ant/dp/1337912[Farnell]
-. Radio modules can be adjusted with AT commands.
-For that it is possible to use a program XCTU, which can be used to configure the XBee module.
-Information about the XCTU program and download link can be found https://www.digi.com/products/xbee-rf-solutions/xctu-software/xctu[here].
-. Radio module settings:
-* Baud: can be chosen accordingly to your own system, does not interfere with modules communicating with each other.
-* Node ID: "According to the requirements of Clause 7.6.2. (Must be convertible during the competition)"
+. Robots must use XBee 802.15.4 radio module (S1, S2C or XBee3) from Digi International.
+. S1 radio modules do not need to be configured.
+S2C and XBee3 modules must be flashed with 802.15.4 firmware.
+Settings can be changed, but it should be taken into account that referee's remote uses default settings in 802.15.4 firmware.
+Modules can be configured with AT commands.
+https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/xctu[XCTU] can be used to change the settings.
 
-//-
+==== Commands from the referee’s remote and responding to them
 
-* The rest of the settings that are not separately highlighted should be left with the factory settings.
-In case any changes are made in the radio equipment, the head referee will immediately inform all participants.
+The remote sends commands in the following format:
 
-==== Commands from the referee’s remote control and responding to them
+* Every command is 12 bytes long.
+** 1 start byte: `a` (`0x61`, `97`)
+** 1 court ID byte in the range of `A` - `W` (`0x41` - `0x57`, `65` - `87`)
+** 1 robot ID byte in the range of `A` - `W` (`0x41` - `0x57`, `65` - `87`)
+** 9 data bytes
+* Missing bytes are filled with hyphens: `-` (`0x2d`, `45`).
+* Commands where robot ID is `X` (`0x58`, `88`) are meant for all of the robots.
 
-The remote control uses LLAP protocol, developed by Ciseco, to send messages.
-
-Protocols overall description:
-
-* Every package includes 12 characters ( char);
-* 1 start-bait;
-* 2 baits about device ID;
-* 9 data-baits;
-* Missing chars are filled with dashes '-'.
-
-Tabel 1 Description of commands
-
+.Description of commands
 []
 |===
-3+|*Command* 3+|*Description*
-|*Start* |*ID* |*Data* |*Field* |*Signal* |*Robot(s)*
-|`a` |`AX` |`START----` |A |START |All
-|`a` |`AX` |`STOP-----` |A |STOP |All
-|`a` |`AA` |`START----` |A |START |A
-|`a` |`AB` |`START----` |A |START |B
-|`a` |`AC` |`START----` |A |START |C
-|`a` |`AD` |`START----` |A |START |D
-|`a` |`AA` |`STOP-----` |A |STOP |A
-|`a` |`AB` |`STOP-----` |A |STOP |B
-|`a` |`AC` |`STOP-----` |A |STOP |C
-|`a` |`AD` |`STOP-----` |A |STOP |D
-|`a` |`BX` |`START----` |B |START |All
-|`a` |`BX` |`STOP-----` |B |STOP |All
-|`a` |`BA` |`START----` |B |START |A
-|`a` |`BB` |`START----` |B |START |B
-|`a` |`BC` |`START----` |B |START |C
-|`a` |`BD` |`START----` |B |START |D
-|`a` |`BA` |`STOP-----` |B |STOP |A
-|`a` |`BB` |`STOP-----` |B |STOP |B
-|`a` |`BC` |`STOP-----` |B |STOP |C
-|`a` |`BD` |`STOP-----` |B |STOP |D
+4+|*Command* 3+|*Description*
+|*Start* |*Court ID* |*Robot ID* |*Data* |*Court* |*Signal* |*Robot(s)*
+|`a` |`A` - `W` |`X` |`START----` |A - W |START |All
+|`a` |`A` - `W` |`X` |`STOP-----` |A - W |STOP |All
+|`a` |`A` - `W` |`A` - `W` |`START----` |A - W |START |A - W
+|`a` |`A` - `W` |`A` - `W` |`STOP-----` |A - W |STOP |A - W
+|`a` |`A` - `W` |`A` - `W` |`PING-----` |A - W |PING |A - W
 |===
 
-For example, the command aBCSTART---- activates robot C on field B, the command aABPING----- asks about the readiness of robot B on field A.
+For example, the command `aBCSTART----` activates robot C on court B and the command `aABPING-----` asks about the readiness of robot B on court A.
 
-The robot must respond to all commands that are sent to this specific robot:
+The robot must respond to all commands that are sent to this specific robot with: `aXXACK------`
 
-* aXXACK-----
-
-In the response, XX must be replaced with the ID of the responding robot.
-The robot has to answer using ACK signal during 40 ms from receiving the data packet (about 50 ms from start of the transmission).
-ACK may not answer commands given to all the robots at the same time.
-
-To ensure the activation of the robots, the referee’s remote issues a PING command to both robots alternately before the start, which also needs to be responded to using ACK signal.
-This allows the referee to see if the robots are ready (i.e. if the signal reaches them).
-The start and stop signal meant for the whole field is sent in 10 packets in 10 ms intervals.
+In the response, the first `X` must be replaced with the court ID and the second `X` with the ID of the responding robot.
+The robot has to answer using ACK signal in 40 ms from receiving the command.
+It is not allowed to respond to commands that are sent to all of the robots.
+To ensure that the robots are able to receive the commands, PING commands might be sent to both robots before the game.
+The start and stop signal meant for the whole court is sent 3 times in 100 ms intervals.
+Other signals are sent once at the time.
 
 ==== Referee’s remote control
 
-.referee’s remote control
-image::images/ref_remote.jpg[width=400]
+Remote control consists of:
 
-Technical description of the remote control:
-
-* The remote control contains XB24-AWI-001 module;
-* the drive of the remote control is AVR microcontroller;
-* the remote control is powered by two AAA batteries.
-
-User interface of the remote control:
-
-* on/off switch;
-* four big buttons (RGB Led under each);
-* mode switch of the remote control.
+* XBee 802.15.4 radio module
+* XBee USB adapter
+* Computer with referee's remote software:
+** https://github.com/ut-robotics/robot-basketball-ref
 
 == Referees
 
-Each game is coordinated by the head referee, ensures the compliance of the competition and games to the competition rules.
-The head referee is assisted by two basket referees, each for one basket.
+Each game is coordinated by the head referee, who ensures the compliance of the competition and games to the competition rules.
+The head referee is assisted by 2 basket referees, each for one basket and 1 referee sending signals with referee's remote.
 
 === Head referee
+:xrefstyle: basic
 
 The tasks of the head referee include:
 
-* Carries out the technical inspection of the robots and decides which ones will be allowed to compete (see clause 13).
-* Ensures that the balls and their placement during the competitions comply with the competition rules (see clause 5).
+* Carries out the technical inspection of the robots and decides which ones will be allowed to compete (see <<qualification>>).
+* Ensures that the balls and their placement during the competitions complies with the competition rules (see <<balls>>).
 * Starts, stops, and ends the game.
-* Informs the players and goal referees about the beginning and end of the round (see clause 11)
-* Gives the order to the team to remove robot from the game until the end of the round if any of the requirements given in clause 7.5 are violated
-* Ends the game round if both robots have violated the requirements given in clause 7.5.
-* May pick the balls out of play during the game provided that none of the robots does operate with the ball at the moment.
+* Informs the players and assistant referees about the beginning and end of the round (see <<game_round>>).
+* Gives the order to the team to remove robot from the game until the end of the round if any of the requirements given in <<robot_control_requirements>> are violated.
+* Ends the game round if both robots have violated the requirements given in <<robot_control_requirements>>.
+* May remove the balls that are out of play during the game provided that none of the robots is operating with the ball at the moment.
 * If necessary, can stop or end the game if there appears to be any external disruptive factors.
-* May remove misbehaving team members from the playing field.
-* Ensures that the spectators do not enter the competitors’ area (see Court coating).
-* Delivers the game result and other relevant information that may influence the game result to the game organisers after the game.
+* May remove misbehaving team members from the competitors area.
+* Ensures that the spectators do not enter the competitors area (see <<court_surface>>).
+* Delivers the game result and other relevant information, that may influence the game result, to the competition organisers after the game.
 
-The head referee’s decisions related to the game and rounds are final.
+The head referee's decisions related to the game and rounds are final.
 The head referee has the right to change his or her decision if any relevant additional information occurs.
 
 == Competition arrangement
 
-There are two different tournament systems used at the same time.
-Firstly, the competition is being done by Swiss-system tournament rules until 4 best competitors will arise.
-By Swiss-system tournament, in the first round the opponent is chosen randomly.
-Every other round has robots competing whose results are the same or closest.
-If there are uneven number of competitors there is a possibility to get a "bye", which means automatic victory.
-None of the robots will compete against each other twice and no robot gets two "byes" 
+There are two different tournament systems used.
+Competition starts with Swiss-system tournament to determine 4 best robots.
+By Swiss-system tournament rules, in the first round of games, the robots are matched randomly.
+Other rounds of games will match the robots with the closest standings.
+If there are odd number of competitors, then one of the robots in each round of games gets a bye, which means automatic victory.
+None of the robots will compete against each other twice and no robot gets two byes. 
 
-After that there will be a double-elimination tournament between the 4 best competitors.
+Minimum number of Swiss-system tournament rounds is asciimath:[ceil(log_2 n_(rob\ot))]:
+
+* 1 - 4 robots do not need to play any Swiss-system games.
+* 5 - 8 robots will play 3 rounds.
+* 9 - 16 robots will play 4 rounds.
+* 17 - 32 robots will play 5 rounds.
+
+After that there will be a double-elimination tournament between the 4 best robots.
 This will reveal the final ranking.
 
 == Game arrangement
 
-One game lasts for 3 main rounds (in exceptional cases up to 2 rounds, if both rounds are won by one robot) and if it is necessary then also 3 extra rounds and free throw round(s) will be conducted.
-The winner robot is the one which has more main round wins.
-If the main rounds end with a draw then the winner will be the robot which wins the first extra round and when extra rounds end with a draw again, then free throw round(s).
+One game consists of 3 or 2 (if both rounds are won by one robot) main rounds and if necessary then also 3 extra rounds and free throw rounds.
+The game is won by having more main round wins.
+If the main rounds end with a draw, then the robot that is the first to win an extra round, wins the game.
+If extra rounds end with a draw, then the winner will be determined with free throws.
+Swiss-system games can end with a draw and no extra rounds or free throws will be played.
 
-=== Free throw arrangement
+Robots have to change sides after every round.
+Sides must be changed in 2 minutes.
 
-There are 3 to 10 free throw rounds.
-Robots must shoot free throws alternately and the round is won by a robot that scores more baskets.
-During free throws, only one basket is used and it will be chosen by the referee with a coin toss.
-1 ball is on the court during the free throws that is placed 1300 mm away from the basket on imagery line between the basket and the center line.
-Robot starts the free throw round from the center line.
-One free throw round lasts for 10 seconds.
-The round starts with a referees signal.
-Round ends if the throw has been made or the referee has stopped the round.
-The winner of free throw rounds is robot which has scored more baskets compared to the other robot.
-If first three rounds end with a draw then free throws will be made until one robot wins.
-If free throw rounds end with a draw then another set of free throws will be arranged, until one robot wins.
-
-.free throw distance
-image::images/free_throw_distance.png[width=400]
-
+[#game_round]
 == Round arrangement
 
 One main round lasts for 60 seconds.
 Extra round lasts for 30 seconds.
-In the beginning of each round, both robots are positioned in the right corner of their side of the court.
-The robots must touch playing courts end line and side line which are black in colour.
+In the beginning of each round, both robots are positioned in the right corner (viewed from the back of the basket) of their side of the court.
+The robots must touch the point where the black endline and black sideline meet.
 The round begins and ends with head referee’s signal.
-After the round, both robots are stopped.
-If a fault is made then the time will be stopped by the referee.
+At the end of the round, both robots must stop.
+If a fault is made then the time will be stopped.
 
 == Scoring
 
 The points are counted at the end of the round.
 Each ball that is fully in the basket gives one point.
-The balls that have bounced back from the basket board, the basket itself or another robot and stay in the playing court can be still played with.
-The balls that are not inside the playing court must not be used to play with.
-The winner of the round is the team who has more points at the end of the round.
+The balls that are out of play are not counted.
+Round is won by having more points.
 
+== Free throw arrangement
+:xrefstyle: short
+
+At least 3 free throw rounds must be played.
+Both robots must perform a one free throw in each round.
+Only one basket is used and it will be chosen with a coin toss by the referee.
+Only 1 ball is on the court and it is placed 1300 mm away from the basket on the same line with both of the baskets (see <<image_free_throw_distance>>).
+The winner of free throw rounds is the robot which has scored more baskets.
+If first three rounds end with a draw then additional rounds will be played until a round is won by a robot.
+
+Free throw procedure:
+
+. Robot starts the free throw from the center of the court.
+. Robot has 10 seconds to throw.
+. Free throw starts with referee's signal.
+. Free throw ends if the throw has been made or the referee has stopped the round.
+
+[#image_free_throw_distance]
+.Ball distance before free throw
+image::images/free_throw_distance.png[width=400]
+
+[#qualification]
 == Technical inspection
+:xrefstyle: basic
 
 Technical inspection is carried out in the morning of the competition day.
-During the technical inspection, the head referee inspects if the robot meets the requirements (see clause 7) and tests the competitive capability.
-In order to show the capability, the attacking robot has to score at least 1 ball out of 5 balls during 60 seconds, while being alone in the field.
-Non-compliant robots and robots incapable of fighting are not allowed to participate in the competition.
+During the technical inspection, the head referee inspects if the robot meets the requirements (see <<robot_requirements>>) and tests the capability to compete.
+In order to show the capability to compete, the robot has to score at least 1 ball out of 5 balls in 60 seconds, while being alone in the court.
+Non-compliant robots and robots incapable to compete are not allowed to participate in the competition.
 
 == Registration
 
@@ -367,10 +370,8 @@ Registration form is opened at least a month before the competition.
 == Organization
 
 . The robot must be registered before the competition.
-The registration process includes technical inspection of the robot and marking the robot with a number sticker.
+The registration process includes technical inspection of the robot and marking the robot with a number.
 . Technical inspection must be completed by the time that is specified by the organisers.
 . All questions and problems arising during the competition are solved by the referee.
-. The final decision regarding any appeals is made by the referee and/or the organizers.
-All complaints must be reported to the referee during the match or right after the ending of the match.
-Complaints filed later will not be accepted.
-The final decision regarding any disputes or inconsistencies, is always made by the referee.
+. All complaints must be reported before the start of the next game.
+. The final decision regarding any disputes or inconsistencies is always made by the referee or the organisers.
