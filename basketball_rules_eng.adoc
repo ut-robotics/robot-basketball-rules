@@ -109,7 +109,7 @@ image::images/basket_dimensions.jpg[width=600]
 
 === Dimensions and properties
 
-Balls are green mini squash balls with a mass of around 24 grams and a diamater of around 40 mm.
+Balls are green mini squash balls with a mass of around 24 grams and a diameter of around 40 mm.
 
 === Placement of the balls
 
@@ -152,7 +152,7 @@ Indicators and LEDs used in sensors are allowed if the LEDs do not violate the e
 . If light spreading elements are used, their intensity must not be harmful to the human eye or they should be shielded from direct observation.
 . If a laser is used, the emission of the laser (averaged over 1 second) must not be more than 1 mW/mm^2^.
 . The robot must not intentionally deceive the optical sensors of the opponent robot (including the camera of the robot).
-. Robot must be able to independently start and stop according to the commands from the referee’s remote control.
+. Robot must be able to independently start and stop according to the commands from the referee's remote control.
 The commands sent by the remote control and information on the required connection interface can be found in <<referee_signals>>
 . Robot is allowed to be started manually after 10 seconds of the start of the round.
 
@@ -257,7 +257,7 @@ Opposing robot has ID of `B`.
 Robots IDs will not change during the game.
 Robots must be able to receive and respond to commands with different IDs.
 
-==== Referee’s remote control
+==== Referee's remote control
 
 Remote control consists of:
 
@@ -328,7 +328,7 @@ One main round lasts for 60 seconds.
 Extra round lasts for 30 seconds.
 In the beginning of each round, both robots are positioned in the right corner (viewed from the back of the basket) of their side of the court.
 The robots must touch the point where the black endline and black sideline meet.
-The round begins and ends with head referee’s signal.
+The round begins and ends with head referee's signal.
 At the end of the round, both robots must stop.
 If a fault is made then the time will be stopped.
 
