@@ -250,6 +250,12 @@ Tagamaks robotite kindlama käivituse võistlusel võib kohtuniku pult saata mõ
 Kogu väljakule mõeldud stardi- ja stopsignaali saadab pult välja 3 korda 100 ms vahedega.
 Ülejäänud signaale saadetakse korraga 1.
 
+Võistluse jaoks määratakse igale väljakule unikaalne ID, mis võistluse jooksul ei muutu.
+Robot, mis alustab esimest mängu vooru magenta korvi poolt (ehk peab viskama palle sinisesse korvi) on ID-ga `A`.
+Vastasrobot on ID-ga `B`.
+Robotite ID-d mängu jooksul ei muutu.
+Robotid peavad suutma vastu võtta ja vastata erinevate ID-dega käskudele.
+
 ==== Kohtuniku pult
 
 Kohtunikupult koosneb:

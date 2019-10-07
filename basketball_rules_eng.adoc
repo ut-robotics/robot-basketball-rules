@@ -251,6 +251,12 @@ To ensure that the robots are able to receive the commands, PING commands might 
 The start and stop signal meant for the whole court is sent 3 times in 100 ms intervals.
 Other signals are sent once at the time.
 
+Every court will have an unique ID, which does not change during the competition.
+Robot that start first round of a game on the magenta side (throwing into blue basket) has ID of `A`.
+Opposing robot has ID of `B`.
+Robots IDs will not change during the game.
+Robots must be able to receive and respond to commands with different IDs.
+
 ==== Referee’s remote control
 
 Remote control consists of:
