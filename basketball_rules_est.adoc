@@ -108,7 +108,7 @@ image::images/basket_dimensions.jpg[width=600]
 
 === Mõõdud ja omadused
 
-Pallid on rohelised mini squashi pallid massiga ligikaudu 24 g ja diameetriga ligikaudu 40 mm.
+Pallid on rohelised mini __squash__'i pallid massiga ligikaudu 24 g ja diameetriga ligikaudu 40 mm.
 
 === Pallide asetus
 
@@ -304,7 +304,7 @@ Minimaalne Šveitsi süsteemi voorude arv on asciimath:[ceil(log_2 n_(rob\ot))]:
 * 1 - 4 robotiga Šveitsi süsteemi mänge ei toimu.
 * 5 - 8 robotiga mängitakse 3 vooru.
 * 9 - 16 robotiga mängitakse 4 vooru.
-* 17 - 32 robotiha mängitakse 5 vooru.
+* 17 - 32 robotiga mängitakse 5 vooru.
 
 Seejärel toimub 4 parima võistleja vahel kahe kaotuse süsteemis turniir, mille käigus selgub lõplik pingerida.
 
@@ -377,5 +377,5 @@ Registreerimisvorm avatakse vähemalt kuu aega enne võistlust.
 Registreerimine sisaldab tehnilist ülevaatust ja roboti märgistamist numbriga.
 . Tehniline ülevaatus peab olema läbitud enne korraldajate poolt määratud aega.
 . Võistlusel tekkivaid küsimusi ja probleeme lahendab kohtunik.
-. Pretentsioone võib esitada kuni järgmise mängu alguseni.
+. Pretensioone võib esitada kuni järgmise mängu alguseni.
 . Ebakõlade või vaidluste tekkimisel jääb lõppsõna kohtunikele ja/või korraldajatele.
