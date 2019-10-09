@@ -50,7 +50,7 @@ During the competition, everyone who moves in that area must wear clothes which 
 For the detailed playing court, see Figure 2 Court measurements.
 
 .Court measurements
-image::images/court_dimensions_eng.jpg[width=600]
+image::images/court_dimensions_eng.png[width=600]
 
 Playing court is marked with white (colour tone is 2) and black lines.
 Lines (black and white) belong to playing area.
