@@ -53,7 +53,7 @@ During the competition, everyone in that area must wear clothes which do not hav
 Court dimensions are shown in <<image_court_dimensions>>.
 
 [#image_court_dimensions]
-.Court measurements
+.Court dimensions
 image::images/court_dimensions_eng.png[width=600]
 
 Playing court is marked with white and black lines.
