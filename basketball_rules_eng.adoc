@@ -45,7 +45,7 @@ Surface beneath the carpet is hard and even.
 Competitors area is covered with a black carpet.
 Competitors area is surrounded by white walls which are at least 450 mm high.
 There can be sponsor logos on the walls if the logos are higher than 450 mm.
-Only referees, competitors of the current game and organizing team are allowed to move in the competitors area, spectators are not allowed into that area.
+Only referees, competitors of the current game and organising team are allowed to move in the competitors area, spectators are not allowed into that area.
 During the competition, everyone in that area must wear clothes which do not have the same colours that are present in the playing area or baskets (except for black).
 
 ==== Court markings
@@ -174,7 +174,7 @@ Violating these requirements during the tournament will lead to removal from the
 The are no direct restrictions for operating a ball.
 Basket is not counted when a ball that is out of play is thrown in the basket.
 
-==== Robot penalization and disqualification
+==== Robot penalisation and disqualification
 :xrefstyle: basic
 
 . Robot receives a fault when the robot:
@@ -373,7 +373,7 @@ Non-compliant robots and robots incapable to compete are not allowed to particip
 
 Registration form is opened at least a month before the competition.
 
-== Organization
+== Organisation
 
 . The robot must be registered before the competition.
 The registration process includes technical inspection of the robot and marking the robot with a number.
