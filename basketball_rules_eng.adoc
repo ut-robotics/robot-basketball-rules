@@ -97,7 +97,7 @@ Basket is a painted pipe with following dimensions:
 * outside diameter 160 mm
 * inside diameter 152 mm
 
-Attached to the basket is a backboard with dimensions of 660 x 800 mm.
+Attached to the basket is a white backboard with dimensions of 660 x 800 mm.
 Basket dimension can be seen in <<image_basket_dimensions>>.
 
 [#image_basket_dimensions]
@@ -131,7 +131,7 @@ Up to 6 members can be registered to a team.
 
 Robot is a fully autonomous machine that carries its own energy source, movement mechanisms, management and control systems.
 It is not allowed to use remote control to move the robot during a game.
-Only one-way connection out of the robot and sending a start signal is allowed.
+Only one-way communication out of the robot and sending a start signal is allowed.
 Robot is not allowed to send anything else than ACK signal in response to referee's signal through radio module (see <<referee_signals>>).
 
 [#robot_requirements_mechanical]
@@ -252,10 +252,10 @@ The start and stop signal meant for the whole court is sent 3 times in 100 ms in
 Other signals are sent once at the time.
 
 Every court will have an unique ID, which does not change during the competition.
-Robot that start first round of a game on the magenta side (throwing into blue basket) has ID of `A`.
+Robot that starts the first round of a game on the magenta side (throwing into blue basket) has ID of `A`.
 Opposing robot has ID of `B`.
 Robots IDs will not change during the game.
-Robots must be able to receive and respond to commands with different IDs.
+Robots must be able to receive and respond to commands with different IDs based on the court and starting position.
 
 ==== Referee's remote control
 

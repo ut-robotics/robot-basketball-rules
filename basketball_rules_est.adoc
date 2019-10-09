@@ -254,7 +254,7 @@ Võistluse jaoks määratakse igale väljakule unikaalne ID, mis võistluse jook
 Robot, mis alustab esimest mängu vooru magenta korvi poolt (ehk peab viskama palle sinisesse korvi) on ID-ga `A`.
 Vastasrobot on ID-ga `B`.
 Robotite ID-d mängu jooksul ei muutu.
-Robotid peavad suutma vastu võtta ja vastata erinevate ID-dega käskudele.
+Robotid peavad suutma vastu võtta ja vastata erinevate ID-dega käskudele vastavalt väljakule ja stardipositsioonile.
 
 ==== Kohtuniku pult
 
