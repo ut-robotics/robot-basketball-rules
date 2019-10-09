@@ -128,7 +128,7 @@ function renderLang(lang, activeLang, tag) {
         return `<span>${lang}</span>`;
     }
 
-    return `<a href="/${tag}/${rulesFilePrefix}${lang}.html">${lang}</a>`;
+    return `<a href="../${tag}/${rulesFilePrefix}${lang}.html">${lang}</a>`;
 }
 
 function renderTags(activeTag, tags, lang) {
@@ -142,7 +142,7 @@ function renderTag(tag, activeTag, lang) {
     const newerTag = olderTag === tag ? activeTag : tag;
 
     return `<div>
-        <span class="tag">${isActive ? `<span class="tag-name">${tag}</span>` : `<a href="/${tag}/${rulesFilePrefix}${lang}.html">${tag}</a>`}</span>
+        <span class="tag">${isActive ? `<span class="tag-name">${tag}</span>` : `<a href="../${tag}/${rulesFilePrefix}${lang}.html">${tag}</a>`}</span>
         <span>${isActive ? '' : `<a href="${githubRepoURL}/compare/${olderTag}...${newerTag}">${translations.compare[lang]}</a>`}</span>
     </div>`;
 }
@@ -156,7 +156,7 @@ function generateIndexHTML(tags) {
     }
 
     function renderTagLangLink(tag, lang) {
-        return `<a href="/${tag}/${rulesFilePrefix}${lang}.html">${lang}</a>`;
+        return `<a href="${tag}/${rulesFilePrefix}${lang}.html">${lang}</a>`;
     }
 
     const html = `<!DOCTYPE html>
