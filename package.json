@@ -1,0 +1,14 @@
+{
+  "name": "robot-basketball-rules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate-docs.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "fs-extra": "^8.1.0",
+    "prettier": "^1.18.2",
+    "simple-git": "^1.126.0"
+  }
+}
