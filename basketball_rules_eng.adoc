@@ -95,7 +95,7 @@ Basket is a painted pipe with following dimensions:
 
 * height 500 mm
 * outside diameter 160 mm
-* inside diameter 152 mm
+* inside diameter 148 mm
 
 Attached to the basket is a white backboard with dimensions of 660 x 800 mm.
 Basket dimension can be seen in <<image_basket_dimensions>>.

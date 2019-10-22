@@ -94,7 +94,7 @@ Korv on värviline toru järgmiste mõõtudega:
 
 * kõrgus 500 mm
 * välisdiameeter 160 mm
-* sisediameeter 152 mm
+* sisediameeter 148 mm
 
 Korvi küljes on maani ulatuv valget värvi tagalaud mõõtmetega 660 x 800 mm.
 Korvi mõõtmed on näha <<image_basket_dimensions>>.
