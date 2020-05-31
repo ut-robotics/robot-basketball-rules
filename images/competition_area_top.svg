@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8140 6040">
+  <g transform="translate(undefined, undefined)">
+    <g transform="translate(20, 20)">
+      <rect x="0" y="0" width="8100" height="6000" fill="black" stroke="none" stroke-width="0" />
+    </g>
+    <g transform="translate(0, 0)">
+      <rect x="10" y="10" width="8120" height="6020" fill="black" stroke="rgb(200, 200, 200)" stroke-width="20" />
+    </g>
+    <g transform="translate(1020, 1020)">
+      <rect x="0" y="0" width="6100" height="4000" fill="darkorange" stroke="none" stroke-width="0" />
+    </g>
+    <g transform="translate(1770, 1470)">
+      <rect x="0" y="0" width="4600" height="3100" fill="darkorange" stroke="none" stroke-width="0" />
+      <rect x="25" y="25" width="4550" height="3050" fill="none" stroke="black" stroke-width="50" />
+      <rect x="75" y="75" width="4450" height="2950" fill="none" stroke="white" stroke-width="50" />
+      <line x1="2300" y1="100" x2="2300" y2="3000" stroke="white" stroke-width="50" />
+    </g>
+    <g transform="translate(1754, 2690) rotate(0)">
+      <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
+      <circle cx="96" cy="330" r="77" fill="none" stroke="rgb(188, 64, 119)" stroke-width="6" />
+    </g>
+    <g transform="translate(6386, 3350) rotate(180)">
+      <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
+      <circle cx="96" cy="330" r="77" fill="none" stroke="rgb(0,124,176)" stroke-width="6" />
+    </g>
+  </g>
+</svg>

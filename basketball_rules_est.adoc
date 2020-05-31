@@ -53,7 +53,7 @@ Võistlusala mõõtmeid vaata <<image_court_dimensions>>.
 
 [#image_court_dimensions]
 .Väljaku mõõtmed
-image::images/court_dimensions_est.jpg[width=600]
+image::images/competition_area_top_with_dimensions.svg[width=600]
 
 Võistlusala on märgistatud valgete joontega ning lisaks ka mustade joontega võistlusala välimises servas.
 Jooned (mustad ja valged) kuuluvad võistlusala juurde.
@@ -74,6 +74,22 @@ Markerid on tuvastatavad markeri ID järgi:
 * *22* *paremal* pool *sinist* korvi
 
 ARUCO markerite generaator on leitav: http://chev.me/arucogen/.
+
+[#marker_basket_1_left]
+.Marker 11
+image::images/marker_basket_1_left.svg[width=160]
+
+[#marker_basket_1_left]
+.Marker 12
+image::images/marker_basket_1_right.svg[width=160]
+
+[#marker_basket_1_left]
+.Marker 21
+image::images/marker_basket_2_left.svg[width=160]
+
+[#marker_basket_1_left]
+.Marker 22
+image::images/marker_basket_2_right.svg[width=160]
 
 == Korvid
 
@@ -101,7 +117,7 @@ Korvi mõõtmed on näha <<image_basket_dimensions>>.
 
 [#image_basket_dimensions]
 .Korvi mõõtmed
-image::images/basket_dimensions.jpg[width=600]
+image::images/basket_2_front_with_dimensions.svg[width=600]
 
 [#balls]
 == Pallid
