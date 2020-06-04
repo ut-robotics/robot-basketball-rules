@@ -62,7 +62,7 @@ async function generateHTMLForTag(activeTag, tags) {
     stdWrite(`done\n`);
 
     for (const lang of languages) {
-        const adocFileName = `${rulesFilePrefix}${lang}.adoc`;
+        const adocFileName = `${rulesFilePrefix}${lang}.asciidoc`;
         const htmlFileName = `${rulesFilePrefix}${lang}.html`;
         const htmlFilePath = path.join(generatedFolder, activeTag, htmlFileName);
 
