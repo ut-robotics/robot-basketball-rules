@@ -29,7 +29,7 @@ image::images/court_angle.jpg[width=600]
 
 === Dimensions
 
-The court is divided into three different zones.
+The competition area is divided into three different zones.
 
 . Playing court is 4600 mm long and 3100 mm wide rectangular area.
 Edge markings (white and black lines) are part of the playing court.
@@ -50,11 +50,15 @@ During the competition, everyone in that area must wear clothes which do not hav
 
 ==== Court markings
 
-Court dimensions are shown in <<image_court_dimensions>>.
+Court markings area shown in  <<image_court_markings>> and competition area dimensions in <<image_court_dimensions>>.
+
+[#image_court_markings]
+.Court markings
+image::images/court_markings.svg[width=800]
 
 [#image_court_dimensions]
-.Court dimensions
-image::images/court_dimensions_eng.png[width=600]
+.Competition area dimensions
+image::images/competition_area_top_with_dimensions_en.svg[width=800]
 
 Playing court is marked with white and black lines.
 Lines (black and white) are part of the playing court.

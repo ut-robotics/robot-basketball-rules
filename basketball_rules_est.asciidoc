@@ -28,9 +28,9 @@ image::images/court_angle.jpg[width=600]
 
 === Mõõtmed
 
-Väljak on jagatud kolmeks erinevaks tsooniks.
+Võistlusala on jagatud kolmeks erinevaks tsooniks.
 
-. Võistlusala on ristkülikukujuline, pikkusega 4600 mm ja laiusega 3100 mm.
+. Mänguväljak on ristkülikukujuline, pikkusega 4600 mm ja laiusega 3100 mm.
 Ääremärgistus (valged ja mustad jooned) kuulub võistlusala sisse.
 . Mänguala sisaldab võistlusala ja lisatsooni robotitele liikumiseks.
 Ala pikkus on 6100 mm ja laius 4000 mm.
@@ -45,15 +45,19 @@ Väljaku võistlejateala on must vaip.
 Võistlejateala välispiiril on vähemalt 450 mm kõrgused valged seinad.
 Seintel võivad asuda sponsorite logod, kui need on kõrgemal kui 450 mm.
 Võistlejatealal tohivad liikuda ainult kohtunikud, toimuva mängu võistlejad ja võistluse korraldajad, pealtvaatajatele on seal liikumine keelatud.
-Võistluse ajal vastava alal liikujate riietuses ei tohi olla väljaku ega korvide värve (v.a must).
+Võistluse ajal vastaval alal liikujate riietuses ei tohi olla väljaku ega korvide värve (v.a must).
 
 ==== Võistlusala märgistus
 
-Võistlusala mõõtmeid vaata <<image_court_dimensions>>.
+Väljaku märgistust vaata <<image_court_markings>> ja võistlusala mõõtmeid vaata <<image_court_dimensions>>.
+
+[#image_court_markings]
+.Väljaku märgistus
+image::images/court_markings.svg[width=800]
 
 [#image_court_dimensions]
-.Väljaku mõõtmed
-image::images/competition_area_top_with_dimensions.svg[width=600]
+.Võistlusala mõõtmed
+image::images/competition_area_top_with_dimensions_et.svg[width=800]
 
 Võistlusala on märgistatud valgete joontega ning lisaks ka mustade joontega võistlusala välimises servas.
 Jooned (mustad ja valged) kuuluvad võistlusala juurde.
@@ -79,15 +83,15 @@ ARUCO markerite generaator on leitav: http://chev.me/arucogen/.
 .Marker 11
 image::images/marker_basket_1_left.svg[width=160]
 
-[#marker_basket_1_left]
+[#marker_basket_1_right]
 .Marker 12
 image::images/marker_basket_1_right.svg[width=160]
 
-[#marker_basket_1_left]
+[#marker_basket_2_left]
 .Marker 21
 image::images/marker_basket_2_left.svg[width=160]
 
-[#marker_basket_1_left]
+[#marker_basket_2_right]
 .Marker 22
 image::images/marker_basket_2_right.svg[width=160]
 
@@ -128,7 +132,7 @@ Pallid on rohelised mini __squash__'i pallid massiga ligikaudu 24 g ja diameetri
 
 === Pallide asetus
 
-Iga vooru alguses on väljakul 11 palli. 
+Iga vooru alguses on väljakul 11 palli.
 Pallide asetus on juhuslik, aga mõlema roboti jaoks sümmeetriline väljaku diagonaali suhtes.
 Mängude jaoks koostatakse vähemalt 10 erinevat pallide paiknemise kombinatsiooni.
 
@@ -196,7 +200,7 @@ Audis palliga visatud korvi ei loeta.
 * hoiab korraga rohkem kui ühte palli;
 * liigutab korvi;
 * kahjustab väljakut või selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid või teisi võistlusväljakut ümbritsevaid inimesi.
-Lubatud on mittepahatahtlik nügimine. 
+Lubatud on mittepahatahtlik nügimine.
 Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelatud;
 * lahkub väljakult (üle poole roboti kerest on pealtvaates mängualast väljas).
 
@@ -216,7 +220,7 @@ Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelat
 
 . Vead kehtivad vooru lõpuni.
 
-. Kohtunikul on lubatud mäng peatada ja robotid lahutada ka ilma viga andmata. 
+. Kohtunikul on lubatud mäng peatada ja robotid lahutada ka ilma viga andmata.
 Sel juhul peatatakse ka ajavõtt.
 
 [#referee_signals]

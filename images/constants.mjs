@@ -12,6 +12,9 @@ export default {
         length: 8100,
         width: 6000,
     },
+    freeThrow: {
+        fromBasket: 1300
+    },
     baskets: {
         innerDiameter: 148,
         outerDiameter: 160,
@@ -43,4 +46,22 @@ export default {
         backboard: 'white',
         walls: 'rgb(200, 200, 200)',
     },
+    translations: {
+        competitionArea: {
+            en: 'Competition area',
+            et: 'Võistlusala',
+        },
+        playArea: {
+            en: 'Playing area',
+            et: 'Mänguala',
+        },
+        court: {
+            en: 'Playing court',
+            et: 'Mänguväljak',
+        },
+        ballLocationBeforeFreeThrow: {
+            en: 'Ball location before free throw',
+            et: 'Palli asukoht enne vabaviset',
+        },
+    }
 }

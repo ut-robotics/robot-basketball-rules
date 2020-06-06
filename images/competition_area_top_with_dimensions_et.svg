@@ -185,7 +185,7 @@
         alignment-baseline="baseline"
         font-family="sans-serif"
       >
-        Ball location before free throw
+        Palli asukoht enne vabaviset
       </text>
       <text
         x="1020"
@@ -196,7 +196,7 @@
         alignment-baseline="hanging"
         font-family="sans-serif"
       >
-        Competition area
+        Võistlusala
       </text>
       <text
         x="2020"
@@ -207,7 +207,7 @@
         alignment-baseline="hanging"
         font-family="sans-serif"
       >
-        Play area
+        Mänguala
       </text>
       <text
         x="2870"
@@ -218,7 +218,7 @@
         alignment-baseline="hanging"
         font-family="sans-serif"
       >
-        Court
+        Mänguväljak
       </text>
     </g>
   </g>
