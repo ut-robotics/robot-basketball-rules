@@ -54,11 +54,11 @@ Court markings area shown in  <<image_court_markings>> and competition area dime
 
 [#image_court_markings]
 .Court markings
-image::images/court_markings.svg[width=800]
+image::images/court_markings.svg[width=610]
 
 [#image_court_dimensions]
 .Competition area dimensions
-image::images/competition_area_top_with_dimensions_en.svg[width=800]
+image::images/competition_area_top_with_dimensions_en.svg[width=900]
 
 Playing court is marked with white and black lines.
 Lines (black and white) are part of the playing court.
@@ -69,6 +69,7 @@ Court is divided into two halves with a white centerline.
 
 There are two 160 x 160 mm ARUCO markers on both backboards.
 Markers are attached to the bottom corners of the backboard.
+Markers can be seen in <<marker_basket_1_left>>, <<marker_basket_1_right>>, <<marker_basket_2_left>> and <<marker_basket_2_right>>.
 Exact marker positions and dimensions can be found in <<image_basket_dimensions>>.
 
 Markers are identified by marker's ID:
@@ -80,20 +81,35 @@ Markers are identified by marker's ID:
 
 ARUCO marker generator can be found here: http://chev.me/arucogen/.
 
+[.float-group]
+--
+[#marker_basket_1_left]
+.Marker 11
+[.left]
+image::images/marker_basket_1_left.svg[width=160]
+
+[#marker_basket_1_right]
+.Marker 12
+[.left]
+image::images/marker_basket_1_right.svg[width=160]
+
+[#marker_basket_2_left]
+.Marker 21
+[.left]
+image::images/marker_basket_2_left.svg[width=160]
+
+[#marker_basket_2_right]
+.Marker 22
+[.left]
+image::images/marker_basket_2_right.svg[width=160]
+--
+
 == Baskets
 
 Baskets are placed in the middle of the endlines (shorter edges) on the court.
 Backboard's side with the basket is in line with the black line's outer edge.
 The colours of the baskets are matt blue (colour code: RAL5015) and matt magenta (colour code: RAL4010).
-Court with baskets can be seen in <<image_court_top>> and <<image_court_side_angle>>.
-
-[#image_court_top]
-.Baskets positions in top view
-image::images/court_top.jpg[width=600]
-
-[#image_court_side_angle]
-.Baskets positions in side view
-image::images/court_side_angle.jpg[width=600]
+Court with baskets can be seen in <<image_court_angle>> and <<image_court_dimensions>>.
 
 Basket is a painted pipe with following dimensions:
 
@@ -106,7 +122,7 @@ Basket dimension can be seen in <<image_basket_dimensions>>.
 
 [#image_basket_dimensions]
 .Basket in front view
-image::images/basket_dimensions.jpg[width=600]
+image::images/basket_2_front_with_dimensions.svg[width=600]
 
 [#balls]
 == Balls
@@ -349,7 +365,7 @@ Round is won by having more points.
 At least 3 free throw rounds must be played.
 Both robots must perform a one free throw in each round.
 Only one basket is used and it will be chosen with a coin toss by the referee.
-Only 1 ball is on the court and it is placed 1300 mm away from the basket on the same line with both of the baskets (see <<image_free_throw_distance>>).
+Only 1 ball is on the court and it is placed 1300 mm away from the basket on the same line with both of the baskets (see <<image_court_dimensions>>).
 The winner of free throw rounds is the robot which has scored more baskets.
 If first three rounds end with a draw then additional rounds will be played until a round is won by a robot.
 
@@ -359,10 +375,6 @@ Free throw procedure:
 . Robot has 10 seconds to throw.
 . Free throw starts with referee's signal.
 . Free throw ends if the throw has been made or the referee has stopped the round.
-
-[#image_free_throw_distance]
-.Ball distance before free throw
-image::images/free_throw_distance.png[width=400]
 
 [#qualification]
 == Technical inspection

@@ -203,8 +203,9 @@ const basketFront = (offsetX, offsetY, color, markerIDs) => `<g transform="trans
     </g>`;
 
 const basketFrontWithDimensions = (color, markerIDs) => {
-    const offset = {x: 180, y: 20};
+    const offset = {x: 2, y: 2};
     const backboardZero = {x: offset.x, y: offset.y + constants.backboard.height}; // bottom left coordinate
+    const backboardBottomRight = moveX(backboardZero, constants.backboard.width);
     const firstDimensionOffset = 20;
     const secondDimensionOffsetX = 100;
     const secondDimensionOffsetY = 80;
@@ -217,15 +218,15 @@ const basketFrontWithDimensions = (color, markerIDs) => {
         return dimension({from, to, lineColor, labelColor, label: length, labelSize, labelSide, startLine});
     };
 
-    const markerOffsetXFrom = moveY(backboardZero, firstDimensionOffset);
-    const markerOffsetXTo = moveX(markerOffsetXFrom, constants.markers.offset);
+    const markerOffsetXFrom = moveY(backboardBottomRight, firstDimensionOffset);
+    const markerOffsetXTo = moveX(markerOffsetXFrom, -constants.markers.offset);
     const dimensionMarkerOffsetX = createDimension({
         from: markerOffsetXFrom,
         to: markerOffsetXTo,
         labelSide: LabelSide.bottom,
     });
 
-    const markerWidthTo = moveX(markerOffsetXTo, constants.markers.width);
+    const markerWidthTo = moveX(markerOffsetXTo, -constants.markers.width);
     const dimensionMarkerWidth = createDimension({
         from: markerOffsetXTo,
         to: markerWidthTo,
@@ -233,37 +234,37 @@ const basketFrontWithDimensions = (color, markerIDs) => {
         startLine: false,
     });
 
-    const markerOffsetYFrom = moveX(backboardZero, -firstDimensionOffset);
+    const markerOffsetYFrom = moveX(backboardBottomRight, firstDimensionOffset);
     const markerOffsetYTo = moveY(markerOffsetYFrom, -constants.markers.offset);
     const dimensionMarkerOffsetY = createDimension({
         from: markerOffsetYFrom,
         to: markerOffsetYTo,
-        labelSide: LabelSide.left,
+        labelSide: LabelSide.right,
     });
 
     const markerHeightTo = moveY(markerOffsetYTo, -constants.markers.width);
     const dimensionMarkerHeight = createDimension({
         from: markerOffsetYTo,
         to: markerHeightTo,
-        labelSide: LabelSide.left,
+        labelSide: LabelSide.right,
         startLine: false,
     });
 
-    const basketZero = moveX(backboardZero, (constants.backboard.width - constants.baskets.outerDiameter) / 2);
-    const basketWidthFrom = moveY(basketZero, firstDimensionOffset);
-    const basketWidthTo = moveX(basketWidthFrom, constants.baskets.outerDiameter);
+    const basketBottomRight = moveX(backboardZero, (constants.backboard.width + constants.baskets.outerDiameter) / 2);
+    const basketWidthFrom = moveY(basketBottomRight, firstDimensionOffset);
+    const basketWidthTo = moveX(basketWidthFrom, -constants.baskets.outerDiameter);
     const dimensionBasketWidth = createDimension({
         from: basketWidthFrom,
         to: basketWidthTo,
         labelSide: LabelSide.bottom,
     });
 
-    const basketHeightFrom = moveX(basketZero, -firstDimensionOffset);
+    const basketHeightFrom = moveX(basketBottomRight, firstDimensionOffset);
     const basketHeightTo = moveY(basketHeightFrom, -constants.baskets.height);
     const dimensionBasketHeight = createDimension({
         from: basketHeightFrom,
         to: basketHeightTo,
-        labelSide: LabelSide.left,
+        labelSide: LabelSide.right,
     });
 
     const backboardWidthFrom = moveY(backboardZero, secondDimensionOffsetY);
@@ -274,12 +275,12 @@ const basketFrontWithDimensions = (color, markerIDs) => {
         labelSide: LabelSide.bottom,
     });
 
-    const backboardHeightFrom = moveX(backboardZero, -secondDimensionOffsetX);
+    const backboardHeightFrom = moveX(backboardBottomRight, secondDimensionOffsetX);
     const backboardHeightTo = moveY(backboardHeightFrom, -constants.backboard.height);
     const dimensionBackboardHeight = createDimension({
         from: backboardHeightFrom,
         to: backboardHeightTo,
-        labelSide: LabelSide.left,
+        labelSide: LabelSide.right,
     });
 
     return `<g>
@@ -335,18 +336,21 @@ const playAreaWithMarkingsTop = () => {
 }
 
 const courtTopWithDimensions = (locale = 'en') => {
-    const offset = {x: 900, y: 0};
+    const offset = {x: 0, y: 0};
     const competitionAreaTopLeft = {x: offset.x + wallThickness, y: offset.y + wallThickness};
+    const competitionAreaBottomRight = moveXY(competitionAreaTopLeft, {x: competitionAreaLength, y: competitionAreaWidth});
     const competitionAreaZero = moveY(competitionAreaTopLeft, competitionAreaWidth); // bottom left coordinate
     const playAreaTopLeft = moveXY(
         competitionAreaTopLeft,
         {x: (competitionAreaLength - playAreaLength) / 2, y: (competitionAreaWidth - playAreaWidth) / 2}
         );
+    const playAreaBottomRight = moveXY(playAreaTopLeft, {x: playAreaLength, y: playAreaWidth});
     const playAreaZero = moveY(playAreaTopLeft, playAreaWidth);
     const courtTopLeft = moveXY(
         playAreaTopLeft,
         {x: (playAreaLength - courtLength) / 2, y: (playAreaWidth - courtWidth) / 2}
     );
+    const courtBottomRight = moveXY(courtTopLeft, {x: courtLength, y: courtWidth});
     const courtZero = moveY(courtTopLeft, courtWidth);
 
     const labelSize = 240;
@@ -382,12 +386,12 @@ const courtTopWithDimensions = (locale = 'en') => {
         labelSide: LabelSide.bottom,
     });
 
-    const competitionAreaWidthFrom = moveX(competitionAreaZero, -160);
+    const competitionAreaWidthFrom = moveX(competitionAreaBottomRight, 160);
     const competitionAreaWidthTo = moveY(competitionAreaWidthFrom, -competitionAreaWidth);
     const dimensionCompetitionAreaWidth = createDimension({
         from: competitionAreaWidthFrom,
         to: competitionAreaWidthTo,
-        labelSide: LabelSide.left,
+        labelSide: LabelSide.right,
     });
 
     const playAreaLengthFrom = moveY(playAreaZero, 160);
@@ -400,12 +404,12 @@ const courtTopWithDimensions = (locale = 'en') => {
         labelColor: dimensionTextColorLight,
     });
 
-    const playAreaWidthFrom = moveX(playAreaZero, -160);
+    const playAreaWidthFrom = moveX(playAreaBottomRight, 160);
     const playAreaWidthTo = moveY(playAreaWidthFrom, -playAreaWidth);
     const dimensionPlayAreaWidth = createDimension({
         from: playAreaWidthFrom,
         to: playAreaWidthTo,
-        labelSide: LabelSide.left,
+        labelSide: LabelSide.right,
         lineColor: dimensionLineColorLight,
         labelColor: dimensionTextColorLight,
     });
@@ -418,12 +422,12 @@ const courtTopWithDimensions = (locale = 'en') => {
         labelSide: LabelSide.bottom,
     });
 
-    const courtWidthFrom = moveX(courtZero, -80);
+    const courtWidthFrom = moveX(courtBottomRight, 80);
     const courtWidthTo = moveY(courtWidthFrom, -courtWidth);
     const dimensionCourtWidth = createDimension({
         from: courtWidthFrom,
         to: courtWidthTo,
-        labelSide: LabelSide.left,
+        labelSide: LabelSide.right,
     });
 
     const courtCenter = moveXY(courtZero, {x: 0.5 * courtLength, y: -0.5 * courtWidth});
@@ -466,8 +470,8 @@ const courtWithDimensionsEnglishSVG = toSVG(courtTopWithDimensions('en'), totalL
 const courtWithDimensionsEstonianSVG = toSVG(courtTopWithDimensions('et'), totalLength + 900, totalWidth + 500);
 const basket1FrontSVG = toSVG(basketFront(0, 0, constants.colors.basket1, constants.markers.basket1IDs), constants.backboard.width, constants.backboard.height);
 const basket2FrontSVG = toSVG(basketFront(0, 0, constants.colors.basket2, constants.markers.basket2IDs), constants.backboard.width, constants.backboard.height);
-const basket1FrontWithDimensionsSVG = toSVG(basketFrontWithDimensions(constants.colors.basket1, constants.markers.basket1IDs), constants.backboard.width + 200, constants.backboard.height + 180);
-const basket2FrontWithDimensionsSVG = toSVG(basketFrontWithDimensions(constants.colors.basket2, constants.markers.basket1IDs), constants.backboard.width + 200, constants.backboard.height + 180);
+const basket1FrontWithDimensionsSVG = toSVG(basketFrontWithDimensions(constants.colors.basket1, constants.markers.basket1IDs), constants.backboard.width + 180, constants.backboard.height + 120);
+const basket2FrontWithDimensionsSVG = toSVG(basketFrontWithDimensions(constants.colors.basket2, constants.markers.basket2IDs), constants.backboard.width + 180, constants.backboard.height + 120);
 const markerBasket1LeftSVG = toSVG(basketMarker(constants.markers.basket1IDs[0], markerWidth, markerHeight, 0, 0), markerWidth, markerHeight);
 const markerBasket1RightSVG = toSVG(basketMarker(constants.markers.basket1IDs[1], markerWidth, markerHeight, 0, 0), markerWidth, markerHeight);
 const markerBasket2LeftSVG = toSVG(basketMarker(constants.markers.basket2IDs[0], markerWidth, markerHeight, 0, 0), markerWidth, markerHeight);

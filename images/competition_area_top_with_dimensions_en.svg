@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9040 6540">
   <g>
-    <g transform="translate(900, 0)">
+    <g transform="translate(0, 0)">
       <g transform="translate(20, 20)">
         <rect x="0" y="0" width="8100" height="6000" fill="black" stroke="none" stroke-width="0" />
       </g>
@@ -36,12 +36,19 @@
     <g>
       <g>
         <g>
-          <line x1="928" y1="6180" x2="9012" y2="6180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="920" y1="6130" x2="920" y2="6230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="9020" y1="6130" x2="9020" y2="6230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="28" y1="6180" x2="8112" y2="6180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line
+            x1="19.999999999999996"
+            y1="6130"
+            x2="20.000000000000004"
+            y2="6230"
+            stroke="rgba(0,0,0,0.5)"
+            stroke-width="16"
+          />
+          <line x1="8120" y1="6130" x2="8120" y2="6230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="4970"
+          x="4070"
           y="6280"
           font-size="240"
           fill="rgba(0,0,0,0.7)"
@@ -54,23 +61,16 @@
       </g>
       <g>
         <g>
-          <line
-            x1="759.9999999999998"
-            y1="6012"
-            x2="760.0000000000002"
-            y2="28"
-            stroke="rgba(0,0,0,0.5)"
-            stroke-width="16"
-          />
-          <line x1="710" y1="6020" x2="810" y2="6020" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="710" y1="20" x2="810" y2="20" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="8280" y1="6012" x2="8280" y2="28" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="8230" y1="6020" x2="8330" y2="6020" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="8230" y1="20" x2="8330" y2="20" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="660"
+          x="8380"
           y="3020"
           font-size="240"
           fill="rgba(0,0,0,0.7)"
-          text-anchor="end"
+          text-anchor="start"
           alignment-baseline="central"
           font-family="sans-serif"
         >
@@ -79,12 +79,12 @@
       </g>
       <g>
         <g>
-          <line x1="1928" y1="5180" x2="8012" y2="5180" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-          <line x1="1920" y1="5130" x2="1920" y2="5230" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-          <line x1="8020" y1="5130" x2="8020" y2="5230" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="1028" y1="5180" x2="7112" y2="5180" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="1020" y1="5130" x2="1020" y2="5230" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7120" y1="5130" x2="7120" y2="5230" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
         </g>
         <text
-          x="4970"
+          x="4070"
           y="5280"
           font-size="240"
           fill="rgba(255,255,255,0.7)"
@@ -97,23 +97,16 @@
       </g>
       <g>
         <g>
-          <line
-            x1="1759.9999999999998"
-            y1="5012"
-            x2="1760.0000000000002"
-            y2="1028"
-            stroke="rgba(255,255,255,0.5)"
-            stroke-width="16"
-          />
-          <line x1="1710" y1="5020" x2="1810" y2="5020" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-          <line x1="1710" y1="1020" x2="1810" y2="1020" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7280" y1="5012" x2="7280" y2="1028" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7230" y1="5020" x2="7330" y2="5020" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7230" y1="1020" x2="7330" y2="1020" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
         </g>
         <text
-          x="1660"
+          x="7380"
           y="3020"
           font-size="240"
           fill="rgba(255,255,255,0.7)"
-          text-anchor="end"
+          text-anchor="start"
           alignment-baseline="central"
           font-family="sans-serif"
         >
@@ -122,12 +115,12 @@
       </g>
       <g>
         <g>
-          <line x1="2678" y1="4650" x2="7262" y2="4650" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="2670" y1="4600" x2="2670" y2="4700" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="7270" y1="4600" x2="7270" y2="4700" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1778" y1="4650" x2="6362" y2="4650" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1770" y1="4600" x2="1770" y2="4700" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6370" y1="4600" x2="6370" y2="4700" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="4970"
+          x="4070"
           y="4750"
           font-size="240"
           fill="rgba(0,0,0,0.7)"
@@ -140,32 +133,32 @@
       </g>
       <g>
         <g>
-          <line x1="2590" y1="4562" x2="2590" y2="1478" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="2540" y1="4570" x2="2640" y2="4570" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="2540" y1="1470" x2="2640" y2="1470" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6450" y1="4562" x2="6450" y2="1478" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6400" y1="4570" x2="6500" y2="4570" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6400" y1="1470" x2="6500" y2="1470" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="2490"
+          x="6550"
           y="3020"
           font-size="240"
           fill="rgba(0,0,0,0.7)"
-          text-anchor="end"
+          text-anchor="start"
           alignment-baseline="central"
           font-family="sans-serif"
         >
           3100
         </text>
       </g>
-      <circle cx="4130" cy="3020" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
-      <circle cx="5810" cy="3020" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <circle cx="3230" cy="3020" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <circle cx="4910" cy="3020" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
       <g>
         <g>
-          <line x1="2838" y1="3180" x2="4122" y2="3180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="2830" y1="3130" x2="2830" y2="3230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="4130" y1="3130" x2="4130" y2="3230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1938" y1="3180" x2="3222" y2="3180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1930" y1="3130" x2="1930" y2="3230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="3230" y1="3130" x2="3230" y2="3230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="3480"
+          x="2580"
           y="3280"
           font-size="240"
           fill="rgba(0,0,0,0.7)"
@@ -177,7 +170,7 @@
         </text>
       </g>
       <text
-        x="4130"
+        x="3230"
         y="2940"
         font-size="120"
         fill="rgba(0,0,0,0.7)"
@@ -188,7 +181,7 @@
         Ball location before free throw
       </text>
       <text
-        x="1020"
+        x="120"
         y="120"
         font-size="200"
         fill="rgba(255,255,255,0.7)"
@@ -199,7 +192,7 @@
         Competition area
       </text>
       <text
-        x="2020"
+        x="1120"
         y="1120"
         font-size="200"
         fill="rgba(0,0,0,0.7)"
@@ -210,7 +203,7 @@
         Playing area
       </text>
       <text
-        x="2870"
+        x="1970"
         y="1670"
         font-size="200"
         fill="rgba(0,0,0,0.7)"

@@ -53,11 +53,11 @@ Väljaku märgistust vaata <<image_court_markings>> ja võistlusala mõõtmeid v
 
 [#image_court_markings]
 .Väljaku märgistus
-image::images/court_markings.svg[width=800]
+image::images/court_markings.svg[width=610]
 
 [#image_court_dimensions]
 .Võistlusala mõõtmed
-image::images/competition_area_top_with_dimensions_et.svg[width=800]
+image::images/competition_area_top_with_dimensions_et.svg[width=900]
 
 Võistlusala on märgistatud valgete joontega ning lisaks ka mustade joontega võistlusala välimises servas.
 Jooned (mustad ja valged) kuuluvad võistlusala juurde.
@@ -68,6 +68,7 @@ Väljak on valge keskjoonega jagatud kaheks pooleks.
 
 Mõlema korvilaua külge on kinnitatud kaks 160 x 160 mm suurust ARUCO markerit.
 Markerid on kinnitatud tagalaua alumistele nurkadele.
+Markerid on näha <<marker_basket_1_left>>, <<marker_basket_1_right>>, <<marker_basket_2_left>> ja <<marker_basket_2_right>>.
 Markerite täpne asetus koos mõõtmetega on leitav <<image_basket_dimensions>>.
 
 Markerid on tuvastatavad markeri ID järgi:
@@ -79,36 +80,35 @@ Markerid on tuvastatavad markeri ID järgi:
 
 ARUCO markerite generaator on leitav: http://chev.me/arucogen/.
 
+[.float-group]
+--
 [#marker_basket_1_left]
 .Marker 11
+[.left]
 image::images/marker_basket_1_left.svg[width=160]
 
 [#marker_basket_1_right]
 .Marker 12
+[.left]
 image::images/marker_basket_1_right.svg[width=160]
 
 [#marker_basket_2_left]
 .Marker 21
+[.left]
 image::images/marker_basket_2_left.svg[width=160]
 
 [#marker_basket_2_right]
 .Marker 22
+[.left]
 image::images/marker_basket_2_right.svg[width=160]
+--
 
 == Korvid
 
 Korvid on paigutatud väljaku otsajoonte (lühemate servade) keskele väljakuga samale tasapinnale.
 Tagalaua korvipoolne sein on kohakuti musta joone välimise servaga.
 Väljakul on üks korv märgistatud sinise (värvikood: RAL5015) ning teine korv magenta (värvikood: RAL4010) mattvärviga.
-Väljakut koos korvidega on võimalik näha <<image_court_top>> ja <<image_court_side_angle>>.
-
-[#image_court_top]
-.Korvide asetus pealtvaates
-image::images/court_top.jpg[width=600]
-
-[#image_court_side_angle]
-.Korvide asetus külgvaates
-image::images/court_side_angle.jpg[width=600]
+Väljakut koos korvidega on võimalik näha <<image_court_angle>> ja <<image_court_dimensions>>.
 
 Korv on värviline toru järgmiste mõõtudega:
 
@@ -363,7 +363,7 @@ Vooru võidab võistkond, kellel on vooru lõpus rohkem punkte.
 Vabaviskevoore mängitakse minimaalselt 3 korda.
 Robotid peavad igas vabaviskevoorus teostama ühe vabaviske.
 Vabavisete jaoks kasutatakse ühte korvi, mis valitakse kohtuniku poolt mündiviskega.
-Väljakul asetseb ainult 1 pall, mis paikneb 1300 mm kaugusel korvist ja on mõlema korviga ühel joonel (vaata <<image_free_throw_distance>>).
+Väljakul asetseb ainult 1 pall, mis paikneb 1300 mm kaugusel korvist ja on mõlema korviga ühel joonel (vaata <<image_court_dimensions>>).
 Vabaviskevoorude võitjaks on rohkem korve visanud robot.
 Kui esimese kolme vabaviskevooruga pole võitja selgunud, toimuvad järgnevad viskevoorud esimese vooru võiduni.
 
@@ -373,10 +373,6 @@ Vabaviske sooritus:
 . Katse sooritamiseks on aega 10 sekundit.
 . Katse algab kohtuniku käsu peale.
 . Katse lõppeb kui vise on sooritatud või kui kohtunik peatab katse.
-
-[#image_free_throw_distance]
-.Palli kaugus vabaviskel
-image::images/free_throw_distance.png[width=400]
 
 [#qualification]
 == Tehniline ülevaatus
