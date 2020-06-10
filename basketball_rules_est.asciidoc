@@ -20,6 +20,7 @@ Väljakul on korraga 2 robotit, kelle eesmärgiks on teatud aja jooksul saada v�
 == Väljak
 
 === Üldine
+
 Võistlusväljaku üldist plaani vaata <<image_court_angle>>.
 
 [#image_court_angle]
@@ -202,20 +203,26 @@ Audis palliga visatud korvi ei loeta.
 * kahjustab väljakut või selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid või teisi võistlusväljakut ümbritsevaid inimesi.
 Lubatud on mittepahatahtlik nügimine.
 Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelatud;
-* lahkub väljakult (üle poole roboti kerest on pealtvaates mängualast väljas).
+* lahkub mängualast (üle poole roboti kerest on pealtvaates mängualast väljas).
 
 . Esimese vea korral:
 * kohtunik peatab mängu ning ajavõtt peatatakse;
 * robotid peavad peatuma;
 * karistuse saanud *robot tuleb paigutada oma stardipositsioonile* (vaata <<game_round>>);
-* vastasrobot jääb samale asukohale;
+* vastasrobot tuleb
+** jätta samale asukohale
+** või paigutada mustale joonele võistkonna poolt valitud kohta
+(kui robot hoiab palli tuleb see jätta sinna, kus see asus vea tegemise ajal);
 * kohtunik jätkab mängu ning aja võtmine jätkub.
 
 . Teise vea korral:
 * kohtunik peatab mängu ning ajavõtt peatatakse;
 * robotid peavad peatuma;
 * karistuse saanud *robot tuleb eemaldada väljakult*;
-* vastasrobot jääb samale asukohale;
+* vastasrobot tuleb
+** jätta samale asukohale
+või paigutada mustale joonele võistkonna poolt valitud kohta
+(kui robot hoiab palli tuleb see jätta sinna, kus see asus vea tegemise ajal);
 * kohtunik jätkab mängu ning aja võtmine jätkub.
 
 . Vead kehtivad vooru lõpuni.
@@ -326,7 +333,8 @@ Minimaalne Šveitsi süsteemi voorude arv on asciimath:[ceil(log_2 n_(rob\ot))]:
 * 9 - 16 robotiga mängitakse 4 vooru.
 * 17 - 32 robotiga mängitakse 5 vooru.
 
-Seejärel toimub 4 parima võistleja vahel kahe kaotuse süsteemis turniir, mille käigus selgub lõplik pingerida.
+Seejärel toimub 4 parima võistleja vahel kahe kaotuse süsteemis turniir,
+mille käigus selgub lõplik pingerida.
 
 == Mängukorraldus
 

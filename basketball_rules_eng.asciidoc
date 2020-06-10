@@ -197,7 +197,7 @@ Basket is not counted when a ball that is out of play is thrown in the basket.
 ==== Robot penalisation and disqualification
 :xrefstyle: basic
 
-. Robot receives a fault when the robot:
+. Robot receives a foul when the robot:
 * holds more than one ball at a time;
 * moves a basket:
 * damages the court or its parts, other robots, balls, referees, the opponent's team, spectators or other people surrounding the court.
@@ -205,23 +205,29 @@ Non-malicious pushing is allowed.
 It is not allowed to damage the court and the opponent by the confused robot;
 * leaves the playing area (over half of the robot is out of the playing area, viewed from the top).
 
-. On first fault:
+. On first foul:
 * the referee stops the game and the time;
 * the robots must stop;
-* the robot, which received the fault, *must be moved to the starting position* (see <<game_round>>);
-* the opponent robot stays in the same place;
+* the robot, which received the foul, *must be moved to the starting position* (see <<game_round>>);
+* the opponent robot
+** stays in the same place
+** or is moved onto the black line at the place chosen by the team
+(if the robot is holding a ball, then it must be left where it was at the time the foul was called);
 * referee will resume the game and the game's time will continue from where it was stopped.
 
-. On second fault:
+. On second foul:
 * the referee stops the game and the time;
 * the robots must stop;
-* the robot, which received the fault, *must be removed from the playing area*;
-* the opponent robot stays in the same place;
+* the robot, which received the foul, *must be removed from the playing area*;
+* the opponent robot
+** stays in the same place
+** or is moved onto the black line at the place chosen by the team
+(if the robot is holding a ball, then it must be left where it was at the time the foul was called);
 * referee will resume the game and the game's time will continue from where it was stopped.
 
-. The faults are valid until the end of the round.
+. Fouls are valid until the end of the round.
 
-. The referee can stop the game and separate the robots from each other without issuing a fault.
+. The referee can stop the game and separate the robots from each other without issuing a foul.
 In that case the time is stopped as well.
 
 [#referee_signals]
@@ -350,7 +356,7 @@ In the beginning of each round, both robots are positioned in the right corner (
 The robots must touch the point where the black endline and black sideline meet.
 The round begins and ends with head referee's signal.
 At the end of the round, both robots must stop.
-If a fault is made then the time will be stopped.
+If a foul is made then the time will be stopped.
 
 == Scoring
 
