@@ -25,7 +25,7 @@ General view of the basketball court is shown in <<image_court_angle>>.
 
 [#image_court_angle]
 .Court
-image::images/court_angle.jpg[width=600]
+image::images/competition_area_angled.svg[width=1000]
 
 === Dimensions
 

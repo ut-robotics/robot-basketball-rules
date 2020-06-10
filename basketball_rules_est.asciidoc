@@ -24,7 +24,7 @@ Võistlusväljaku üldist plaani vaata <<image_court_angle>>.
 
 [#image_court_angle]
 .Väljak ruumiliselt
-image::images/court_angle.jpg[width=600]
+image::images/competition_area_angled.svg[width=1000]
 
 === Mõõtmed
 
