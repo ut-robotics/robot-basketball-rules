@@ -151,7 +151,6 @@ Up to 6 members can be registered to a team.
 Robot is a fully autonomous machine that carries its own energy source, movement mechanisms, management and control systems.
 It is not allowed to use remote control to move the robot during a game.
 Only one-way communication out of the robot and sending a start signal is allowed.
-Robot is not allowed to send anything else than ACK signal in response to referee's signal through radio module (see <<referee_signals>>).
 
 [#robot_requirements_mechanical]
 === Mechanical requirements for the robot
@@ -171,9 +170,7 @@ Indicators and LEDs used in sensors are allowed if the LEDs do not violate the e
 . If light spreading elements are used, their intensity must not be harmful to the human eye or they should be shielded from direct observation.
 . If a laser is used, the emission of the laser (averaged over 1 second) must not be more than 1 mW/mm^2^.
 . The robot must not intentionally deceive the optical sensors of the opponent robot (including the camera of the robot).
-. Robot must be able to independently start and stop according to the commands from the referee's remote control.
-The commands sent by the remote control and information on the required connection interface can be found in <<referee_signals>>
-. Robot is allowed to be started manually after 10 seconds of the start of the round.
+. Robot is allowed to be started manually.
 
 === Robot access to the competition
 :xrefstyle: short
@@ -232,69 +229,18 @@ In that case the time is stopped as well.
 [#referee_signals]
 === Referee’s signals
 
-==== Radio module and configuration
+Software has been created to manage the games and send the referee's signals.
 
-. Robots must use XBee 802.15.4 radio module (S1, S2C or XBee3) from Digi International.
-. S1 radio modules do not need to be configured.
-S2C and XBee3 modules must be flashed with 802.15.4 firmware.
-Settings can be changed, but it should be taken into account that referee's remote uses default settings in 802.15.4 firmware.
-Modules can be configured with AT commands.
-https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/xctu[XCTU] can be used to change the settings.
+Software and documentation is available from the following link:
+https://github.com/ut-robotics/robot-basketball-manager
 
-==== Commands from the referee’s remote and responding to them
-
-The remote sends commands in the following format:
-
-* Every command is 12 bytes long.
-** 1 start byte: `a` (`0x61`, `97`)
-** 1 court ID byte in the range of `A` - `W` (`0x41` - `0x57`, `65` - `87`)
-** 1 robot ID byte in the range of `A` - `W` (`0x41` - `0x57`, `65` - `87`)
-** 9 data bytes
-* Missing bytes are filled with hyphens: `-` (`0x2d`, `45`).
-* Commands where robot ID is `X` (`0x58`, `88`) are meant for all of the robots.
-
-.Description of commands
-[]
-|===
-4+|*Command* 3+|*Description*
-|*Start* |*Court ID* |*Robot ID* |*Data* |*Court* |*Signal* |*Robot(s)*
-|`a` |`A` - `W` |`X` |`START----` |A - W |START |All
-|`a` |`A` - `W` |`X` |`STOP-----` |A - W |STOP |All
-|`a` |`A` - `W` |`A` - `W` |`START----` |A - W |START |A - W
-|`a` |`A` - `W` |`A` - `W` |`STOP-----` |A - W |STOP |A - W
-|`a` |`A` - `W` |`A` - `W` |`PING-----` |A - W |PING |A - W
-|===
-
-For example, the command `aBCSTART----` activates robot C on court B and the command `aABPING-----` asks about the readiness of robot B on court A.
-
-The robot must respond to all commands that are sent to this specific robot with: `aXXACK------`
-
-In the response, the first `X` must be replaced with the court ID and the second `X` with the ID of the responding robot.
-The robot has to answer using ACK signal in 40 ms from receiving the command.
-It is not allowed to respond to commands that are sent to all of the robots.
-To ensure that the robots are able to receive the commands, PING commands might be sent to both robots before the game.
-The start and stop signal meant for the whole court is sent 3 times in 100 ms intervals.
-Other signals are sent once at the time.
-
-Every court will have an unique ID, which does not change during the competition.
-Robot that starts the first round of a game on the magenta side (throwing into blue basket) has ID of `A`.
-Opposing robot has ID of `B`.
-Robots IDs will not change during the game.
-Robots must be able to receive and respond to commands with different IDs based on the court and starting position.
-
-==== Referee's remote control
-
-Remote control consists of:
-
-* XBee 802.15.4 radio module
-* XBee USB adapter
-* Computer with referee's remote software:
-** https://github.com/ut-robotics/robot-basketball-ref
+Reacting to referee's signals is not mandatory.
+Software is still in development and referee's signals can change.
 
 == Referees
 
 Each game is coordinated by the head referee, who ensures the compliance of the competition and games to the competition rules.
-The head referee is assisted by 2 basket referees, each for one basket and 1 referee sending signals with referee's remote.
+The head referee is assisted by 2 basket referees.
 
 === Head referee
 :xrefstyle: basic
@@ -359,7 +305,6 @@ If a foul is made then the time will be stopped.
 
 == Scoring
 
-The points are counted at the end of the round.
 Each ball that is fully in the basket gives one point.
 The balls that are out of play are not counted.
 Round is won by having more points.
@@ -369,7 +314,7 @@ Round is won by having more points.
 
 At least 3 free throw rounds must be played.
 Both robots must perform a one free throw in each round.
-Only one basket is used and it will be chosen with a coin toss by the referee.
+Only one basket is used and it will be chosen by the referee.
 Only 1 ball is on the court and it is placed 1300 mm away from the basket on the same line with both of the baskets (see <<image_court_dimensions>>).
 The winner of free throw rounds is the robot which has scored more baskets.
 If first three rounds end with a draw then additional rounds will be played until a round is won by a robot.
@@ -390,14 +335,10 @@ During the technical inspection, the head referee inspects if the robot meets th
 In order to show the capability to compete, the robot has to score at least 1 ball out of 5 balls in 60 seconds, while being alone in the court.
 Non-compliant robots and robots incapable to compete are not allowed to participate in the competition.
 
-== Registration
-
-Registration form is opened at least a month before the competition.
-
 == Organisation
 
 . The robot must be registered before the competition.
-The registration process includes technical inspection of the robot and marking the robot with a number.
+The registration process includes technical inspection of the robot.
 . Technical inspection must be completed by the time that is specified by the organisers.
 . All questions and problems arising during the competition are solved by the referee.
 . All complaints must be reported before the start of the next game.

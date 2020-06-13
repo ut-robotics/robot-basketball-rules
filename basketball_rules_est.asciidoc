@@ -151,7 +151,6 @@ Võistkonna suurus registreerimisel on kuni 6 liiget.
 Robot on täielikult autonoomne masin, mis kannab oma energiaallikat, liikumismehhanisme ja oma juhtimis- ning kontrollsüsteeme.
 Robotit ei tohi mängu ajal kaugjuhtida.
 lubatud on ühesuunaline side robotist välja ja stardimärguande saatmine.
-Robot ei tohi raadiomooduli kaudu saata midagi muud peale ACK signaali kohtuniku signaalile vastamiseks (vaata <<referee_signals>>).
 
 [#robot_requirements_mechanical]
 === Roboti mehaanilised nõuded
@@ -171,9 +170,7 @@ Indikaatorid ja andurites kasutatavad LED-id on lubatud, kui need vastavad väli
 . Juhul kui kasutatakse valgust levitavaid elemente, siis ei tohi nende intensiivsus olla inimese silmale ohtlik või peab olema varjestatud otsevaatluse eest.
 . Juhul kui kasutatakse laserit, siis ei tohi laseri poolt kiiratud kiirgus (keskmistatud üle 1 sekundi) olla suurem kui 1 mW/mm^2^.
 . Robot ei tohi tahtlikult petta vastasroboti optilisi andureid (sealhulgas ka roboti kaamerat).
-. Robot peab suutma startida ja peatuda iseseisvalt kohtuniku juhtpuldi käskude peale.
-Juhtpuldi poolt saadetavad käsud ja info nõutud ühendusliidese kohta leiab punktist <<referee_signals>>.
-. Robot on lubatud käivitada manuaalselt 10 sekundit pärast vooru algust.
+. Robot on lubatud käivitada manuaalselt.
 
 === Roboti pääs võistlusele
 :xrefstyle: short
@@ -232,69 +229,18 @@ Sel juhul peatatakse ka ajavõtt.
 [#referee_signals]
 === Kohtuniku signaalid
 
-==== Raadiomoodul ja seadistamine
+Mängude haldamiseks on loodud tarkvara, mis tegeleb signaalide saatmisega.
 
-. Robotitel on nõutud kasutada Digi Internationali XBee 802.15.4 raadiomoodulit (S1, S2C või XBee3).
-. S1 raadiomoodulid ei vaja seadistamist.
-S2C ja XBee3 moodulitele tuleb paigaldada 802.15.4 püsivara.
-Seadeid võib muuta, aga tuleb arvestada, et kohtunikumoodul kasutab 802.15.4 püsivara vaikeseadeid.
-Raadiomooduleid saab seadistada AT käskudega.
-Selleks on võimalik kasutada XBee moodulite seadistamiseks ettenähtud programmi https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/xctu[XCTU].
+Tarkvara ja dokumentatsioon on saadaval järgnevalt lingilt:
+https://github.com/ut-robotics/robot-basketball-manager
 
-==== Kohtuniku puldi saadetavad käsud ja neile vastamine
-
-Juhtpult saadab kohtuniku käske järgmise struktuuriga:
-
-* Iga käsk sisaldab 12 baiti.
-** 1 start-bait: `a` (`0x61`, `97`)
-** 1 väljaku ID bait vahemikus `A` - `W` (`0x41` - `0x57`, `65` - `87`)
-** 1 roboti ID bait vahemikus `A` - `W` (`0x41` - `0x57`, `65` - `87`)
-** 9 andmebaiti
-* Puuduolevad baidid täidetakse sidekriipsudega: `-` (`0x2d`, `45`).
-* Käsud roboti ID-ga `X` (`0x58`, `88`) on mõeldud kõikidele robotitele.
-
-.Käskude kirjeldused
-[]
-|===
-4+|*Käsk* 3+|*Kirjeldus*
-|*Start* |*Väljaku ID* |*Roboti ID* |*Andmed* |*Väljak* |*Signaal* |*Robot(id)*
-|`a` |`A` - `W` |`X` |`START----` |A - W |START |Kõik
-|`a` |`A` - `W` |`X` |`STOP-----` |A - W |STOP |Kõik
-|`a` |`A` - `W` |`A` - `W` |`START----` |A - W |START |A - W
-|`a` |`A` - `W` |`A` - `W` |`STOP-----` |A - W |STOP |A - W
-|`a` |`A` - `W` |`A` - `W` |`PING-----` |A - W |PING |A - W
-|===
-
-Näiteks käsk `aBCSTART----` käivitab B väljakul asuva roboti C ja käsk `aABPING-----` küsib väljakul A asetseva roboti B valmisolekut.
-
-Kõikidele käskudele, mis saadetakse kindlale robotile, peab see robot vastama: `aXXACK------`
-
-Vastuses tuleb esimene `X` asendada väljaku ID-ga ja teine `X` vastust saatva roboti ID-ga.
-ACK signaaliga tuleb vastata 40 ms jooksul käsu kätte saamise hetkest.
-Käskudele, mis on saadetud kõikidele robotitele korraga, ACK vastata ei tohi.
-Tagamaks robotite kindlama käivituse võistlusel võib kohtuniku pult saata mõlemale robotile PING käsku enne mängu algust.
-Kogu väljakule mõeldud stardi- ja stopsignaali saadab pult välja 3 korda 100 ms vahedega.
-Ülejäänud signaale saadetakse korraga 1.
-
-Võistluse jaoks määratakse igale väljakule unikaalne ID, mis võistluse jooksul ei muutu.
-Robot, mis alustab esimest mängu vooru magenta korvi poolt (ehk peab viskama palle sinisesse korvi) on ID-ga `A`.
-Vastasrobot on ID-ga `B`.
-Robotite ID-d mängu jooksul ei muutu.
-Robotid peavad suutma vastu võtta ja vastata erinevate ID-dega käskudele vastavalt väljakule ja stardipositsioonile.
-
-==== Kohtuniku pult
-
-Kohtunikupult koosneb:
-
-* XBee 802.15.4 raadiomoodulist
-* XBee USB adapterist
-* Arvutist koos kohtunikupuldi tarkvaraga:
-** https://github.com/ut-robotics/robot-basketball-ref
+Kohtuniku signaalide reageerimine pole kohustuslik.
+Tarkvara on veel arendamisel ja kohtuniku signaalid võivad muutuda.
 
 == Kohtunikud
 
 Iga mängu koordineerib peakohtunik, kes tagab võistluse ja mängude vastavuse võistlusreeglitele.
-Peakohtunikku abistavad 3 abikohtunikku, kellest 2 vastutavad kummagi korvi eest ja 1 kohtuniku signaalide saatmise eest.
+Peakohtunikku abistavad 2 abikohtunikku, kes vastutavad kummagi korvi eest.
 
 === Peakohtunik
 :xrefstyle: basic
@@ -359,7 +305,6 @@ Vigade korral pannakse seisma ka aeg.
 
 == Punktiarvestus
 
-Punkte loetakse vooru lõpus.
 Iga korvi visatud pall annab ühe punkti.
 Audis pallidega punkte teenida ei saa.
 Vooru võidab võistkond, kellel on vooru lõpus rohkem punkte.
@@ -369,7 +314,7 @@ Vooru võidab võistkond, kellel on vooru lõpus rohkem punkte.
 
 Vabaviskevoore mängitakse minimaalselt 3 korda.
 Robotid peavad igas vabaviskevoorus teostama ühe vabaviske.
-Vabavisete jaoks kasutatakse ühte korvi, mis valitakse kohtuniku poolt mündiviskega.
+Vabavisete jaoks kasutatakse ühte korvi, mis valitakse kohtuniku poolt.
 Väljakul asetseb ainult 1 pall, mis paikneb 1300 mm kaugusel korvist ja on mõlema korviga ühel joonel (vaata <<image_court_dimensions>>).
 Vabaviskevoorude võitjaks on rohkem korve visanud robot.
 Kui esimese kolme vabaviskevooruga pole võitja selgunud, toimuvad järgnevad viskevoorud esimese vooru võiduni.
@@ -390,14 +335,10 @@ Tehnilise ülevaatuse käigus kontrollib peakohtunik roboti vastavust nõuetele 
 Võistlusvõimekuse näitamiseks peab robot üksinda 5 palliga võistlusväljakul suutma 60 sekundi jooksul visata korvi vähemalt 1 palli.
 Nõuetele mittevastavad või võistlusvõimetud robotid võistlusele ei pääse.
 
-== Võistlusele registreerimine
-
-Registreerimisvorm avatakse vähemalt kuu aega enne võistlust.
-
 == Organiseerimine
 
 . Robot peab olema registreeritud enne võistlust.
-Registreerimine sisaldab tehnilist ülevaatust ja roboti märgistamist numbriga.
+Registreerimine sisaldab tehnilist ülevaatust.
 . Tehniline ülevaatus peab olema läbitud enne korraldajate poolt määratud aega.
 . Võistlusel tekkivaid küsimusi ja probleeme lahendab kohtunik.
 . Pretensioone võib esitada kuni järgmise mängu alguseni.
