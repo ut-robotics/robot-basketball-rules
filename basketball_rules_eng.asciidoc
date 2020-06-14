@@ -289,7 +289,6 @@ The tasks of the head referee include:
 * Gives the order to the team to remove robot from the game until the end of the round if any of the requirements given in <<robot_control_requirements>> are violated.
 * Ends the game round if both robots have violated the requirements given in <<robot_control_requirements>>.
 * If necessary, can stop or end the game if there appears to be any external disruptive factors.
-* Delivers the game result and other relevant information, that may influence the game result, to the competition organisers after the game.
 * May remove misbehaving team members from the competition area.
 * Ensures that the spectators do not enter the competition area (see <<being_in_competition_area>>).
 

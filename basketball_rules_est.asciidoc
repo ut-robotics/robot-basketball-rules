@@ -290,7 +290,6 @@ Peakohtuniku ülesanded on järgmised:
 * Lõpetab mänguvooru, kui mõlemad robotid on rikkunud peatükis <<robot_control_requirements>> toodud nõudeid.
 * Võib vajadusel peatada või lõpetada mängu väliste segavate tegurite ilmnemisel.
 * Võib eemaldada võistlejate alast halvasti käituvaid võistkonnaliikmeid.
-* Pärast mängu edastab võistluse korraldajatele mängu tulemuse ja muu olulise info, mis võiks mõjutada võistlustulemust.
 * Tagab, et pealtvaatajad ei sisene võistlusalasse (vaata <<being_in_competition_area>>).
 
 Peakohtuniku otsused seoses mängu ja voorudega on lõplikud.
