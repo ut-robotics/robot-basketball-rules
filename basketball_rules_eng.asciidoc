@@ -64,7 +64,7 @@ Court is divided into two halves with a white centerline.
 
 == AR markers
 
-There are two 160 x 160 mm ARUCO markers on both backboards.
+There are two 160 x 160 mm ArUco markers on both backboards.
 Markers are attached to the bottom corners of the backboard.
 Markers can be seen in <<marker_basket_1_left>>, <<marker_basket_1_right>>, <<marker_basket_2_left>> and <<marker_basket_2_right>>.
 Exact marker positions and dimensions can be found in <<image_basket_dimensions>>.
@@ -76,7 +76,7 @@ Markers are identified by marker's ID:
 * *21* on the *left* of the *blue* basket
 * *22* on the *right* of the *blue* basket
 
-ARUCO marker generator can be found here: http://chev.me/arucogen/.
+ArUco marker generator can be found here: http://chev.me/arucogen/.
 
 [.float-group]
 --

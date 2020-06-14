@@ -64,7 +64,7 @@ Väljak on valge keskjoonega jagatud kaheks pooleks.
 
 == AR markerid
 
-Mõlema korvilaua külge on kinnitatud kaks 160 x 160 mm suurust ARUCO markerit.
+Mõlema korvilaua külge on kinnitatud kaks 160 x 160 mm suurust ArUco markerit.
 Markerid on kinnitatud tagalaua alumistele nurkadele.
 Markerid on näha <<marker_basket_1_left>>, <<marker_basket_1_right>>, <<marker_basket_2_left>> ja <<marker_basket_2_right>>.
 Markerite täpne asetus koos mõõtmetega on leitav <<image_basket_dimensions>>.
@@ -76,7 +76,7 @@ Markerid on tuvastatavad markeri ID järgi:
 * *21* *vasakul* pool *sinist* korvi
 * *22* *paremal* pool *sinist* korvi
 
-ARUCO markerite generaator on leitav: http://chev.me/arucogen/.
+ArUco markerite generaator on leitav: http://chev.me/arucogen/.
 
 [.float-group]
 --
