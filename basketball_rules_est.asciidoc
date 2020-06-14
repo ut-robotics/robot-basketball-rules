@@ -24,7 +24,7 @@ Väljakul on korraga 2 robotit, kelle eesmärgiks on teatud aja jooksul saada v�
 Võistlusväljaku üldist plaani vaata <<image_court_angle>>.
 
 [#image_court_angle]
-.Väljak ruumiliselt
+.Võistlusala ruumiliselt
 image::images/competition_area_angled.svg[width=1000]
 
 === Mõõtmed
@@ -32,7 +32,7 @@ image::images/competition_area_angled.svg[width=1000]
 Võistlusala on jagatud kolmeks erinevaks tsooniks.
 
 . Mänguväljak on ristkülikukujuline, pikkusega 4600 mm ja laiusega 3100 mm.
-Ääremärgistus (valged ja mustad jooned) kuulub võistlusala sisse.
+Ääremärgistus (valged ja mustad jooned) on osa mänguväljakust.
 . Mänguala sisaldab võistlusala ja lisatsooni robotitele liikumiseks.
 Ala pikkus on 6100 mm ja laius 4000 mm.
 . Võistlejateala on 950 - 1000 mm laiune musta värvi vaip mänguala ümber.
@@ -57,10 +57,10 @@ image::images/court_markings.svg[width=610]
 .Võistlusala mõõtmed
 image::images/competition_area_top_with_dimensions_et.svg[width=900]
 
-Võistlusala on märgistatud valgete joontega ning lisaks ka mustade joontega võistlusala välimises servas.
-Jooned (mustad ja valged) kuuluvad võistlusala juurde.
+Mänguväljak on märgistatud valgete joontega ning lisaks ka mustade joontega mänguala välimises servas.
+Jooned (mustad ja valged) kuuluvad mänguväljaku juurde.
 Kõik jooned on 50 mm laiused.
-Väljak on valge keskjoonega jagatud kaheks pooleks.
+Mänguväljak on valge keskjoonega jagatud kaheks pooleks.
 
 == AR markerid
 
@@ -103,10 +103,10 @@ image::images/marker_basket_2_right.svg[width=160]
 
 == Korvid
 
-Korvid on paigutatud väljaku otsajoonte (lühemate servade) keskele väljakuga samale tasapinnale.
+Korvid on paigutatud mänguväljaku otsajoonte (lühemate servade) keskele väljakuga samale tasapinnale.
 Tagalaua korvipoolne sein on kohakuti musta joone välimise servaga.
-Väljakul on üks korv märgistatud sinise (värvikood: RAL5015) ning teine korv magenta (värvikood: RAL4010) mattvärviga.
-Väljakut koos korvidega on võimalik näha <<image_court_angle>> ja <<image_court_dimensions>>.
+Mänguväljakul on üks korv märgistatud sinise (värvikood: RAL5015) ning teine korv magenta (värvikood: RAL4010) mattvärviga.
+Mänguväljakut koos korvidega on võimalik näha <<image_court_angle>> ja <<image_court_dimensions>>.
 
 Korv on värviline toru järgmiste mõõtudega:
 
@@ -209,7 +209,7 @@ Indikaatorid ja andurites kasutatavad LED-id on lubatud, kui need vastavad väli
 :xrefstyle: short
 
 Robot, mis ei vasta punktides <<robot_requirements_general>> - <<robot_requirements_electrical>> nimetatud nõuetele, ei pääse võistlusele.
-Samade nõuete vastu eksimine turniiri käigus toob kaasa roboti kõrvaldamise kogu turniirilt.
+Samade nõuete vastu eksimine turniiri käigus toob kaasa roboti kõrvaldamise kogu võistluselt.
 
 [#robot_control_requirements]
 === Roboti juhtimise nõuded
@@ -249,7 +249,7 @@ Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelat
 . Teise vea korral:
 * kohtunik peatab mängu ning ajavõtt peatatakse;
 * robotid peavad peatuma;
-* karistuse saanud *robot tuleb eemaldada väljakult*;
+* karistuse saanud *robot tuleb eemaldada mängualalt*;
 * vastasrobot tuleb
 ** jätta samale asukohale
 või paigutada mustale joonele võistkonna poolt valitud kohta

@@ -24,7 +24,7 @@ There are 2 robots on the court, which try to get as many balls into the opponen
 General view of the basketball court is shown in <<image_court_angle>>.
 
 [#image_court_angle]
-.Court
+.Competition area from an angle
 image::images/competition_area_angled.svg[width=1000]
 
 === Dimensions
@@ -60,7 +60,7 @@ image::images/competition_area_top_with_dimensions_en.svg[width=900]
 Playing court is marked with white and black lines.
 Lines (black and white) are part of the playing court.
 All lines are 50 mm wide.
-Court is divided into two halves with a white centerline.
+Playing court is divided into two halves with a white centerline.
 
 == AR markers
 
@@ -103,10 +103,10 @@ image::images/marker_basket_2_right.svg[width=160]
 
 == Baskets
 
-Baskets are placed in the middle of the endlines (shorter edges) on the court.
+Baskets are placed in the middle of the endlines (shorter edges) on the playing court.
 Backboard's side with the basket is in line with the black line's outer edge.
 The colours of the baskets are matt blue (colour code: RAL5015) and matt magenta (colour code: RAL4010).
-Court with baskets can be seen in <<image_court_angle>> and <<image_court_dimensions>>.
+Playing court with baskets can be seen in <<image_court_angle>> and <<image_court_dimensions>>.
 
 Basket is a painted pipe with following dimensions:
 
