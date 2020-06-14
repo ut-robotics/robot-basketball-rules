@@ -242,8 +242,8 @@ Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelat
 * karistuse saanud *robot tuleb paigutada oma stardipositsioonile* (vaata <<game_round>>);
 * vastasrobot tuleb
 ** jätta samale asukohale
-** või paigutada mustale joonele võistkonna poolt valitud kohta
-(kui robot hoiab palli tuleb see jätta sinna, kus see asus vea tegemise ajal);
+** või paigutada mustale joonele võistkonna poolt valitud kohta.
+Kui robot hoiab palli tuleb see jätta sinna, kus see asus vea tegemise ajal;
 * kohtunik jätkab mängu ning aja võtmine jätkub.
 
 . Teise vea korral:
@@ -253,7 +253,7 @@ Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelat
 * vastasrobot tuleb
 ** jätta samale asukohale
 või paigutada mustale joonele võistkonna poolt valitud kohta
-(kui robot hoiab palli tuleb see jätta sinna, kus see asus vea tegemise ajal);
+Kui robot hoiab palli tuleb see jätta sinna, kus see asus vea tegemise ajal;
 * kohtunik jätkab mängu ning aja võtmine jätkub.
 
 . Vead kehtivad vooru lõpuni.
@@ -321,7 +321,7 @@ Mäng koosneb kolmest või kahest (kui mõlemad voorud on võitnud sama robot) p
 Mängu võitjaks on rohkem põhivoorude võite kogunud robot,
 põhivoorude viigi korral esimesena lisavooru võitnud robot 
 ja lisavoorude viigi korral vabaviskevoorude võitja.
-Šveitsi süsteemi mängud võivad lõppeda viigiga ehk  lisavoore ja vabaviskeid ei mängita.
+Šveitsi süsteemi mängud võivad lõppeda viigiga ehk lisavoore ja vabaviskeid ei mängita.
 
 Robotid peavad vahetama iga vooru järel pooli.
 Poolte vahetamiseks on aega 2 minutit.

@@ -47,7 +47,7 @@ Competition area is surrounded by white walls which are at least 450 mm high.
 
 ==== Court markings
 
-Court markings area shown in  <<image_court_markings>> and competition area dimensions in <<image_court_dimensions>>.
+Court markings are shown in <<image_court_markings>> and competition area dimensions in <<image_court_dimensions>>.
 
 [#image_court_markings]
 .Court markings
@@ -242,8 +242,8 @@ It is not allowed to damage the court and the opponent by the confused robot;
 * the robot, which received the foul, *must be moved to the starting position* (see <<game_round>>);
 * the opponent robot
 ** stays in the same place
-** or is moved onto the black line at the place chosen by the team
-(if the robot is holding a ball, then it must be left where it was at the time the foul was called);
+** or is moved onto the black line at the place chosen by the team.
+If the robot is holding a ball, then it must be left where it was at the time the foul was called;
 * referee will resume the game and the game's time will continue from where it was stopped.
 
 . On second foul:
@@ -252,8 +252,8 @@ It is not allowed to damage the court and the opponent by the confused robot;
 * the robot, which received the foul, *must be removed from the playing area*;
 * the opponent robot
 ** stays in the same place
-** or is moved onto the black line at the place chosen by the team
-(if the robot is holding a ball, then it must be left where it was at the time the foul was called);
+** or is moved onto the black line at the place chosen by the team.
+If the robot is holding a ball, then it must be left where it was at the time the foul was called;
 * referee will resume the game and the game's time will continue from where it was stopped.
 
 . Fouls are valid until the end of the round.
@@ -289,8 +289,8 @@ The tasks of the head referee include:
 * Gives the order to the team to remove robot from the game until the end of the round if any of the requirements given in <<robot_control_requirements>> are violated.
 * Ends the game round if both robots have violated the requirements given in <<robot_control_requirements>>.
 * If necessary, can stop or end the game if there appears to be any external disruptive factors.
-* May remove misbehaving team members from the competitors area.
 * Delivers the game result and other relevant information, that may influence the game result, to the competition organisers after the game.
+* May remove misbehaving team members from the competition area.
 * Ensures that the spectators do not enter the competition area (see <<being_in_competition_area>>).
 
 The head referee's decisions related to the game and rounds are final.
@@ -347,7 +347,7 @@ Round is won by having more points.
 :xrefstyle: short
 
 At least 3 free throw rounds must be played.
-Both robots must perform a one free throw in each round.
+Both robots must perform one free throw in each round.
 Only one basket is used and it will be chosen by the referee.
 Only 1 ball is on the court and it is placed 1300 mm away from the basket on the same line with both of the baskets (see <<image_court_dimensions>>).
 The winner of free throw rounds is the robot which has scored more baskets.
