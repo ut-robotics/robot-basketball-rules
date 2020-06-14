@@ -43,9 +43,7 @@ Ala pikkus on 6100 mm ja laius 4000 mm.
 Väljaku mänguala katteks on oranž viltmatt (ExpoRips 2007).
 Vaibaalune pind on ühtlane ja kõva.
 Väljaku võistlejateala on must vaip.
-Võistlejateala välispiiril on vähemalt 450 mm kõrgused valged seinad.
-Võistlejatealal tohivad liikuda ainult kohtunikud, toimuva mängu võistlejad ja võistluse korraldajad, pealtvaatajatele on seal liikumine keelatud.
-Võistluse ajal vastaval alal liikujate riietuses ei tohi olla väljaku ega korvide värve (v.a must).
+Võistlusala välispiiril on vähemalt 450 mm kõrgused valged seinad.
 
 ==== Võistlusala märgistus
 
@@ -141,6 +139,39 @@ Mängude jaoks koostatakse vähemalt 10 erinevat pallide paiknemise kombinatsioo
 Mängu jooksul on väljakul korraga võistlemas 2 robotit, 1 robot kummagi võistkonna kohta.
 Võistkonna suurus registreerimisel on kuni 6 liiget.
 
+[#being_in_competition_area]
+== Võistlusalas viibimine
+
+=== Robotid
+
+. Mängu ajal võivad võistlusalas viibida ainult selles mängus võistlevad robotid.
+
+=== Kõik inimesed
+
+. Mängude ajal ei tohi võistlusalas liikujate riietuses olla väljaku ega korvide värve (v.a must).
+
+=== Võistkonna liikmed
+
+. Mängu kestel on lubatud võistlusalas viibida ainult võistlevate võistkondade liikmetel.
+. Käimasoleva mängu ajal on roboti käivitamiseks lubatud mängualas (väljaspool mänguväljakut) viibida mõlemast võistkonnast ainult ühel liikmel.
+Pärast roboti käivitamist tuleb võistlusalast lahkuda.
+. Kui mänguvoor on peatatud, on kummastki võistkonnast lubatud võistlusalas viibida kuni kahel liikmel.
+. Mänguvoorude vahelisel ajal on lubatud võistlusalas viibida kogu võistkonnal.
+. Mängude vahelisel ajal on lubatud võistlusalas viibida ainult algava mängu võistkondadel.
+
+=== Kohtunikud
+
+. Kohtunikel on lubatud võistlusalas viibida igal ajal.
+. Kohtunikel ei ole lubatud mängualas viibida käimasoleva mänguvooru ajal.
+
+=== Korraldajad
+
+. Korraldajatel on lubatud võistlusalas viibida ainult voorude ja mängude vahelisel ajal.
+
+=== Ülejäänud inimesed
+
+. Võistlusalas pole lubatud viibida ainult võistlejatel, kohtunikel ja korraldajatel.
+
 [#robot_requirements]
 == Robotile esitatavad nõuded
 
@@ -193,13 +224,14 @@ Audis palliga visatud korvi ei loeta.
 ==== Roboti karistamine ja eemaldamine
 :xrefstyle: basic
 
-. Robotile määratakse viga kui robot:
-* hoiab korraga rohkem kui ühte palli;
-* liigutab korvi;
-* kahjustab väljakut või selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid või teisi võistlusväljakut ümbritsevaid inimesi.
+. Robotile määratakse viga kui:
+* robot hoiab korraga rohkem kui ühte palli;
+* robot liigutab korvi;
+* robot kahjustab väljakut või selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid või teisi võistlusväljakut ümbritsevaid inimesi.
 Lubatud on mittepahatahtlik nügimine.
 Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelatud;
-* lahkub mängualast (üle poole roboti kerest on pealtvaates mängualast väljas).
+* robot lahkub mängualast (üle poole roboti kerest on pealtvaates mängualast väljas);
+* roboti võistkonnaliige rikub väljakul viibimise reegleid (vaata <<being_in_competition_area>>);
 
 . Esimese vea korral:
 * kohtunik peatab mängu ning ajavõtt peatatakse;
@@ -256,8 +288,8 @@ Peakohtuniku ülesanded on järgmised:
 * Võib auti läinud pallid mängu jooksul ära korjata eeldusel, et ükski robot seda palli hetkel ei käsitle.
 * Võib vajadusel peatada või lõpetada mängu väliste segavate tegurite ilmnemisel.
 * Võib eemaldada võistlejate alast halvasti käituvaid võistkonnaliikmeid.
-* Tagab, et pealtvaatajad ei sisene võistlejate alasse (vaata <<court_surface>>).
 * Pärast mängu edastab võistluse korraldajatele mängu tulemuse ja muu olulise info, mis võiks mõjutada võistlustulemust.
+* Tagab, et pealtvaatajad ei sisene võistlusalasse (vaata <<being_in_competition_area>>).
 
 Peakohtuniku otsused seoses mängu ja voorudega on lõplikud.
 Peakohtunikul on õigus muuta oma otsust olulise lisainfo ilmnemisel.
