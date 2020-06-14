@@ -133,6 +133,7 @@ Balls are green mini squash balls with a mass of around 24 grams and a diameter 
 Each round starts with 11 balls on the court.
 The placement of the balls is random, but symmetrical for both robots with respect to the diagonal of the court.
 At least 10 different ball placement combinations must be prepared for the games.
+During a game round, balls can be moved only by the competing robots of that game.
 
 == Number of robots and team size
 
@@ -232,6 +233,7 @@ Non-malicious pushing is allowed.
 It is not allowed to damage the court and the opponent by the confused robot;
 * the robot leaves the playing area (over half of the robot is out of the playing area, viewed from the top);
 * robot's team member breaks the rules of being in the competition area (see <<being_in_competition_area>>);
+* robot's team member moves the balls in the competition area during game's round.
 
 . On first foul:
 * the referee stops the game and the time;
@@ -285,7 +287,6 @@ The tasks of the head referee include:
 * Informs the players and assistant referees about the beginning and end of the round (see <<game_round>>).
 * Gives the order to the team to remove robot from the game until the end of the round if any of the requirements given in <<robot_control_requirements>> are violated.
 * Ends the game round if both robots have violated the requirements given in <<robot_control_requirements>>.
-* May remove the balls that are out of play during the game provided that none of the robots is operating with the ball at the moment.
 * If necessary, can stop or end the game if there appears to be any external disruptive factors.
 * May remove misbehaving team members from the competitors area.
 * Delivers the game result and other relevant information, that may influence the game result, to the competition organisers after the game.

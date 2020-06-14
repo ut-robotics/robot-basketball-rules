@@ -133,6 +133,7 @@ Pallid on rohelised mini __squash__'i pallid massiga ligikaudu 24 g ja diameetri
 Iga vooru alguses on väljakul 11 palli.
 Pallide asetus on juhuslik, aga mõlema roboti jaoks sümmeetriline väljaku diagonaali suhtes.
 Mängude jaoks koostatakse vähemalt 10 erinevat pallide paiknemise kombinatsiooni.
+Palle võivad mänguvooru ajal liigutada ainult selles mängus võistlevad robotid.
 
 == Robotite arv ja võistkonna suurus
 
@@ -232,6 +233,7 @@ Lubatud on mittepahatahtlik nügimine.
 Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelatud;
 * robot lahkub mängualast (üle poole roboti kerest on pealtvaates mängualast väljas);
 * roboti võistkonnaliige rikub väljakul viibimise reegleid (vaata <<being_in_competition_area>>);
+* roboti võistkonnaliige liigutab mänguvooru ajal võistlusalas olevaid palle.
 
 . Esimese vea korral:
 * kohtunik peatab mängu ning ajavõtt peatatakse;
@@ -285,7 +287,6 @@ Peakohtuniku ülesanded on järgmised:
 * Informeerib mängijaid ja abikohtunikke vooru algusest ja lõpust (vaata <<game_round>>).
 * Annab käsu võistkonnaliikmele roboti eemaldamiseks mängust vooru lõpuni peatükis <<robot_control_requirements>> toodud nõuete eksimisel.
 * Lõpetab mänguvooru, kui mõlemad robotid on rikkunud peatükis <<robot_control_requirements>> toodud nõudeid.
-* Võib auti läinud pallid mängu jooksul ära korjata eeldusel, et ükski robot seda palli hetkel ei käsitle.
 * Võib vajadusel peatada või lõpetada mängu väliste segavate tegurite ilmnemisel.
 * Võib eemaldada võistlejate alast halvasti käituvaid võistkonnaliikmeid.
 * Pärast mängu edastab võistluse korraldajatele mängu tulemuse ja muu olulise info, mis võiks mõjutada võistlustulemust.
