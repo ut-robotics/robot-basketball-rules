@@ -133,6 +133,7 @@ Balls are green mini squash balls with a mass of around 24 grams and a diameter 
 Each round starts with 11 balls on the court.
 The placement of the balls is random, but symmetrical for both robots with respect to the diagonal of the court.
 At least 10 different ball placement combinations must be prepared for the games.
+Ball placement will not change during a game.
 During a game round, balls can be moved only by the competing robots of that game.
 
 == Number of robots and team size

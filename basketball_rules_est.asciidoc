@@ -133,6 +133,7 @@ Pallid on rohelised mini __squash__'i pallid massiga ligikaudu 24 g ja diameetri
 Iga vooru alguses on väljakul 11 palli.
 Pallide asetus on juhuslik, aga mõlema roboti jaoks sümmeetriline väljaku diagonaali suhtes.
 Mängude jaoks koostatakse vähemalt 10 erinevat pallide paiknemise kombinatsiooni.
+Pallide asetus ei muutu mängu jooksul.
 Palle võivad mänguvooru ajal liigutada ainult selles mängus võistlevad robotid.
 
 == Robotite arv ja võistkonna suurus
