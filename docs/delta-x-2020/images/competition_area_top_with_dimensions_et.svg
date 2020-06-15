@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9040 6540">
+  <g>
+    <g transform="translate(0, 0)">
+      <g transform="translate(20, 20)">
+        <rect x="0" y="0" width="8100" height="6000" fill="black" stroke="none" stroke-width="0" />
+      </g>
+      <g transform="translate(0, 0)">
+        <rect x="10" y="10" width="8120" height="6020" fill="black" stroke="rgb(200, 200, 200)" stroke-width="20" />
+      </g>
+      <g transform="translate(1020, 1020)">
+        <rect x="0" y="0" width="6100" height="4000" fill="darkorange" stroke="none" stroke-width="0" />
+      </g>
+      <g transform="translate(1770, 1470)">
+        <rect x="0" y="0" width="4600" height="3100" fill="darkorange" stroke="none" stroke-width="0" />
+        <rect x="25" y="25" width="4550" height="3050" fill="none" stroke="black" stroke-width="50" />
+        <rect x="75" y="75" width="4450" height="2950" fill="none" stroke="white" stroke-width="50" />
+        <line x1="2300" y1="100" x2="2300" y2="3000" stroke="white" stroke-width="50" />
+      </g>
+      <g transform="translate(1754, 2690) rotate(0)">
+        <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
+        <circle
+          cx="96"
+          cy="330"
+          r="77"
+          fill="none"
+          stroke="rgb(188, 64, 119)"
+          stroke-width="6"
+          stroke-dasharray="none"
+        />
+      </g>
+      <g transform="translate(6386, 3350) rotate(180)">
+        <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
+        <circle cx="96" cy="330" r="77" fill="none" stroke="rgb(0,124,176)" stroke-width="6" stroke-dasharray="none" />
+      </g>
+    </g>
+    <g>
+      <g>
+        <g>
+          <line x1="28" y1="6180" x2="8112" y2="6180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line
+            x1="19.999999999999996"
+            y1="6130"
+            x2="20.000000000000004"
+            y2="6230"
+            stroke="rgba(0,0,0,0.5)"
+            stroke-width="16"
+          />
+          <line x1="8120" y1="6130" x2="8120" y2="6230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="4070"
+          y="6280"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="middle"
+          alignment-baseline="hanging"
+          font-family="sans-serif"
+        >
+          8100
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="8280" y1="6012" x2="8280" y2="28" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="8230" y1="6020" x2="8330" y2="6020" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="8230" y1="20" x2="8330" y2="20" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="8380"
+          y="3020"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="start"
+          alignment-baseline="central"
+          font-family="sans-serif"
+        >
+          6000
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="1028" y1="5180" x2="7112" y2="5180" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="1020" y1="5130" x2="1020" y2="5230" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7120" y1="5130" x2="7120" y2="5230" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="4070"
+          y="5280"
+          font-size="240"
+          fill="rgba(255,255,255,0.7)"
+          text-anchor="middle"
+          alignment-baseline="hanging"
+          font-family="sans-serif"
+        >
+          6100
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="7280" y1="5012" x2="7280" y2="1028" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7230" y1="5020" x2="7330" y2="5020" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7230" y1="1020" x2="7330" y2="1020" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="7380"
+          y="3020"
+          font-size="240"
+          fill="rgba(255,255,255,0.7)"
+          text-anchor="start"
+          alignment-baseline="central"
+          font-family="sans-serif"
+        >
+          4000
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="1778" y1="4650" x2="6362" y2="4650" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1770" y1="4600" x2="1770" y2="4700" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6370" y1="4600" x2="6370" y2="4700" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="4070"
+          y="4750"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="middle"
+          alignment-baseline="hanging"
+          font-family="sans-serif"
+        >
+          4600
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="6450" y1="4562" x2="6450" y2="1478" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6400" y1="4570" x2="6500" y2="4570" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6400" y1="1470" x2="6500" y2="1470" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="6550"
+          y="3020"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="start"
+          alignment-baseline="central"
+          font-family="sans-serif"
+        >
+          3100
+        </text>
+      </g>
+      <circle cx="3230" cy="3020" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <circle cx="4910" cy="3020" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <g>
+        <g>
+          <line x1="1938" y1="3180" x2="3222" y2="3180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1930" y1="3130" x2="1930" y2="3230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="3230" y1="3130" x2="3230" y2="3230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="2580"
+          y="3280"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="middle"
+          alignment-baseline="hanging"
+          font-family="sans-serif"
+        >
+          1300
+        </text>
+      </g>
+      <text
+        x="3230"
+        y="2940"
+        font-size="120"
+        fill="rgba(0,0,0,0.7)"
+        text-anchor="middle"
+        alignment-baseline="baseline"
+        font-family="sans-serif"
+      >
+        Palli asukoht enne vabaviset
+      </text>
+      <text
+        x="120"
+        y="120"
+        font-size="200"
+        fill="rgba(255,255,255,0.7)"
+        text-anchor="start"
+        alignment-baseline="hanging"
+        font-family="sans-serif"
+      >
+        Võistlusala
+      </text>
+      <text
+        x="1120"
+        y="1120"
+        font-size="200"
+        fill="rgba(0,0,0,0.7)"
+        text-anchor="start"
+        alignment-baseline="hanging"
+        font-family="sans-serif"
+      >
+        Mänguala
+      </text>
+      <text
+        x="1970"
+        y="1670"
+        font-size="200"
+        fill="rgba(0,0,0,0.7)"
+        text-anchor="start"
+        alignment-baseline="hanging"
+        font-family="sans-serif"
+      >
+        Mänguväljak
+      </text>
+    </g>
+  </g>
+</svg>

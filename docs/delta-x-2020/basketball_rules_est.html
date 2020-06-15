@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Basketball Rules</title>
+<title>Korvpalli Reeglid</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -470,821 +470,767 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
         </style></head>
 <body class="article"><div id="top-links">
             <div id="tags"><div>
-        <span class="tag"><a href="../delta-x-2020/basketball_rules_eng.html">delta-x-2020</a></span>
-        <span><a href="https://github.com/ut-robotics/robot-basketball-rules/compare/robotex2019...delta-x-2020">Compare</a></span>
-    </div><div>
-        <span class="tag"><span class="tag-name">robotex2019</span></span>
+        <span class="tag"><span class="tag-name">delta-x-2020</span></span>
         <span></span>
     </div><div>
-        <span class="tag"><a href="../robotex2018/basketball_rules_eng.html">robotex2018</a></span>
-        <span><a href="https://github.com/ut-robotics/robot-basketball-rules/compare/robotex2018...robotex2019">Compare</a></span>
+        <span class="tag"><a href="../robotex2019/basketball_rules_est.html">robotex2019</a></span>
+        <span><a href="https://github.com/ut-robotics/robot-basketball-rules/compare/robotex2019...delta-x-2020">V&#xF5;rdle</a></span>
+    </div><div>
+        <span class="tag"><a href="../robotex2018/basketball_rules_est.html">robotex2018</a></span>
+        <span><a href="https://github.com/ut-robotics/robot-basketball-rules/compare/robotex2018...delta-x-2020">V&#xF5;rdle</a></span>
     </div></div>
-            <a id="source-link" href="https://github.com/ut-robotics/robot-basketball-rules/blob/robotex2019/basketball_rules_eng.adoc">Source file</a>
-            <a id="repo-link" href="https://github.com/ut-robotics/robot-basketball-rules">Repository</a>
-            <div class="languages"><a href="../robotex2019/basketball_rules_est.html">est</a><span>eng</span></div>
+            <a id="source-link" href="https://github.com/ut-robotics/robot-basketball-rules/blob/delta-x-2020/basketball_rules_est.asciidoc">L&#xE4;htefail</a>
+            <a id="repo-link" href="https://github.com/ut-robotics/robot-basketball-rules">K&#xF5;ik l&#xE4;htefailid</a>
+            <div class="languages"><span>est</span><a href="../delta-x-2020/basketball_rules_eng.html">eng</a></div>
         </div>
 <div id="header">
-<h1>Basketball Rules</h1>
+<h1>Korvpalli Reeglid</h1>
 <div id="toc" class="toc">
-<div id="toctitle">Table of contents</div>
+<div id="toctitle">Sisukord</div>
 <ul class="sectlevel1">
-<li><a href="#_introduction">1. Introduction</a></li>
-<li><a href="#_court">2. Court</a>
+<li><a href="#_tutvustus">1. Tutvustus</a></li>
+<li><a href="#_v&#xE4;ljak">2. V&#xE4;ljak</a>
 <ul class="sectlevel2">
-<li><a href="#_general">2.1. General</a></li>
-<li><a href="#_dimensions">2.2. Dimensions</a></li>
-<li><a href="#court_surface">2.3. Court surface</a>
+<li><a href="#_&#xFC;ldine">2.1. &#xDC;ldine</a></li>
+<li><a href="#_m&#xF5;&#xF5;tmed">2.2. M&#xF5;&#xF5;tmed</a></li>
+<li><a href="#court_surface">2.3. V&#xE4;ljaku kate</a>
 <ul class="sectlevel3">
-<li><a href="#_court_markings">2.3.1. Court markings</a></li>
+<li><a href="#_v&#xF5;istlusala_m&#xE4;rgistus">2.3.1. V&#xF5;istlusala m&#xE4;rgistus</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_ar_markers">3. AR markers</a></li>
-<li><a href="#_baskets">4. Baskets</a></li>
-<li><a href="#balls">5. Balls</a>
+<li><a href="#_ar_markerid">3. AR markerid</a></li>
+<li><a href="#_korvid">4. Korvid</a></li>
+<li><a href="#balls">5. Pallid</a>
 <ul class="sectlevel2">
-<li><a href="#_dimensions_and_properties">5.1. Dimensions and properties</a></li>
-<li><a href="#_placement_of_the_balls">5.2. Placement of the balls</a></li>
+<li><a href="#_m&#xF5;&#xF5;dud_ja_omadused">5.1. M&#xF5;&#xF5;dud ja omadused</a></li>
+<li><a href="#_pallide_asetus">5.2. Pallide asetus</a></li>
 </ul>
 </li>
-<li><a href="#_number_of_robots_and_team_size">6. Number of robots and team size</a></li>
-<li><a href="#robot_requirements">7. Requirements for the robot</a>
+<li><a href="#_robotite_arv_ja_v&#xF5;istkonna_suurus">6. Robotite arv ja v&#xF5;istkonna suurus</a></li>
+<li><a href="#being_in_competition_area">7. V&#xF5;istlusalas viibimine</a>
 <ul class="sectlevel2">
-<li><a href="#robot_requirements_general">7.1. General requirements</a></li>
-<li><a href="#robot_requirements_mechanical">7.2. Mechanical requirements for the robot</a></li>
-<li><a href="#robot_requirements_electrical">7.3. Electronic requirements for the robot</a></li>
-<li><a href="#_robot_access_to_the_competition">7.4. Robot access to the competition</a></li>
-<li><a href="#robot_control_requirements">7.5. Requirements for robot control</a>
+<li><a href="#_robotid">7.1. Robotid</a></li>
+<li><a href="#_k&#xF5;ik_inimesed">7.2. K&#xF5;ik inimesed</a></li>
+<li><a href="#_v&#xF5;istkonna_liikmed">7.3. V&#xF5;istkonna liikmed</a></li>
+<li><a href="#_kohtunikud">7.4. Kohtunikud</a></li>
+<li><a href="#_korraldajad">7.5. Korraldajad</a></li>
+<li><a href="#_&#xFC;lej&#xE4;&#xE4;nud_inimesed">7.6. &#xDC;lej&#xE4;&#xE4;nud inimesed</a></li>
+</ul>
+</li>
+<li><a href="#robot_requirements">8. Robotile esitatavad n&#xF5;uded</a>
+<ul class="sectlevel2">
+<li><a href="#robot_requirements_general">8.1. &#xDC;ldised n&#xF5;uded</a></li>
+<li><a href="#robot_requirements_mechanical">8.2. Roboti mehaanilised n&#xF5;uded</a></li>
+<li><a href="#robot_requirements_electrical">8.3. Roboti elektroonilised n&#xF5;uded</a></li>
+<li><a href="#_roboti_p&#xE4;&#xE4;s_v&#xF5;istlusele">8.4. Roboti p&#xE4;&#xE4;s v&#xF5;istlusele</a></li>
+<li><a href="#robot_control_requirements">8.5. Roboti juhtimise n&#xF5;uded</a>
 <ul class="sectlevel3">
-<li><a href="#_definitions">7.5.1. Definitions</a></li>
-<li><a href="#_general_2">7.5.2. General</a></li>
-<li><a href="#_robot_penalisation_and_disqualification">7.5.3. Robot penalisation and disqualification</a></li>
+<li><a href="#_m&#xF5;isted">8.5.1. M&#xF5;isted</a></li>
+<li><a href="#_&#xFC;ldine_2">8.5.2. &#xDC;ldine</a></li>
+<li><a href="#_roboti_karistamine_ja_eemaldamine">8.5.3. Roboti karistamine ja eemaldamine</a></li>
 </ul>
 </li>
-<li><a href="#referee_signals">7.6. Referee&#x2019;s signals</a>
-<ul class="sectlevel3">
-<li><a href="#_radio_module_and_configuration">7.6.1. Radio module and configuration</a></li>
-<li><a href="#_commands_from_the_referees_remote_and_responding_to_them">7.6.2. Commands from the referee&#x2019;s remote and responding to them</a></li>
-<li><a href="#_referees_remote_control">7.6.3. Referee&#x2019;s remote control</a></li>
+<li><a href="#referee_signals">8.6. Kohtuniku signaalid</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_referees">8. Referees</a>
+<li><a href="#_kohtunikud_2">9. Kohtunikud</a>
 <ul class="sectlevel2">
-<li><a href="#_head_referee">8.1. Head referee</a></li>
+<li><a href="#_peakohtunik">9.1. Peakohtunik</a></li>
 </ul>
 </li>
-<li><a href="#_competition_arrangement">9. Competition arrangement</a></li>
-<li><a href="#_game_arrangement">10. Game arrangement</a></li>
-<li><a href="#game_round">11. Round arrangement</a></li>
-<li><a href="#_scoring">12. Scoring</a></li>
-<li><a href="#_free_throw_arrangement">13. Free throw arrangement</a></li>
-<li><a href="#qualification">14. Technical inspection</a></li>
-<li><a href="#_registration">15. Registration</a></li>
-<li><a href="#_organisation">16. Organisation</a></li>
+<li><a href="#_v&#xF5;istluskorraldus">10. V&#xF5;istluskorraldus</a></li>
+<li><a href="#_m&#xE4;ngukorraldus">11. M&#xE4;ngukorraldus</a></li>
+<li><a href="#game_round">12. Vooru korraldus</a></li>
+<li><a href="#_punktiarvestus">13. Punktiarvestus</a></li>
+<li><a href="#_vabavisete_korraldus">14. Vabavisete korraldus</a></li>
+<li><a href="#qualification">15. Tehniline &#xFC;levaatus</a></li>
+<li><a href="#_organiseerimine">16. Organiseerimine</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_introduction">1. Introduction</h2>
+<h2 id="_tutvustus">1. Tutvustus</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The purpose of this competition is to imitate a real basketball game.
-There are 2 robots on the court, which try to get as many balls into the opponent&#x2019;s basket as possible.</p>
+<p>V&#xF5;istluse eesm&#xE4;rk on j&#xE4;ljendada korvpalli v&#xF5;istlust.
+V&#xE4;ljakul on korraga 2 robotit, kelle eesm&#xE4;rgiks on teatud aja jooksul saada v&#xF5;imalikult palju palle vastase korvi.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_court">2. Court</h2>
+<h2 id="_v&#xE4;ljak">2. V&#xE4;ljak</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_general">2.1. General</h3>
+<h3 id="_&#xFC;ldine">2.1. &#xDC;ldine</h3>
 <div class="paragraph">
-<p>General view of the basketball court is shown in <a href="#image_court_angle">Figure 1</a>.</p>
+<p>V&#xF5;istlusv&#xE4;ljaku &#xFC;ldist plaani vaata <a href="#image_court_angle">Joonis 1</a>.</p>
 </div>
 <div id="image_court_angle" class="imageblock">
 <div class="content">
-<img src="images/court_angle.jpg" alt="court angle" width="600">
+<img src="images/competition_area_angled.svg" alt="competition area angled" width="1000">
 </div>
-<div class="title">Figure 1. Court</div>
+<div class="title">Joonis 1. V&#xF5;istlusala ruumiliselt</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_dimensions">2.2. Dimensions</h3>
+<h3 id="_m&#xF5;&#xF5;tmed">2.2. M&#xF5;&#xF5;tmed</h3>
 <div class="paragraph">
-<p>The court is divided into three different zones.</p>
+<p>V&#xF5;istlusala on jagatud kolmeks erinevaks tsooniks.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Playing court is 4600 mm long and 3100 mm wide rectangular area.
-Edge markings (white and black lines) are part of the playing court.</p>
+<p>M&#xE4;nguv&#xE4;ljak on ristk&#xFC;likukujuline, pikkusega 4600 mm ja laiusega 3100 mm.
+&#xC4;&#xE4;rem&#xE4;rgistus (valged ja mustad jooned) on osa m&#xE4;nguv&#xE4;ljakust.</p>
 </li>
 <li>
-<p>Playing area includes playing court and extra zone for robots to move around.
-Playing area is 6100 mm long and 4000 mm wide.</p>
+<p>M&#xE4;nguala sisaldab v&#xF5;istlusala ja lisatsooni robotitele liikumiseks.
+Ala pikkus on 6100 mm ja laius 4000 mm.</p>
 </li>
 <li>
-<p>Competitors area is an 950 &#x2013; 1000 mm wide black carpet around the playing area.</p>
+<p>V&#xF5;istlejateala on 950 - 1000 mm laiune musta v&#xE4;rvi vaip m&#xE4;nguala &#xFC;mber.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="court_surface">2.3. Court surface</h3>
+<h3 id="court_surface">2.3. V&#xE4;ljaku kate</h3>
 <div class="paragraph">
-<p>The surface of the playing area is orange needle felt carpet (ExpoRips 2007).
-Surface beneath the carpet is hard and even.
-Competitors area is covered with a black carpet.
-Competitors area is surrounded by white walls which are at least 450 mm high.
-There can be sponsor logos on the walls if the logos are higher than 450 mm.
-Only referees, competitors of the current game and organising team are allowed to move in the competitors area, spectators are not allowed into that area.
-During the competition, everyone in that area must wear clothes which do not have the same colours that are present in the playing area or baskets (except for black).</p>
+<p>V&#xE4;ljaku m&#xE4;nguala katteks on oran&#x17E; viltmatt (ExpoRips 2007).
+Vaibaalune pind on &#xFC;htlane ja k&#xF5;va.
+V&#xE4;ljaku v&#xF5;istlejateala on must vaip.
+V&#xF5;istlusala v&#xE4;lispiiril on v&#xE4;hemalt 450 mm k&#xF5;rgused valged seinad.</p>
 </div>
 <div class="sect3">
-<h4 id="_court_markings">2.3.1. Court markings</h4>
+<h4 id="_v&#xF5;istlusala_m&#xE4;rgistus">2.3.1. V&#xF5;istlusala m&#xE4;rgistus</h4>
 <div class="paragraph">
-<p>Court dimensions are shown in <a href="#image_court_dimensions">Figure 2</a>.</p>
+<p>V&#xE4;ljaku m&#xE4;rgistust vaata <a href="#image_court_markings">Joonis 2</a> ja v&#xF5;istlusala m&#xF5;&#xF5;tmeid vaata <a href="#image_court_dimensions">Joonis 3</a>.</p>
+</div>
+<div id="image_court_markings" class="imageblock">
+<div class="content">
+<img src="images/court_markings.svg" alt="court markings" width="610">
+</div>
+<div class="title">Joonis 2. V&#xE4;ljaku m&#xE4;rgistus</div>
 </div>
 <div id="image_court_dimensions" class="imageblock">
 <div class="content">
-<img src="images/court_dimensions_eng.png" alt="court dimensions eng" width="600">
+<img src="images/competition_area_top_with_dimensions_et.svg" alt="competition area top with dimensions et" width="900">
 </div>
-<div class="title">Figure 2. Court dimensions</div>
+<div class="title">Joonis 3. V&#xF5;istlusala m&#xF5;&#xF5;tmed</div>
 </div>
 <div class="paragraph">
-<p>Playing court is marked with white and black lines.
-Lines (black and white) are part of the playing court.
-All lines are 50 mm wide.
-Court is divided into two halves with a white centerline.</p>
+<p>M&#xE4;nguv&#xE4;ljak on m&#xE4;rgistatud valgete joontega ning lisaks ka mustade joontega m&#xE4;nguala v&#xE4;limises servas.
+Jooned (mustad ja valged) kuuluvad m&#xE4;nguv&#xE4;ljaku juurde.
+K&#xF5;ik jooned on 50 mm laiused.
+M&#xE4;nguv&#xE4;ljak on valge keskjoonega jagatud kaheks pooleks.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ar_markers">3. AR markers</h2>
+<h2 id="_ar_markerid">3. AR markerid</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are two 160 x 160 mm ARUCO markers on both backboards.
-Markers are attached to the bottom corners of the backboard.
-Exact marker positions and dimensions can be found in <a href="#image_basket_dimensions">Figure 5</a>.</p>
+<p>M&#xF5;lema korvilaua k&#xFC;lge on kinnitatud kaks 160 x 160 mm suurust ArUco markerit.
+Markerid on kinnitatud tagalaua alumistele nurkadele.
+Markerid on n&#xE4;ha <a href="#marker_basket_1_left">Joonis 4</a>, <a href="#marker_basket_1_right">Joonis 5</a>, <a href="#marker_basket_2_left">Joonis 6</a> ja <a href="#marker_basket_2_right">Joonis 7</a>.
+Markerite t&#xE4;pne asetus koos m&#xF5;&#xF5;tmetega on leitav <a href="#image_basket_dimensions">Joonis 8</a>.</p>
 </div>
 <div class="paragraph">
-<p>Markers are identified by marker&#x2019;s ID:</p>
+<p>Markerid on tuvastatavad markeri ID j&#xE4;rgi:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>11</strong> on the <strong>left</strong> of the <strong>magenta</strong> basket</p>
+<p><strong>11</strong> <strong>vasakul</strong> pool <strong>magenta</strong> korvi</p>
 </li>
 <li>
-<p><strong>12</strong> on the <strong>right</strong> of the <strong>magenta</strong> basket</p>
+<p><strong>12</strong> <strong>paremal</strong> pool <strong>magenta</strong> korvi</p>
 </li>
 <li>
-<p><strong>21</strong> on the <strong>left</strong> of the <strong>blue</strong> basket</p>
+<p><strong>21</strong> <strong>vasakul</strong> pool <strong>sinist</strong> korvi</p>
 </li>
 <li>
-<p><strong>22</strong> on the <strong>right</strong> of the <strong>blue</strong> basket</p>
+<p><strong>22</strong> <strong>paremal</strong> pool <strong>sinist</strong> korvi</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>ARUCO marker generator can be found here: <a href="http://chev.me/arucogen/" class="bare">http://chev.me/arucogen/</a>.</p>
+<p>ArUco markerite generaator on leitav: <a href="http://chev.me/arucogen/" class="bare">http://chev.me/arucogen/</a>.</p>
+</div>
+<div class="openblock float-group">
+<div class="content">
+<div id="marker_basket_1_left" class="imageblock left">
+<div class="content">
+<img src="images/marker_basket_1_left.svg" alt="marker basket 1 left" width="160">
+</div>
+<div class="title">Joonis 4. Marker 11</div>
+</div>
+<div id="marker_basket_1_right" class="imageblock left">
+<div class="content">
+<img src="images/marker_basket_1_right.svg" alt="marker basket 1 right" width="160">
+</div>
+<div class="title">Joonis 5. Marker 12</div>
+</div>
+<div id="marker_basket_2_left" class="imageblock left">
+<div class="content">
+<img src="images/marker_basket_2_left.svg" alt="marker basket 2 left" width="160">
+</div>
+<div class="title">Joonis 6. Marker 21</div>
+</div>
+<div id="marker_basket_2_right" class="imageblock left">
+<div class="content">
+<img src="images/marker_basket_2_right.svg" alt="marker basket 2 right" width="160">
+</div>
+<div class="title">Joonis 7. Marker 22</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_baskets">4. Baskets</h2>
+<h2 id="_korvid">4. Korvid</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Baskets are placed in the middle of the endlines (shorter edges) on the court.
-Backboard&#x2019;s side with the basket is in line with the black line&#x2019;s outer edge.
-The colours of the baskets are matt blue (colour code: RAL5015) and matt magenta (colour code: RAL4010).
-Court with baskets can be seen in <a href="#image_court_top">Figure 3</a> and <a href="#image_court_side_angle">Figure 4</a>.</p>
-</div>
-<div id="image_court_top" class="imageblock">
-<div class="content">
-<img src="images/court_top.jpg" alt="court top" width="600">
-</div>
-<div class="title">Figure 3. Baskets positions in top view</div>
-</div>
-<div id="image_court_side_angle" class="imageblock">
-<div class="content">
-<img src="images/court_side_angle.jpg" alt="court side angle" width="600">
-</div>
-<div class="title">Figure 4. Baskets positions in side view</div>
+<p>Korvid on paigutatud m&#xE4;nguv&#xE4;ljaku otsajoonte (l&#xFC;hemate servade) keskele v&#xE4;ljakuga samale tasapinnale.
+Tagalaua korvipoolne sein on kohakuti musta joone v&#xE4;limise servaga.
+M&#xE4;nguv&#xE4;ljakul on &#xFC;ks korv m&#xE4;rgistatud sinise (v&#xE4;rvikood: RAL5015) ning teine korv magenta (v&#xE4;rvikood: RAL4010) mattv&#xE4;rviga.
+M&#xE4;nguv&#xE4;ljakut koos korvidega on v&#xF5;imalik n&#xE4;ha <a href="#image_court_angle">Joonis 1</a> ja <a href="#image_court_dimensions">Joonis 3</a>.</p>
 </div>
 <div class="paragraph">
-<p>Basket is a painted pipe with following dimensions:</p>
+<p>Korv on v&#xE4;rviline toru j&#xE4;rgmiste m&#xF5;&#xF5;tudega:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>height 500 mm</p>
+<p>k&#xF5;rgus 500 mm</p>
 </li>
 <li>
-<p>outside diameter 160 mm</p>
+<p>v&#xE4;lisdiameeter 160 mm</p>
 </li>
 <li>
-<p>inside diameter 148 mm</p>
+<p>sisediameeter 148 mm</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Attached to the basket is a white backboard with dimensions of 660 x 800 mm.
-Basket dimension can be seen in <a href="#image_basket_dimensions">Figure 5</a>.</p>
+<p>Korvi k&#xFC;ljes on maani ulatuv valget v&#xE4;rvi tagalaud m&#xF5;&#xF5;tmetega 660 x 800 mm.
+Korvi m&#xF5;&#xF5;tmed on n&#xE4;ha <a href="#image_basket_dimensions">Joonis 8</a>.</p>
 </div>
 <div id="image_basket_dimensions" class="imageblock">
 <div class="content">
-<img src="images/basket_dimensions.jpg" alt="basket dimensions" width="600">
+<img src="images/basket_2_front_with_dimensions.svg" alt="basket 2 front with dimensions" width="600">
 </div>
-<div class="title">Figure 5. Basket in front view</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="balls">5. Balls</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_dimensions_and_properties">5.1. Dimensions and properties</h3>
-<div class="paragraph">
-<p>Balls are green mini squash balls with a mass of around 24 grams and a diameter of around 40 mm.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_placement_of_the_balls">5.2. Placement of the balls</h3>
-<div class="paragraph">
-<p>Each round starts with 11 balls on the court.
-The placement of the balls is random, but symmetrical for both robots with respect to the diagonal of the court.
-At least 10 different ball placement combinations must be prepared for the games.</p>
-</div>
+<div class="title">Joonis 8. Korvi m&#xF5;&#xF5;tmed</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_number_of_robots_and_team_size">6. Number of robots and team size</h2>
+<h2 id="balls">5. Pallid</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_m&#xF5;&#xF5;dud_ja_omadused">5.1. M&#xF5;&#xF5;dud ja omadused</h3>
 <div class="paragraph">
-<p>2 robots are on the court during the game, 1 per each team.
-Up to 6 members can be registered to a team.</p>
+<p>Pallid on rohelised mini <em>squash</em>&apos;i pallid massiga ligikaudu 24 g ja diameetriga ligikaudu 40 mm.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pallide_asetus">5.2. Pallide asetus</h3>
+<div class="paragraph">
+<p>Iga vooru alguses on v&#xE4;ljakul 11 palli.
+Pallide asetus on juhuslik, aga m&#xF5;lema roboti jaoks s&#xFC;mmeetriline v&#xE4;ljaku diagonaali suhtes.
+M&#xE4;ngude jaoks koostatakse v&#xE4;hemalt 10 erinevat pallide paiknemise kombinatsiooni.
+Pallide asetus ei muutu m&#xE4;ngu jooksul.
+Palle v&#xF5;ivad m&#xE4;nguvooru ajal liigutada ainult selles m&#xE4;ngus v&#xF5;istlevad robotid.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="robot_requirements">7. Requirements for the robot</h2>
+<h2 id="_robotite_arv_ja_v&#xF5;istkonna_suurus">6. Robotite arv ja v&#xF5;istkonna suurus</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>M&#xE4;ngu jooksul on v&#xE4;ljakul korraga v&#xF5;istlemas 2 robotit, 1 robot kummagi v&#xF5;istkonna kohta.
+V&#xF5;istkonna suurus registreerimisel on kuni 6 liiget.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="being_in_competition_area">7. V&#xF5;istlusalas viibimine</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="robot_requirements_general">7.1. General requirements</h3>
-<div class="paragraph">
-<p>Robot is a fully autonomous machine that carries its own energy source, movement mechanisms, management and control systems.
-It is not allowed to use remote control to move the robot during a game.
-Only one-way communication out of the robot and sending a start signal is allowed.
-Robot is not allowed to send anything else than ACK signal in response to referee&#x2019;s signal through radio module (see <a href="#referee_signals">Referee&#x2019;s signals</a>).</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="robot_requirements_mechanical">7.2. Mechanical requirements for the robot</h3>
+<h3 id="_robotid">7.1. Robotid</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Robot has to fit in an upright cylinder with a diameter of 350 mm and height of 350 mm the entire time during the game.</p>
-</li>
-<li>
-<p>Robot&#x2019;s mass must not exceed 8 kg.</p>
-</li>
-<li>
-<p>Majority of robot&#x2019;s external design must consist of black, white or gray colours.
-It is not allowed to use ball and basket colours in the external design.</p>
-</li>
-<li>
-<p>The robot is not allowed to intentionally detach any parts during the game onto the court.</p>
+<p>M&#xE4;ngu ajal v&#xF5;ivad v&#xF5;istlusalas viibida ainult selles m&#xE4;ngus v&#xF5;istlevad robotid.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="robot_requirements_electrical">7.3. Electronic requirements for the robot</h3>
+<h3 id="_k&#xF5;ik_inimesed">7.2. K&#xF5;ik inimesed</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The robot is not allowed to use LEDs during the game rounds (except by mutual agreement between the opposing teams).
-Indicators and LEDs used in sensors are allowed if the LEDs do not violate the external design requirements (see <a href="#robot_requirements_mechanical"> 7.2</a>).</p>
-</li>
-<li>
-<p>If light spreading elements are used, their intensity must not be harmful to the human eye or they should be shielded from direct observation.</p>
-</li>
-<li>
-<p>If a laser is used, the emission of the laser (averaged over 1 second) must not be more than 1 mW/mm<sup>2</sup>.</p>
-</li>
-<li>
-<p>The robot must not intentionally deceive the optical sensors of the opponent robot (including the camera of the robot).</p>
-</li>
-<li>
-<p>Robot must be able to independently start and stop according to the commands from the referee&#x2019;s remote control.
-The commands sent by the remote control and information on the required connection interface can be found in <a href="#referee_signals"> 7.6</a></p>
-</li>
-<li>
-<p>Robot is allowed to be started manually after 10 seconds of the start of the round.</p>
+<p>M&#xE4;ngude ajal ei tohi v&#xF5;istlusalas liikujate riietuses olla v&#xE4;ljaku ega korvide v&#xE4;rve (v.a must).</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_robot_access_to_the_competition">7.4. Robot access to the competition</h3>
-<div class="paragraph">
-<p>The robot, which does not comply with the requirements stated in sections <a href="#robot_requirements_general"> 7.1</a> - <a href="#robot_requirements_electrical"> 7.3</a>, is not allowed to participate in the competition.
-Violating these requirements during the tournament will lead to removal from the competition.</p>
+<h3 id="_v&#xF5;istkonna_liikmed">7.3. V&#xF5;istkonna liikmed</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>M&#xE4;ngu kestel on lubatud v&#xF5;istlusalas viibida ainult v&#xF5;istlevate v&#xF5;istkondade liikmetel.</p>
+</li>
+<li>
+<p>K&#xE4;imasoleva m&#xE4;ngu ajal on roboti k&#xE4;ivitamiseks lubatud m&#xE4;ngualas (v&#xE4;ljaspool m&#xE4;nguv&#xE4;ljakut) viibida m&#xF5;lemast v&#xF5;istkonnast ainult &#xFC;hel liikmel.
+P&#xE4;rast roboti k&#xE4;ivitamist tuleb v&#xF5;istlusalast lahkuda.</p>
+</li>
+<li>
+<p>Kui m&#xE4;nguvoor on peatatud, on kummastki v&#xF5;istkonnast lubatud v&#xF5;istlusalas viibida kuni kahel liikmel.</p>
+</li>
+<li>
+<p>M&#xE4;nguvoorude vahelisel ajal on lubatud v&#xF5;istlusalas viibida kogu v&#xF5;istkonnal.</p>
+</li>
+<li>
+<p>M&#xE4;ngude vahelisel ajal on lubatud v&#xF5;istlusalas viibida ainult algava m&#xE4;ngu v&#xF5;istkondadel.</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="robot_control_requirements">7.5. Requirements for robot control</h3>
-<div class="sect3">
-<h4 id="_definitions">7.5.1. Definitions</h4>
+<h3 id="_kohtunikud">7.4. Kohtunikud</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ball out of play &#x2013; ball that has at least once completely passed over the black line when viewed from the top.</p>
+<p>Kohtunikel on lubatud v&#xF5;istlusalas viibida igal ajal.</p>
+</li>
+<li>
+<p>Kohtunikel ei ole lubatud m&#xE4;ngualas viibida k&#xE4;imasoleva m&#xE4;nguvooru ajal.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_korraldajad">7.5. Korraldajad</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Korraldajatel on lubatud v&#xF5;istlusalas viibida ainult voorude ja m&#xE4;ngude vahelisel ajal.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_&#xFC;lej&#xE4;&#xE4;nud_inimesed">7.6. &#xDC;lej&#xE4;&#xE4;nud inimesed</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>V&#xF5;istlusalas pole lubatud viibida ainult v&#xF5;istlejatel, kohtunikel ja korraldajatel.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="robot_requirements">8. Robotile esitatavad n&#xF5;uded</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="robot_requirements_general">8.1. &#xDC;ldised n&#xF5;uded</h3>
+<div class="paragraph">
+<p>Robot on t&#xE4;ielikult autonoomne masin, mis kannab oma energiaallikat, liikumismehhanisme ja oma juhtimis- ning kontrolls&#xFC;steeme.
+Robotit ei tohi m&#xE4;ngu ajal kaugjuhtida.
+lubatud on &#xFC;hesuunaline side robotist v&#xE4;lja ja stardim&#xE4;rguande saatmine.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="robot_requirements_mechanical">8.2. Roboti mehaanilised n&#xF5;uded</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Robot peab mahtuma terve v&#xF5;istluse jooksul m&#xE4;ngusituatsioonis p&#xFC;stisesse silindrisse, mille diameeter on 350 mm ja k&#xF5;rgus 350 mm.</p>
+</li>
+<li>
+<p>Roboti mass ei tohi olla suurem kui 8 kg.</p>
+</li>
+<li>
+<p>Roboti v&#xE4;liskujunduses peab kasutama suuremas osas musta, valget v&#xF5;i halli v&#xE4;rvi.
+Keelatud on kasutada v&#xE4;liskujunduses pallide ja korvide v&#xE4;rve.</p>
+</li>
+<li>
+<p>Robot ei tohi v&#xF5;istluse ajal v&#xE4;ljakule tahtlikult enda k&#xFC;ljest osasid eraldada.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="robot_requirements_electrical">8.3. Roboti elektroonilised n&#xF5;uded</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>V&#xF5;istlusvoorude ajal ei tohi robot kasutada LED-e (v&#xE4;lja arvatud v&#xF5;istlejate vastastikusel n&#xF5;usolekul).
+Indikaatorid ja andurites kasutatavad LED-id on lubatud, kui need vastavad v&#xE4;liskujunduse n&#xF5;uetele (vaata <a href="#robot_requirements_mechanical"> 8.2</a>).</p>
+</li>
+<li>
+<p>Juhul kui kasutatakse valgust levitavaid elemente, siis ei tohi nende intensiivsus olla inimese silmale ohtlik v&#xF5;i peab olema varjestatud otsevaatluse eest.</p>
+</li>
+<li>
+<p>Juhul kui kasutatakse laserit, siis ei tohi laseri poolt kiiratud kiirgus (keskmistatud &#xFC;le 1 sekundi) olla suurem kui 1 mW/mm<sup>2</sup>.</p>
+</li>
+<li>
+<p>Robot ei tohi tahtlikult petta vastasroboti optilisi andureid (sealhulgas ka roboti kaamerat).</p>
+</li>
+<li>
+<p>Robot on lubatud k&#xE4;ivitada manuaalselt.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_roboti_p&#xE4;&#xE4;s_v&#xF5;istlusele">8.4. Roboti p&#xE4;&#xE4;s v&#xF5;istlusele</h3>
+<div class="paragraph">
+<p>Robot, mis ei vasta punktides <a href="#robot_requirements_general"> 8.1</a> - <a href="#robot_requirements_electrical"> 8.3</a> nimetatud n&#xF5;uetele, ei p&#xE4;&#xE4;se v&#xF5;istlusele.
+Samade n&#xF5;uete vastu eksimine turniiri k&#xE4;igus toob kaasa roboti k&#xF5;rvaldamise kogu v&#xF5;istluselt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="robot_control_requirements">8.5. Roboti juhtimise n&#xF5;uded</h3>
+<div class="sect3">
+<h4 id="_m&#xF5;isted">8.5.1. M&#xF5;isted</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Audis pall - v&#xE4;hemalt korra v&#xF5;istlusala piiravast mustast joonest pealtvaates t&#xE4;ielikult v&#xE4;ljaspool k&#xE4;inud pall.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_general_2">7.5.2. General</h4>
+<h4 id="_&#xFC;ldine_2">8.5.2. &#xDC;ldine</h4>
 <div class="paragraph">
-<p>The are no direct restrictions for operating a ball.
-Basket is not counted when a ball that is out of play is thrown in the basket.</p>
+<p>Palli k&#xE4;sitlemisel roboti poolt otseseid piiranguid ei ole.
+Audis palliga visatud korvi ei loeta.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_robot_penalisation_and_disqualification">7.5.3. Robot penalisation and disqualification</h4>
+<h4 id="_roboti_karistamine_ja_eemaldamine">8.5.3. Roboti karistamine ja eemaldamine</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Robot receives a fault when the robot:</p>
+<p>Robotile m&#xE4;&#xE4;ratakse viga kui:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>holds more than one ball at a time;</p>
+<p>robot hoiab korraga rohkem kui &#xFC;hte palli;</p>
 </li>
 <li>
-<p>moves a basket:</p>
+<p>robot liigutab korvi;</p>
 </li>
 <li>
-<p>damages the court or its parts, other robots, balls, referees, the opponent&#x2019;s team, spectators or other people surrounding the court.
-Non-malicious pushing is allowed.
-It is not allowed to damage the court and the opponent by the confused robot;</p>
+<p>robot kahjustab v&#xE4;ljakut v&#xF5;i selle osasid, teisi roboteid, palle, kohtunikke, vastasv&#xF5;istkonda, pealtvaatajaid v&#xF5;i teisi v&#xF5;istlusv&#xE4;ljakut &#xFC;mbritsevaid inimesi.
+Lubatud on mittepahatahtlik n&#xFC;gimine.
+V&#xE4;ljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelatud;</p>
 </li>
 <li>
-<p>leaves the playing area (over half of the robot is out of the playing area, viewed from the top).</p>
+<p>robot lahkub m&#xE4;ngualast (&#xFC;le poole roboti kerest on pealtvaates m&#xE4;ngualast v&#xE4;ljas);</p>
+</li>
+<li>
+<p>roboti v&#xF5;istkonnaliige rikub v&#xE4;ljakul viibimise reegleid (vaata <a href="#being_in_competition_area">V&#xF5;istlusalas viibimine</a>);</p>
+</li>
+<li>
+<p>roboti v&#xF5;istkonnaliige liigutab m&#xE4;nguvooru ajal v&#xF5;istlusalas olevaid palle.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>On first fault:</p>
+<p>Esimese vea korral:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>the referee stops the game and the time;</p>
+<p>kohtunik peatab m&#xE4;ngu ning ajav&#xF5;tt peatatakse;</p>
 </li>
 <li>
-<p>the robots must stop;</p>
+<p>robotid peavad peatuma;</p>
 </li>
 <li>
-<p>the robot, which received the fault, <strong>must be moved to the starting position</strong> (see <a href="#game_round">Round arrangement</a>);</p>
+<p>karistuse saanud <strong>robot tuleb paigutada oma stardipositsioonile</strong> (vaata <a href="#game_round">Vooru korraldus</a>);</p>
 </li>
 <li>
-<p>the opponent robot stays in the same place;</p>
+<p>vastasrobot tuleb</p>
+<div class="ulist">
+<ul>
+<li>
+<p>j&#xE4;tta samale asukohale</p>
 </li>
 <li>
-<p>referee will resume the game and the game&#x2019;s time will continue from where it was stopped.</p>
+<p>v&#xF5;i paigutada mustale joonele v&#xF5;istkonna poolt valitud kohta.
+Kui robot hoiab palli tuleb see j&#xE4;tta sinna, kus see asus vea tegemise ajal;</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>On second fault:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>the referee stops the game and the time;</p>
-</li>
-<li>
-<p>the robots must stop;</p>
-</li>
-<li>
-<p>the robot, which received the fault, <strong>must be removed from the playing area</strong>;</p>
-</li>
-<li>
-<p>the opponent robot stays in the same place;</p>
-</li>
-<li>
-<p>referee will resume the game and the game&#x2019;s time will continue from where it was stopped.</p>
+<p>kohtunik j&#xE4;tkab m&#xE4;ngu ning aja v&#xF5;tmine j&#xE4;tkub.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>The faults are valid until the end of the round.</p>
+<p>Teise vea korral:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>kohtunik peatab m&#xE4;ngu ning ajav&#xF5;tt peatatakse;</p>
 </li>
 <li>
-<p>The referee can stop the game and separate the robots from each other without issuing a fault.
-In that case the time is stopped as well.</p>
+<p>robotid peavad peatuma;</p>
+</li>
+<li>
+<p>karistuse saanud <strong>robot tuleb eemaldada m&#xE4;ngualalt</strong>;</p>
+</li>
+<li>
+<p>vastasrobot tuleb</p>
+<div class="ulist">
+<ul>
+<li>
+<p>j&#xE4;tta samale asukohale
+v&#xF5;i paigutada mustale joonele v&#xF5;istkonna poolt valitud kohta
+Kui robot hoiab palli tuleb see j&#xE4;tta sinna, kus see asus vea tegemise ajal;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>kohtunik j&#xE4;tkab m&#xE4;ngu ning aja v&#xF5;tmine j&#xE4;tkub.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Vead kehtivad vooru l&#xF5;puni.</p>
+</li>
+<li>
+<p>Kohtunikul on lubatud m&#xE4;ng peatada ja robotid lahutada ka ilma viga andmata.
+Sel juhul peatatakse ka ajav&#xF5;tt.</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="referee_signals">7.6. Referee&#x2019;s signals</h3>
-<div class="sect3">
-<h4 id="_radio_module_and_configuration">7.6.1. Radio module and configuration</h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Robots must use XBee 802.15.4 radio module (S1, S2C or XBee3) from Digi International.</p>
-</li>
-<li>
-<p>S1 radio modules do not need to be configured.
-S2C and XBee3 modules must be flashed with 802.15.4 firmware.
-Settings can be changed, but it should be taken into account that referee&#x2019;s remote uses default settings in 802.15.4 firmware.
-Modules can be configured with AT commands.
-<a href="https://www.digi.com/products/embedded-systems/digi-xbee/digi-xbee-tools/xctu">XCTU</a> can be used to change the settings.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_commands_from_the_referees_remote_and_responding_to_them">7.6.2. Commands from the referee&#x2019;s remote and responding to them</h4>
+<h3 id="referee_signals">8.6. Kohtuniku signaalid</h3>
 <div class="paragraph">
-<p>The remote sends commands in the following format:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Every command is 12 bytes long.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>1 start byte: <code>a</code> (<code>0x61</code>, <code>97</code>)</p>
-</li>
-<li>
-<p>1 court ID byte in the range of <code>A</code> - <code>W</code> (<code>0x41</code> - <code>0x57</code>, <code>65</code> - <code>87</code>)</p>
-</li>
-<li>
-<p>1 robot ID byte in the range of <code>A</code> - <code>W</code> (<code>0x41</code> - <code>0x57</code>, <code>65</code> - <code>87</code>)</p>
-</li>
-<li>
-<p>9 data bytes</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Missing bytes are filled with hyphens: <code>-</code> (<code>0x2d</code>, <code>45</code>).</p>
-</li>
-<li>
-<p>Commands where robot ID is <code>X</code> (<code>0x58</code>, <code>88</code>) are meant for all of the robots.</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Description of commands</caption>
-<colgroup>
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Command</strong></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><strong>Description</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Start</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Court ID</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot ID</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Data</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Court</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Signal</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Robot(s)</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>START----</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">START</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>X</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>STOP-----</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">STOP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>START----</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">START</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>STOP-----</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">STOP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code> - <code>W</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PING-----</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PING</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A - W</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>For example, the command <code>aBCSTART----</code> activates robot C on court B and the command <code>aABPING-----</code> asks about the readiness of robot B on court A.</p>
+<p>M&#xE4;ngude haldamiseks on loodud tarkvara, mis tegeleb signaalide saatmisega.</p>
 </div>
 <div class="paragraph">
-<p>The robot must respond to all commands that are sent to this specific robot with: <code>aXXACK------</code></p>
+<p>Tarkvara ja dokumentatsioon on saadaval j&#xE4;rgnevalt lingilt:
+<a href="https://github.com/ut-robotics/robot-basketball-manager" class="bare">https://github.com/ut-robotics/robot-basketball-manager</a></p>
 </div>
 <div class="paragraph">
-<p>In the response, the first <code>X</code> must be replaced with the court ID and the second <code>X</code> with the ID of the responding robot.
-The robot has to answer using ACK signal in 40 ms from receiving the command.
-It is not allowed to respond to commands that are sent to all of the robots.
-To ensure that the robots are able to receive the commands, PING commands might be sent to both robots before the game.
-The start and stop signal meant for the whole court is sent 3 times in 100 ms intervals.
-Other signals are sent once at the time.</p>
-</div>
-<div class="paragraph">
-<p>Every court will have an unique ID, which does not change during the competition.
-Robot that starts the first round of a game on the magenta side (throwing into blue basket) has ID of <code>A</code>.
-Opposing robot has ID of <code>B</code>.
-Robots IDs will not change during the game.
-Robots must be able to receive and respond to commands with different IDs based on the court and starting position.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_referees_remote_control">7.6.3. Referee&#x2019;s remote control</h4>
-<div class="paragraph">
-<p>Remote control consists of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>XBee 802.15.4 radio module</p>
-</li>
-<li>
-<p>XBee USB adapter</p>
-</li>
-<li>
-<p>Computer with referee&#x2019;s remote software:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/ut-robotics/robot-basketball-ref" class="bare">https://github.com/ut-robotics/robot-basketball-ref</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
+<p>Kohtuniku signaalide reageerimine pole kohustuslik.
+Tarkvara on veel arendamisel ja kohtuniku signaalid v&#xF5;ivad muutuda.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_referees">8. Referees</h2>
+<h2 id="_kohtunikud_2">9. Kohtunikud</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each game is coordinated by the head referee, who ensures the compliance of the competition and games to the competition rules.
-The head referee is assisted by 2 basket referees, each for one basket and 1 referee sending signals with referee&#x2019;s remote.</p>
+<p>Iga m&#xE4;ngu koordineerib peakohtunik, kes tagab v&#xF5;istluse ja m&#xE4;ngude vastavuse v&#xF5;istlusreeglitele.
+Peakohtunikku abistavad 2 abikohtunikku, kes vastutavad kummagi korvi eest.</p>
 </div>
 <div class="sect2">
-<h3 id="_head_referee">8.1. Head referee</h3>
+<h3 id="_peakohtunik">9.1. Peakohtunik</h3>
 <div class="paragraph">
-<p>The tasks of the head referee include:</p>
+<p>Peakohtuniku &#xFC;lesanded on j&#xE4;rgmised:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Carries out the technical inspection of the robots and decides which ones will be allowed to compete (see <a href="#qualification">Technical inspection</a>).</p>
+<p>Viib l&#xE4;bi k&#xF5;igi robotite tehnilise &#xFC;levaatuse ning otsustab, millised neist lubatakse v&#xF5;istlema (vaata <a href="#qualification">Tehniline &#xFC;levaatus</a>).</p>
 </li>
 <li>
-<p>Ensures that the balls and their placement during the competitions complies with the competition rules (see <a href="#balls">Balls</a>).</p>
+<p>Tagab, et pallid ja nende asetus v&#xF5;istlusel vastaksid v&#xF5;istlusreeglitele (vaata <a href="#balls">Pallid</a>).</p>
 </li>
 <li>
-<p>Starts, stops, and ends the game.</p>
+<p>Alustab, peatab ja l&#xF5;petab m&#xE4;ngu.</p>
 </li>
 <li>
-<p>Informs the players and assistant referees about the beginning and end of the round (see <a href="#game_round">Round arrangement</a>).</p>
+<p>Informeerib m&#xE4;ngijaid ja abikohtunikke vooru algusest ja l&#xF5;pust (vaata <a href="#game_round">Vooru korraldus</a>).</p>
 </li>
 <li>
-<p>Gives the order to the team to remove robot from the game until the end of the round if any of the requirements given in <a href="#robot_control_requirements">Requirements for robot control</a> are violated.</p>
+<p>Annab k&#xE4;su v&#xF5;istkonnaliikmele roboti eemaldamiseks m&#xE4;ngust vooru l&#xF5;puni peat&#xFC;kis <a href="#robot_control_requirements">Roboti juhtimise n&#xF5;uded</a> toodud n&#xF5;uete eksimisel.</p>
 </li>
 <li>
-<p>Ends the game round if both robots have violated the requirements given in <a href="#robot_control_requirements">Requirements for robot control</a>.</p>
+<p>L&#xF5;petab m&#xE4;nguvooru, kui m&#xF5;lemad robotid on rikkunud peat&#xFC;kis <a href="#robot_control_requirements">Roboti juhtimise n&#xF5;uded</a> toodud n&#xF5;udeid.</p>
 </li>
 <li>
-<p>May remove the balls that are out of play during the game provided that none of the robots is operating with the ball at the moment.</p>
+<p>V&#xF5;ib vajadusel peatada v&#xF5;i l&#xF5;petada m&#xE4;ngu v&#xE4;liste segavate tegurite ilmnemisel.</p>
 </li>
 <li>
-<p>If necessary, can stop or end the game if there appears to be any external disruptive factors.</p>
+<p>V&#xF5;ib eemaldada v&#xF5;istlejate alast halvasti k&#xE4;ituvaid v&#xF5;istkonnaliikmeid.</p>
 </li>
 <li>
-<p>May remove misbehaving team members from the competitors area.</p>
-</li>
-<li>
-<p>Ensures that the spectators do not enter the competitors area (see <a href="#court_surface">Court surface</a>).</p>
-</li>
-<li>
-<p>Delivers the game result and other relevant information, that may influence the game result, to the competition organisers after the game.</p>
+<p>Tagab, et pealtvaatajad ei sisene v&#xF5;istlusalasse (vaata <a href="#being_in_competition_area">V&#xF5;istlusalas viibimine</a>).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The head referee&#x2019;s decisions related to the game and rounds are final.
-The head referee has the right to change his or her decision if any relevant additional information occurs.</p>
+<p>Peakohtuniku otsused seoses m&#xE4;ngu ja voorudega on l&#xF5;plikud.
+Peakohtunikul on &#xF5;igus muuta oma otsust olulise lisainfo ilmnemisel.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_competition_arrangement">9. Competition arrangement</h2>
+<h2 id="_v&#xF5;istluskorraldus">10. V&#xF5;istluskorraldus</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are two different tournament systems used.
-Competition starts with Swiss-system tournament to determine 4 best robots.
-By Swiss-system tournament rules, in the first round of games, the robots are matched randomly.
-Other rounds of games will match the robots with the closest standings.
-If there are odd number of competitors, then one of the robots in each round of games gets a bye, which means automatic victory.
-None of the robots will compete against each other twice and no robot gets two byes.</p>
+<p>V&#xF5;istluse l&#xE4;biviimisel on kasutusel kaks erinevat turniiris&#xFC;steemi.
+Esialgu viiakse v&#xF5;istlus l&#xE4;bi &#x160;veitsi s&#xFC;steemi reeglite j&#xE4;rgi 4 parima roboti selgitamiseks.
+&#x160;veitsi s&#xFC;steemi j&#xE4;rgi on esimeses voorus robotid juhuslikult valitud.
+K&#xF5;igi j&#xE4;rgnevate voorude puhul pannakse vastamisi robotid, kellel on varasemad v&#xF5;istlustulemused sarnased.
+Paaritu arvu v&#xF5;istlejate puhul on v&#xF5;imalik saada &#xFC;hes voorus <em>bye</em>, mis t&#xE4;hendab automaatset v&#xF5;itu.
+Mitte &#xFC;kski robot ei v&#xF5;istle teise robotiga kaks korda ning ei saa v&#xF5;istluse jooksul kahte <em>bye</em>&apos;d.</p>
 </div>
 <div class="paragraph">
-<p>Minimum number of Swiss-system tournament rounds is \$ceil(log_2 n_(rob\ot))\$:</p>
+<p>Minimaalne &#x160;veitsi s&#xFC;steemi voorude arv on \$ceil(log_2 n_(rob\ot))\$:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>1 - 4 robots do not need to play any Swiss-system games.</p>
+<p>1 - 4 robotiga &#x160;veitsi s&#xFC;steemi m&#xE4;nge ei toimu.</p>
 </li>
 <li>
-<p>5 - 8 robots will play 3 rounds.</p>
+<p>5 - 8 robotiga m&#xE4;ngitakse 3 vooru.</p>
 </li>
 <li>
-<p>9 - 16 robots will play 4 rounds.</p>
+<p>9 - 16 robotiga m&#xE4;ngitakse 4 vooru.</p>
 </li>
 <li>
-<p>17 - 32 robots will play 5 rounds.</p>
+<p>17 - 32 robotiga m&#xE4;ngitakse 5 vooru.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>After that there will be a double-elimination tournament between the 4 best robots.
-This will reveal the final ranking.</p>
+<p>Seej&#xE4;rel toimub 4 parima v&#xF5;istleja vahel kahe kaotuse s&#xFC;steemis turniir,
+mille k&#xE4;igus selgub l&#xF5;plik pingerida.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_game_arrangement">10. Game arrangement</h2>
+<h2 id="_m&#xE4;ngukorraldus">11. M&#xE4;ngukorraldus</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>One game consists of 3 or 2 (if both rounds are won by one robot) main rounds and if necessary then also 3 extra rounds and free throw rounds.
-The game is won by having more main round wins.
-If the main rounds end with a draw, then the robot that is the first to win an extra round, wins the game.
-If extra rounds end with a draw, then the winner will be determined with free throws.
-Swiss-system games can end with a draw and no extra rounds or free throws will be played.</p>
+<p>M&#xE4;ng koosneb kolmest v&#xF5;i kahest (kui m&#xF5;lemad voorud on v&#xF5;itnud sama robot) p&#xF5;hivoorust ja vajadusel kuni kolmest lisavoorust ning vabaviskevoorudest.
+M&#xE4;ngu v&#xF5;itjaks on rohkem p&#xF5;hivoorude v&#xF5;ite kogunud robot,
+p&#xF5;hivoorude viigi korral esimesena lisavooru v&#xF5;itnud robot
+ja lisavoorude viigi korral vabaviskevoorude v&#xF5;itja.
+&#x160;veitsi s&#xFC;steemi m&#xE4;ngud v&#xF5;ivad l&#xF5;ppeda viigiga ehk lisavoore ja vabaviskeid ei m&#xE4;ngita.</p>
 </div>
 <div class="paragraph">
-<p>Robots have to change sides after every round.
-Sides must be changed in 2 minutes.</p>
+<p>Robotid peavad vahetama iga vooru j&#xE4;rel pooli.
+Poolte vahetamiseks on aega 2 minutit.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="game_round">11. Round arrangement</h2>
+<h2 id="game_round">12. Vooru korraldus</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>One main round lasts for 60 seconds.
-Extra round lasts for 30 seconds.
-In the beginning of each round, both robots are positioned in the right corner (viewed from the back of the basket) of their side of the court.
-The robots must touch the point where the black endline and black sideline meet.
-The round begins and ends with head referee&#x2019;s signal.
-At the end of the round, both robots must stop.
-If a fault is made then the time will be stopped.</p>
+<p>P&#xF5;hivooru pikkus on 60 sekundit.
+Lisavooru pikkus on 30 sekundit.
+Vooru alguses asuvad robotid oma v&#xE4;ljaku poole paremas nurgas (vaadatuna oma korvi tagant).
+Robotid peavad puudutama v&#xF5;istlusv&#xE4;ljaku musta otsajoone ja k&#xFC;ljejoone &#xFC;henduskohta (stardipositsioon).
+Voor algab ja l&#xF5;peb peakohtuniku m&#xE4;rguandega.
+Peale l&#xF5;pu m&#xE4;rguannet peavad robotid seisma j&#xE4;&#xE4;ma.
+Vigade korral pannakse seisma ka aeg.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_scoring">12. Scoring</h2>
+<h2 id="_punktiarvestus">13. Punktiarvestus</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The points are counted at the end of the round.
-Each ball that is fully in the basket gives one point.
-The balls that are out of play are not counted.
-Round is won by having more points.</p>
+<p>Iga korvi visatud pall annab &#xFC;he punkti.
+Audis pallidega punkte teenida ei saa.
+Vooru v&#xF5;idab v&#xF5;istkond, kellel on vooru l&#xF5;pus rohkem punkte.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_free_throw_arrangement">13. Free throw arrangement</h2>
+<h2 id="_vabavisete_korraldus">14. Vabavisete korraldus</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At least 3 free throw rounds must be played.
-Both robots must perform a one free throw in each round.
-Only one basket is used and it will be chosen with a coin toss by the referee.
-Only 1 ball is on the court and it is placed 1300 mm away from the basket on the same line with both of the baskets (see <a href="#image_free_throw_distance">Figure 6</a>).
-The winner of free throw rounds is the robot which has scored more baskets.
-If first three rounds end with a draw then additional rounds will be played until a round is won by a robot.</p>
+<p>Vabaviskevoore m&#xE4;ngitakse minimaalselt 3 korda.
+Robotid peavad igas vabaviskevoorus teostama &#xFC;he vabaviske.
+Vabavisete jaoks kasutatakse &#xFC;hte korvi, mis valitakse kohtuniku poolt.
+V&#xE4;ljakul asetseb ainult 1 pall, mis paikneb 1300 mm kaugusel korvist ja on m&#xF5;lema korviga &#xFC;hel joonel (vaata <a href="#image_court_dimensions">Joonis 3</a>).
+Vabaviskevoorude v&#xF5;itjaks on rohkem korve visanud robot.
+Kui esimese kolme vabaviskevooruga pole v&#xF5;itja selgunud, toimuvad j&#xE4;rgnevad viskevoorud esimese vooru v&#xF5;iduni.</p>
 </div>
 <div class="paragraph">
-<p>Free throw procedure:</p>
+<p>Vabaviske sooritus:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Robot starts the free throw from the center of the court.</p>
+<p>Robot alustab vabaviskekatset v&#xE4;ljaku keskelt.</p>
 </li>
 <li>
-<p>Robot has 10 seconds to throw.</p>
+<p>Katse sooritamiseks on aega 10 sekundit.</p>
 </li>
 <li>
-<p>Free throw starts with referee&#x2019;s signal.</p>
+<p>Katse algab kohtuniku k&#xE4;su peale.</p>
 </li>
 <li>
-<p>Free throw ends if the throw has been made or the referee has stopped the round.</p>
+<p>Katse l&#xF5;ppeb kui vise on sooritatud v&#xF5;i kui kohtunik peatab katse.</p>
 </li>
 </ol>
 </div>
-<div id="image_free_throw_distance" class="imageblock">
-<div class="content">
-<img src="images/free_throw_distance.png" alt="free throw distance" width="400">
-</div>
-<div class="title">Figure 6. Ball distance before free throw</div>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="qualification">14. Technical inspection</h2>
+<h2 id="qualification">15. Tehniline &#xFC;levaatus</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Technical inspection is carried out in the morning of the competition day.
-During the technical inspection, the head referee inspects if the robot meets the requirements (see <a href="#robot_requirements">Requirements for the robot</a>) and tests the capability to compete.
-In order to show the capability to compete, the robot has to score at least 1 ball out of 5 balls in 60 seconds, while being alone in the court.
-Non-compliant robots and robots incapable to compete are not allowed to participate in the competition.</p>
+<p>Tehniline &#xFC;levaatus toimub v&#xF5;istlusp&#xE4;eva hommikul.
+Tehnilise &#xFC;levaatuse k&#xE4;igus kontrollib peakohtunik roboti vastavust n&#xF5;uetele (vaata <a href="#robot_requirements">Robotile esitatavad n&#xF5;uded</a>) ning testib v&#xF5;istlusv&#xF5;imekust.
+V&#xF5;istlusv&#xF5;imekuse n&#xE4;itamiseks peab robot &#xFC;ksinda 5 palliga v&#xF5;istlusv&#xE4;ljakul suutma 60 sekundi jooksul visata korvi v&#xE4;hemalt 1 palli.
+N&#xF5;uetele mittevastavad v&#xF5;i v&#xF5;istlusv&#xF5;imetud robotid v&#xF5;istlusele ei p&#xE4;&#xE4;se.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_registration">15. Registration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Registration form is opened at least a month before the competition.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_organisation">16. Organisation</h2>
+<h2 id="_organiseerimine">16. Organiseerimine</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The robot must be registered before the competition.
-The registration process includes technical inspection of the robot and marking the robot with a number.</p>
+<p>Robot peab olema registreeritud enne v&#xF5;istlust.
+Registreerimine sisaldab tehnilist &#xFC;levaatust.</p>
 </li>
 <li>
-<p>Technical inspection must be completed by the time that is specified by the organisers.</p>
+<p>Tehniline &#xFC;levaatus peab olema l&#xE4;bitud enne korraldajate poolt m&#xE4;&#xE4;ratud aega.</p>
 </li>
 <li>
-<p>All questions and problems arising during the competition are solved by the referee.</p>
+<p>V&#xF5;istlusel tekkivaid k&#xFC;simusi ja probleeme lahendab kohtunik.</p>
 </li>
 <li>
-<p>All complaints must be reported before the start of the next game.</p>
+<p>Pretensioone v&#xF5;ib esitada kuni j&#xE4;rgmise m&#xE4;ngu alguseni.</p>
 </li>
 <li>
-<p>The final decision regarding any disputes or inconsistencies is always made by the referee or the organisers.</p>
+<p>Ebak&#xF5;lade v&#xF5;i vaidluste tekkimisel j&#xE4;&#xE4;b l&#xF5;pps&#xF5;na kohtunikele ja/v&#xF5;i korraldajatele.</p>
 </li>
 </ol>
 </div>

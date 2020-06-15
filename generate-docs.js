@@ -30,6 +30,21 @@ function cleanGitRepo() {
     fs.rmdirSync(gitFolder, {recursive: true});
 }
 
+function sortTagsByYearDescending(tags) {
+    const pattern = /.*([0-9]{4})/;
+
+    tags.sort((a, b) => {
+        const aMatch = pattern.exec(a);
+        const bMatch = pattern.exec(b);
+
+        if (aMatch && aMatch.length === 2 && bMatch && bMatch.length === 2) {
+            return bMatch[1].localeCompare(aMatch[1]);
+        }
+
+        return 0;
+    });
+}
+
 async function generate() {
     cleanAll();
 
@@ -40,18 +55,31 @@ async function generate() {
     simpleGit = SimpleGit(gitFolder);
 
     const tags = (await simpleGit.tags()).all;
+    sortTagsByYearDescending(tags);
 
     fs.mkdirSync(generatedFolder);
 
     for (const tag of tags) {
         await generateHTMLForTag(tag, tags);
-    };
+    }
 
     stdWrite(`generate index.html ... `);
     generateIndexHTML(tags);
     stdWrite(`done\n`);
 
     cleanGitRepo();
+}
+
+async function findFileWithName(name, directory) {
+    const fileNames = await fs.readdir(directory);
+
+    for (const fileName of fileNames) {
+        if (path.basename(fileName, path.extname(fileName)) === name) {
+            return fileName;
+        }
+    }
+
+    return null;
 }
 
 async function generateHTMLForTag(activeTag, tags) {
@@ -62,7 +90,8 @@ async function generateHTMLForTag(activeTag, tags) {
     stdWrite(`done\n`);
 
     for (const lang of languages) {
-        const adocFileName = `${rulesFilePrefix}${lang}.asciidoc`;
+        // Extensions have changed from adoc to asciidoc. Need to find correct file by name.
+        const adocFileName = await findFileWithName(`${rulesFilePrefix}${lang}`, gitFolder);
         const htmlFileName = `${rulesFilePrefix}${lang}.html`;
         const htmlFilePath = path.join(generatedFolder, activeTag, htmlFileName);
 
@@ -120,7 +149,7 @@ async function generateHTMLForTag(activeTag, tags) {
         fs.writeFileSync(htmlFilePath, $.html());
 
         stdWrite(`done\n`);
-    };
+    }
 }
 
 function renderLang(lang, activeLang, tag) {
@@ -132,14 +161,15 @@ function renderLang(lang, activeLang, tag) {
 }
 
 function renderTags(activeTag, tags, lang) {
-    return `<div id="tags">${tags.map(t => renderTag(t, activeTag, lang)).join('')}</div>`
+    return `<div id="tags">${tags.map(tag => renderTag(tag, activeTag, lang)).join('')}</div>`
 }
 
 function renderTag(tag, activeTag, lang) {
     const isActive = tag === activeTag;
 
-    const olderTag = tag < activeTag ? tag : activeTag;
-    const newerTag = olderTag === tag ? activeTag : tag;
+    const tags = [tag, activeTag];
+    sortTagsByYearDescending(tags);
+    const [newerTag, olderTag] = tags;
 
     return `<div>
         <span class="tag">${isActive ? `<span class="tag-name">${tag}</span>` : `<a href="../${tag}/${rulesFilePrefix}${lang}.html">${tag}</a>`}</span>
