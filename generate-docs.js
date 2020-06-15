@@ -82,6 +82,12 @@ async function findFileWithName(name, directory) {
     return null;
 }
 
+async function copyFiles(paths, fromDirectory, toDirectory) {
+    for (const filePath of paths) {
+        await fs.copy(path.join(fromDirectory, filePath), path.join(toDirectory, filePath));
+    }
+}
+
 async function generateHTMLForTag(activeTag, tags) {
     fs.mkdirSync(path.join(generatedFolder, activeTag));
 
@@ -99,9 +105,10 @@ async function generateHTMLForTag(activeTag, tags) {
 
         execSync(`asciidoctor ${path.join(gitFolder, adocFileName)} -o ${htmlFilePath}`);
 
-        await fs.copy(path.join(gitFolder, 'images'), path.join(generatedFolder, activeTag, 'images'));
-
         const $ = cheerio.load(fs.readFileSync(htmlFilePath));
+
+        const imagePaths = $('img').map((index, element) => $(element).attr('src')).get();
+        await copyFiles(imagePaths, gitFolder, path.join(generatedFolder, activeTag));
 
         $('body').prepend(`<div id="top-links">
             ${renderTags(activeTag, tags, lang)}
