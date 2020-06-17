@@ -49,7 +49,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           20
@@ -67,7 +67,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           160
@@ -85,7 +85,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="start"
-          alignment-baseline="central"
+          dominant-baseline="central"
           font-family="sans-serif"
         >
           20
@@ -103,7 +103,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="start"
-          alignment-baseline="central"
+          dominant-baseline="central"
           font-family="sans-serif"
         >
           160
@@ -121,7 +121,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           160
@@ -139,7 +139,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="start"
-          alignment-baseline="central"
+          dominant-baseline="central"
           font-family="sans-serif"
         >
           500
@@ -164,7 +164,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           660
@@ -182,7 +182,7 @@
           font-size="30"
           fill="rgba(0,0,0,0.7)"
           text-anchor="start"
-          alignment-baseline="central"
+          dominant-baseline="central"
           font-family="sans-serif"
         >
           800
