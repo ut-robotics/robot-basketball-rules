@@ -156,7 +156,7 @@ Up to 6 members can be registered to a team.
 
 . Only team members of the competing robots can be in the competition area during a game.
 . During an active game, only one team member from each team is allowed in the playing area (outside playing court) for starting the robot.
-Team member has to leave the competition area after starting the robot.
+The team member has to leave the competition area after starting the robot.
 . When a game round is stopped, up to two team members from each team can be in the competition area.
 . Entire team is allowed in the competition area between game rounds.
 . Only teams of the game about to start are allowed in the competition area between the games.
@@ -181,16 +181,16 @@ Team member has to leave the competition area after starting the robot.
 === General requirements
 :xrefstyle: basic
 
-Robot is a fully autonomous machine that carries its own energy source, movement mechanisms, management and control systems.
+A robot is a fully autonomous machine that carries its own energy source, movement mechanisms, management and control systems.
 It is not allowed to use remote control to move the robot during a game.
 Only one-way communication out of the robot and sending a start signal is allowed.
 
 [#robot_requirements_mechanical]
 === Mechanical requirements for the robot
 
-. Robot has to fit in an upright cylinder with a diameter of 350 mm and height of 350 mm the entire time during the game.
-. Robot's mass must not exceed 8 kg.
-. Majority of robot's external design must consist of black, white or gray colours.
+. The robot has to fit in an upright cylinder with a diameter of 350 mm and height of 350 mm the entire time during the game.
+. The robot's mass must not exceed 8 kg.
+. Majority of the robot's external design must consist of black, white or gray colours.
 It is not allowed to use ball and basket colours in the external design.
 . The robot is not allowed to intentionally detach any parts during the game onto the court.
 
@@ -203,7 +203,7 @@ Indicators and LEDs used in sensors are allowed if the LEDs do not violate the e
 . If light spreading elements are used, their intensity must not be harmful to the human eye or they should be shielded from direct observation.
 . If a laser is used, the emission of the laser (averaged over 1 second) must not be more than 1 mW/mm^2^.
 . The robot must not intentionally deceive the optical sensors of the opponent robot (including the camera of the robot).
-. Robot is allowed to be started manually.
+. The robot is allowed to be started manually.
 
 === Robot access to the competition
 :xrefstyle: short
@@ -226,7 +226,7 @@ Basket is not counted when a ball that is out of play is thrown in the basket.
 ==== Robot penalisation and disqualification
 :xrefstyle: basic
 
-. Robot receives a foul when:
+. A robot receives a foul when:
 * the robot holds more than one ball at a time;
 * the robot moves a basket:
 * the robot damages the court or its parts, other robots, balls, referees, the opponent's team, spectators or other people surrounding the court.

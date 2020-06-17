@@ -183,7 +183,7 @@ Pärast roboti käivitamist tuleb võistlusalast lahkuda.
 
 Robot on täielikult autonoomne masin, mis kannab oma energiaallikat, liikumismehhanisme ja oma juhtimis- ning kontrollsüsteeme.
 Robotit ei tohi mängu ajal kaugjuhtida.
-lubatud on ühesuunaline side robotist välja ja stardimärguande saatmine.
+Lubatud on ühesuunaline side robotist välja ja stardimärguande saatmine.
 
 [#robot_requirements_mechanical]
 === Roboti mehaanilised nõuded
