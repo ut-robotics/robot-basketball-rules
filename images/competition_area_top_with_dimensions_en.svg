@@ -53,7 +53,7 @@
           font-size="240"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           8100
@@ -71,7 +71,7 @@
           font-size="240"
           fill="rgba(0,0,0,0.7)"
           text-anchor="start"
-          alignment-baseline="central"
+          dominant-baseline="central"
           font-family="sans-serif"
         >
           6000
@@ -89,7 +89,7 @@
           font-size="240"
           fill="rgba(255,255,255,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           6100
@@ -107,7 +107,7 @@
           font-size="240"
           fill="rgba(255,255,255,0.7)"
           text-anchor="start"
-          alignment-baseline="central"
+          dominant-baseline="central"
           font-family="sans-serif"
         >
           4000
@@ -125,7 +125,7 @@
           font-size="240"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           4600
@@ -143,7 +143,7 @@
           font-size="240"
           fill="rgba(0,0,0,0.7)"
           text-anchor="start"
-          alignment-baseline="central"
+          dominant-baseline="central"
           font-family="sans-serif"
         >
           3100
@@ -163,7 +163,7 @@
           font-size="240"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
-          alignment-baseline="hanging"
+          dominant-baseline="hanging"
           font-family="sans-serif"
         >
           1300
@@ -175,7 +175,7 @@
         font-size="120"
         fill="rgba(0,0,0,0.7)"
         text-anchor="middle"
-        alignment-baseline="baseline"
+        dominant-baseline="baseline"
         font-family="sans-serif"
       >
         Ball location before free throw
@@ -186,7 +186,7 @@
         font-size="200"
         fill="rgba(255,255,255,0.7)"
         text-anchor="start"
-        alignment-baseline="hanging"
+        dominant-baseline="hanging"
         font-family="sans-serif"
       >
         Competition area
@@ -197,7 +197,7 @@
         font-size="200"
         fill="rgba(0,0,0,0.7)"
         text-anchor="start"
-        alignment-baseline="hanging"
+        dominant-baseline="hanging"
         font-family="sans-serif"
       >
         Playing area
@@ -208,7 +208,7 @@
         font-size="200"
         fill="rgba(0,0,0,0.7)"
         text-anchor="start"
-        alignment-baseline="hanging"
+        dominant-baseline="hanging"
         font-family="sans-serif"
       >
         Playing court

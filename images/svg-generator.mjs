@@ -45,7 +45,7 @@ const TextAnchor = {
     end: 'end',
 }
 
-const TextAlignmentBaseline = {
+const TextDominantBaseline = {
     baseline: 'baseline',
     central: 'central',
     hanging: 'hanging',
@@ -84,8 +84,8 @@ const circle = (center, r, fill, stroke, strokeWidth, strokeDashArray = 'none') 
     `<circle cx="${center.x}" cy="${center.y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}" stroke-dasharray="${strokeDashArray}"/>`;
 const line = (from, to, stroke, strokeWidth) =>
     `<line x1="${from.x}" y1="${from.y}" x2="${to.x}" y2="${to.y}" stroke="${stroke}" stroke-width="${strokeWidth}"/>`;
-const text = (label, point, size, color, anchor, alignmentBaseline) =>
-    `<text x="${point.x}" y="${point.y}" font-size="${size}" fill="${color}" text-anchor="${anchor}" alignment-baseline="${alignmentBaseline}" font-family="sans-serif">${label}</text>`;
+const text = (label, point, size, color, anchor, dominantBaseline) =>
+    `<text x="${point.x}" y="${point.y}" font-size="${size}" fill="${color}" text-anchor="${anchor}" dominant-baseline="${dominantBaseline}" font-family="sans-serif">${label}</text>`;
 
 const arrowHead = (x, y, angle, color) => {
     return `<path d="M${x},${y} L${x + 3},${y + 5} L${x - 3},${y + 5} z" transform="rotate(${angle},${x},${y})" stroke=${color} stroke-width="2"/>`;
@@ -134,12 +134,12 @@ const dimension = (
     const labelOffset = width;
     let labelPoint = {x: (from.x + to.x) / 2, y: (from.y + to.y) / 2};
     let textAnchor = TextAnchor.middle;
-    let alignmentBaseline = TextAlignmentBaseline.central;
+    let dominantBaseline = TextDominantBaseline.central;
 
     switch (labelSide) {
         case LabelSide.top:
             labelPoint.y -= labelOffset;
-            alignmentBaseline = TextAlignmentBaseline.baseline;
+            dominantBaseline = TextDominantBaseline.baseline;
             break;
         case LabelSide.right:
             labelPoint.x += labelOffset;
@@ -147,7 +147,7 @@ const dimension = (
             break;
         case LabelSide.bottom:
             labelPoint.y += labelOffset;
-            alignmentBaseline = TextAlignmentBaseline.hanging;
+            dominantBaseline = TextDominantBaseline.hanging;
             break;
         case LabelSide.left:
             labelPoint.x -= labelOffset;
@@ -157,7 +157,7 @@ const dimension = (
 
     return `<g>
         ${dimensionLine(from, to, lineColor, lineWidth, width, startLine, endLine, startCap, endCap)}
-        ${text(label, labelPoint, labelSize, labelColor, textAnchor, alignmentBaseline)}
+        ${text(label, labelPoint, labelSize, labelColor, textAnchor, dominantBaseline)}
         </g>`;
 }
 
@@ -455,10 +455,10 @@ const courtTopWithDimensions = (locale = 'en') => {
         ${circle(leftFreeThrow, 40, 'none', 'black', 10, "30")}
         ${circle(rightFreeThrow, 40, 'none', 'black', 10, "30")}
         ${dimensionFreeThrow}
-        ${text(translations.ballLocationBeforeFreeThrow[locale], moveY(leftFreeThrow, -80), 120, dimensionTextColor, TextAnchor.middle, TextAlignmentBaseline.baseline)}
-        ${text(translations.competitionArea[locale], moveXY(competitionAreaTopLeft, {x: 100, y: 100}), 200, dimensionTextColorLight, TextAnchor.start, TextAlignmentBaseline.hanging)}
-        ${text(translations.playArea[locale], moveXY(playAreaTopLeft, {x: 100, y: 100}), 200, dimensionTextColor, TextAnchor.start, TextAlignmentBaseline.hanging)}
-        ${text(translations.court[locale], moveXY(courtTopLeft, {x: 200, y: 200}), 200, dimensionTextColor, TextAnchor.start, TextAlignmentBaseline.hanging)}
+        ${text(translations.ballLocationBeforeFreeThrow[locale], moveY(leftFreeThrow, -80), 120, dimensionTextColor, TextAnchor.middle, TextDominantBaseline.baseline)}
+        ${text(translations.competitionArea[locale], moveXY(competitionAreaTopLeft, {x: 100, y: 100}), 200, dimensionTextColorLight, TextAnchor.start, TextDominantBaseline.hanging)}
+        ${text(translations.playArea[locale], moveXY(playAreaTopLeft, {x: 100, y: 100}), 200, dimensionTextColor, TextAnchor.start, TextDominantBaseline.hanging)}
+        ${text(translations.court[locale], moveXY(courtTopLeft, {x: 200, y: 200}), 200, dimensionTextColor, TextAnchor.start, TextDominantBaseline.hanging)}
         </g>
         </g>`;
 }
