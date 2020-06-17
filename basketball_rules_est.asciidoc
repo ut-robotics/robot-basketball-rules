@@ -338,7 +338,7 @@ Vigade korral pannakse seisma ka aeg.
 
 == Punktiarvestus
 
-Iga korvi visatud pall annab ühe punkti.
+Iga korvi visatud ja sinna jäänud pall annab ühe punkti.
 Audis pallidega punkte teenida ei saa.
 Vooru võidab võistkond, kellel on vooru lõpus rohkem punkte.
 

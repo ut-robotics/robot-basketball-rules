@@ -338,7 +338,7 @@ If a foul is made then the time will be stopped.
 
 == Scoring
 
-Each ball that is fully in the basket gives one point.
+Each ball that is thrown in the basket and stays there gives one point.
 The balls that are out of play are not counted.
 Round is won by having more points.
 
