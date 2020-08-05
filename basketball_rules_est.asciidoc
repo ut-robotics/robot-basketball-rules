@@ -172,7 +172,7 @@ Pärast roboti käivitamist tuleb võistlusalast lahkuda.
 
 === Ülejäänud inimesed
 
-. Võistlusalas pole lubatud viibida ainult võistlejatel, kohtunikel ja korraldajatel.
+. Võistlusalas on lubatud viibida ainult võistlejatel, kohtunikel ja korraldajatel.
 
 [#robot_requirements]
 == Robotile esitatavad nõuded
