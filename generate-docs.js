@@ -1,10 +1,12 @@
 const {execSync} = require('child_process');
-const fs = require('fs-extra');
+const fs = require('fs');
 const path = require('path');
 const SimpleGit = require('simple-git/promise');
 let simpleGit = SimpleGit();
 const cheerio = require('cheerio');
 const prettier = require("prettier");
+
+const fsPromises = fs.promises;
 
 const stdWrite = function (message) {
     process.stdout.write(message);
@@ -23,11 +25,11 @@ const githubRepoURL = 'https://github.com/ut-robotics/robot-basketball-rules';
 
 function cleanAll() {
     cleanGitRepo();
-    fs.rmdirSync(generatedFolder, {recursive: true});
+    fs.rmSync(generatedFolder, {recursive: true, force: true});
 }
 
 function cleanGitRepo() {
-    fs.rmdirSync(gitFolder, {recursive: true});
+    fs.rmSync(gitFolder, {recursive: true, force: true});
 }
 
 function sortTagsByYearDescending(tags) {
@@ -71,7 +73,7 @@ async function generate() {
 }
 
 async function findFileWithName(name, directory) {
-    const fileNames = await fs.readdir(directory);
+    const fileNames = await fsPromises.readdir(directory);
 
     for (const fileName of fileNames) {
         if (path.basename(fileName, path.extname(fileName)) === name) {
@@ -84,7 +86,10 @@ async function findFileWithName(name, directory) {
 
 async function copyFiles(paths, fromDirectory, toDirectory) {
     for (const filePath of paths) {
-        await fs.copy(path.join(fromDirectory, filePath), path.join(toDirectory, filePath));
+        const destinationFilePath = path.join(toDirectory, filePath);
+
+        await fsPromises.mkdir(path.dirname(destinationFilePath), {recursive: true})
+        await fsPromises.copyFile(path.join(fromDirectory, filePath), destinationFilePath);
     }
 }
 
