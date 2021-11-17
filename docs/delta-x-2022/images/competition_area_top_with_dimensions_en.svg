@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8740 5540">
+  <g>
+    <g transform="translate(0, 0)">
+      <g transform="translate(20, 20)">
+        <rect x="0" y="0" width="7800" height="5000" fill="black" stroke="none" stroke-width="0" />
+      </g>
+      <g transform="translate(0, 0)">
+        <rect x="10" y="10" width="7820" height="5020" fill="black" stroke="rgb(200, 200, 200)" stroke-width="20" />
+      </g>
+      <g transform="translate(870, 520)">
+        <rect x="0" y="0" width="6100" height="4000" fill="darkorange" stroke="none" stroke-width="0" />
+      </g>
+      <g transform="translate(1620, 970)">
+        <rect x="0" y="0" width="4600" height="3100" fill="darkorange" stroke="none" stroke-width="0" />
+        <rect x="25" y="25" width="4550" height="3050" fill="none" stroke="black" stroke-width="50" />
+        <rect x="75" y="75" width="4450" height="2950" fill="none" stroke="white" stroke-width="50" />
+        <line x1="2300" y1="100" x2="2300" y2="3000" stroke="white" stroke-width="50" />
+      </g>
+      <g transform="translate(1604, 2190) rotate(0)">
+        <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
+        <circle
+          cx="96"
+          cy="330"
+          r="77"
+          fill="none"
+          stroke="rgb(188, 64, 119)"
+          stroke-width="6"
+          stroke-dasharray="none"
+        />
+      </g>
+      <g transform="translate(6236, 2850) rotate(180)">
+        <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
+        <circle cx="96" cy="330" r="77" fill="none" stroke="rgb(0,124,176)" stroke-width="6" stroke-dasharray="none" />
+      </g>
+    </g>
+    <g>
+      <g>
+        <g>
+          <line x1="28" y1="5180" x2="7812" y2="5180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line
+            x1="19.999999999999996"
+            y1="5130"
+            x2="20.000000000000004"
+            y2="5230"
+            stroke="rgba(0,0,0,0.5)"
+            stroke-width="16"
+          />
+          <line x1="7820" y1="5130" x2="7820" y2="5230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="3920"
+          y="5280"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="middle"
+          dominant-baseline="hanging"
+          font-family="sans-serif"
+        >
+          6500+
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="7980" y1="5012" x2="7980" y2="28" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="7930" y1="5020" x2="8030" y2="5020" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="7930" y1="20" x2="8030" y2="20" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="8080"
+          y="2520"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="start"
+          dominant-baseline="central"
+          font-family="sans-serif"
+        >
+          4400+
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="20" y1="4680" x2="862" y2="4680" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="445"
+          y="4780"
+          font-size="240"
+          fill="rgba(255,255,255,0.7)"
+          text-anchor="middle"
+          dominant-baseline="hanging"
+          font-family="sans-serif"
+        >
+          200+
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="7130" y1="512" x2="7130" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="7230"
+          y="270"
+          font-size="240"
+          fill="rgba(255,255,255,0.7)"
+          text-anchor="start"
+          dominant-baseline="central"
+          font-family="sans-serif"
+        >
+          200+
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="878" y1="4680" x2="6962" y2="4680" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="870" y1="4630" x2="870" y2="4730" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="6970" y1="4630" x2="6970" y2="4730" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="3920"
+          y="4780"
+          font-size="240"
+          fill="rgba(255,255,255,0.7)"
+          text-anchor="middle"
+          dominant-baseline="hanging"
+          font-family="sans-serif"
+        >
+          6100
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="7130" y1="4512" x2="7130" y2="528" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7080" y1="4520" x2="7180" y2="4520" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+          <line x1="7080" y1="520" x2="7180" y2="520" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="7230"
+          y="2520"
+          font-size="240"
+          fill="rgba(255,255,255,0.7)"
+          text-anchor="start"
+          dominant-baseline="central"
+          font-family="sans-serif"
+        >
+          4000
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="1628" y1="4150" x2="6212" y2="4150" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1620" y1="4100" x2="1620" y2="4200" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6220" y1="4100" x2="6220" y2="4200" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="3920"
+          y="4250"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="middle"
+          dominant-baseline="hanging"
+          font-family="sans-serif"
+        >
+          4600
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="6300" y1="4062" x2="6300" y2="978" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6250" y1="4070" x2="6350" y2="4070" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="6250" y1="970" x2="6350" y2="970" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="6400"
+          y="2520"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="start"
+          dominant-baseline="central"
+          font-family="sans-serif"
+        >
+          3100
+        </text>
+      </g>
+      <circle cx="3080" cy="2520" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <circle cx="4760" cy="2520" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <g>
+        <g>
+          <line x1="1788" y1="2680" x2="3072" y2="2680" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1780" y1="2630" x2="1780" y2="2730" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="3080" y1="2630" x2="3080" y2="2730" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="2430"
+          y="2780"
+          font-size="240"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="middle"
+          dominant-baseline="hanging"
+          font-family="sans-serif"
+        >
+          1300
+        </text>
+      </g>
+      <text
+        x="3080"
+        y="2440"
+        font-size="120"
+        fill="rgba(0,0,0,0.7)"
+        text-anchor="middle"
+        dominant-baseline="baseline"
+        font-family="sans-serif"
+      >
+        Ball location before free throw
+      </text>
+      <text
+        x="120"
+        y="120"
+        font-size="200"
+        fill="rgba(255,255,255,0.7)"
+        text-anchor="start"
+        dominant-baseline="hanging"
+        font-family="sans-serif"
+      >
+        Competition area
+      </text>
+      <text
+        x="970"
+        y="620"
+        font-size="200"
+        fill="rgba(0,0,0,0.7)"
+        text-anchor="start"
+        dominant-baseline="hanging"
+        font-family="sans-serif"
+      >
+        Playing area
+      </text>
+      <text
+        x="1820"
+        y="1170"
+        font-size="200"
+        fill="rgba(0,0,0,0.7)"
+        text-anchor="start"
+        dominant-baseline="hanging"
+        font-family="sans-serif"
+      >
+        Playing court
+      </text>
+    </g>
+  </g>
+</svg>
