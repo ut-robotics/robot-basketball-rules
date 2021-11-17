@@ -35,15 +35,15 @@ Võistlusala on jagatud kolmeks erinevaks tsooniks.
 Ääremärgistus (valged ja mustad jooned) on osa mänguväljakust.
 . Mänguala sisaldab võistlusala ja lisatsooni robotitele liikumiseks.
 Ala pikkus on 6100 mm ja laius 4000 mm.
-. Võistlejateala on 950 - 1000 mm laiune musta värvi vaip mänguala ümber.
+. Mänguala ümbritseb vähemalt 200 mm laiune musta värvi vaip.
 
 [#court_surface]
 === Väljaku kate
 
-Väljaku mänguala katteks on oranž viltmatt (ExpoRips 2007).
+Väljaku mänguala katteks on oranž viltmatt.
 Vaibaalune pind on ühtlane ja kõva.
 Väljaku võistlejateala on must vaip.
-Võistlusala välispiiril on vähemalt 450 mm kõrgused valged seinad.
+Võistlusala välispiiril on vähemalt 100 mm kõrgused valged seinad.
 
 ==== Võistlusala märgistus
 

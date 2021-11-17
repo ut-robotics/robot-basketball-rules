@@ -9,8 +9,10 @@ export default {
         width: 4000,
     },
     competitionArea: {
-        length: 8100,
-        width: 6000,
+        length: 7800,
+        width: 5000,
+        lengthMinPadding: 200,
+        widthMinPadding: 200,
     },
     freeThrow: {
         fromBasket: 1300

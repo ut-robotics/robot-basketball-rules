@@ -18,6 +18,10 @@ const playAreaWidth = constants.playArea.width;
 const playAreaLength = constants.playArea.length;
 const competitionAreaWidth = constants.competitionArea.width;
 const competitionAreaLength = constants.competitionArea.length;
+const competitionAreaWidthMinPadding = constants.competitionArea.widthMinPadding;
+const competitionAreaLengthMinPadding = constants.competitionArea.lengthMinPadding;
+const competitionAreaWidthPaddingActual = (competitionAreaWidth - playAreaWidth) / 2;
+const competitionAreaLengthPaddingActual = (competitionAreaLength - playAreaLength) / 2;
 const wallThickness = constants.walls.thickness;
 const totalLength = competitionAreaLength + 2 * wallThickness;
 const totalWidth = competitionAreaWidth + 2 * wallThickness;
@@ -357,25 +361,30 @@ const courtTopWithDimensions = (locale = 'en') => {
 
     const createDimension = (
         {
-            from, to, labelSide, lineColor = dimensionLineColor,
+            from, to, labelSide, label = null, lineColor = dimensionLineColor,
             labelColor = dimensionTextColor, startLine = true, endLine = true, startCap = false, endCap = false
-        }) => {
-            const length = Math.sqrt(Math.pow(to.y - from.y, 2) + Math.pow(to.x - from.x, 2));
-            return dimension({
-                from,
-                to,
-                lineColor,
-                labelColor,
-                label: length,
-                labelSize,
-                labelSide,
-                lineWidth: 16,
-                width: 100,
-                startLine,
-                endLine,
-                startCap,
-                endCap,
-            });
+        }
+    ) => {
+        if (label == null) {
+            // label = length
+            label = Math.sqrt(Math.pow(to.y - from.y, 2) + Math.pow(to.x - from.x, 2));
+        }
+
+        return dimension({
+            from,
+            to,
+            lineColor,
+            labelColor,
+            label,
+            labelSize,
+            labelSide,
+            lineWidth: 16,
+            width: 100,
+            startLine,
+            endLine,
+            startCap,
+            endCap,
+        });
     };
 
     const competitionAreaLengthFrom = moveY(competitionAreaZero, 160);
@@ -384,6 +393,7 @@ const courtTopWithDimensions = (locale = 'en') => {
         from: competitionAreaLengthFrom,
         to: competitionAreaLengthTo,
         labelSide: LabelSide.bottom,
+        label: `${playAreaLength + competitionAreaLengthMinPadding * 2}+`,
     });
 
     const competitionAreaWidthFrom = moveX(competitionAreaBottomRight, 160);
@@ -392,6 +402,7 @@ const courtTopWithDimensions = (locale = 'en') => {
         from: competitionAreaWidthFrom,
         to: competitionAreaWidthTo,
         labelSide: LabelSide.right,
+        label: `${playAreaWidth + competitionAreaWidthMinPadding * 2}+`,
     });
 
     const playAreaLengthFrom = moveY(playAreaZero, 160);
@@ -404,6 +415,18 @@ const courtTopWithDimensions = (locale = 'en') => {
         labelColor: dimensionTextColorLight,
     });
 
+    const dimensionCompetitionAreaLengthPadding = createDimension({
+        from: moveX(playAreaLengthFrom, -competitionAreaLengthPaddingActual),
+        to: playAreaLengthFrom,
+        labelSide: LabelSide.bottom,
+        label: `${competitionAreaLengthMinPadding}+`,
+        lineColor: dimensionLineColorLight,
+        labelColor: dimensionTextColorLight,
+        startLine: false,
+        endLine: false,
+        startCap: true,
+    });
+
     const playAreaWidthFrom = moveX(playAreaBottomRight, 160);
     const playAreaWidthTo = moveY(playAreaWidthFrom, -playAreaWidth);
     const dimensionPlayAreaWidth = createDimension({
@@ -412,6 +435,18 @@ const courtTopWithDimensions = (locale = 'en') => {
         labelSide: LabelSide.right,
         lineColor: dimensionLineColorLight,
         labelColor: dimensionTextColorLight,
+    });
+
+    const dimensionCompetitionAreaWidthPadding = createDimension({
+        from: playAreaWidthTo,
+        to: moveY(playAreaWidthTo, -competitionAreaWidthPaddingActual),
+        labelSide: LabelSide.right,
+        label: `${competitionAreaWidthMinPadding}+`,
+        lineColor: dimensionLineColorLight,
+        labelColor: dimensionTextColorLight,
+        startLine: false,
+        endLine: false,
+        endCap: true,
     });
 
     const courtLengthFrom = moveY(courtZero, 80);
@@ -448,6 +483,8 @@ const courtTopWithDimensions = (locale = 'en') => {
         <g>
         ${dimensionCompetitionAreaLength}
         ${dimensionCompetitionAreaWidth}
+        ${dimensionCompetitionAreaLengthPadding}
+        ${dimensionCompetitionAreaWidthPadding}
         ${dimensionPlayAreaLength}
         ${dimensionPlayAreaWidth}
         ${dimensionCourtLength}

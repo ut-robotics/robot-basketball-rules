@@ -35,15 +35,15 @@ The competition area is divided into three different zones.
 Edge markings (white and black lines) are part of the playing court.
 . Playing area includes playing court and extra zone for robots to move around.
 Playing area is 6100 mm long and 4000 mm wide.
-. Competitors area is an 950 – 1000 mm wide black carpet around the playing area.
+. Playing area is surrounded with at least 200 mm wide black carpet.
 
 [#court_surface]
 === Court surface
 
-The surface of the playing area is orange needle felt carpet (ExpoRips 2007).
+The surface of the playing area is orange needle felt carpet.
 Surface beneath the carpet is hard and even.
 Competitors area is covered with a black carpet.
-Competition area is surrounded by white walls which are at least 450 mm high.
+Competition area is surrounded by white walls which are at least 100 mm high.
 
 ==== Court markings
 
