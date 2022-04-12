@@ -9,6 +9,6 @@
     "cheerio": "^1.0.0-rc.3",
     "color": "^4.0.1",
     "prettier": "^2.4.1",
-    "simple-git": "^2.47.0"
+    "simple-git": "^3.5.0"
   }
 }
