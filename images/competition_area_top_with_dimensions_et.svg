@@ -1,22 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8740 5540">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6100 4400">
+  <rect x="0" y="0" width="6100" height="4400" fill="white" stroke="none" stroke-width="0" />
   <g>
     <g transform="translate(0, 0)">
-      <g transform="translate(20, 20)">
-        <rect x="0" y="0" width="7800" height="5000" fill="black" stroke="none" stroke-width="0" />
-      </g>
       <g transform="translate(0, 0)">
-        <rect x="10" y="10" width="7820" height="5020" fill="black" stroke="rgb(200, 200, 200)" stroke-width="20" />
+        <rect x="0" y="0" width="5500" height="4000" fill="darkorange" stroke="none" stroke-width="0" />
       </g>
-      <g transform="translate(870, 520)">
-        <rect x="0" y="0" width="6100" height="4000" fill="darkorange" stroke="none" stroke-width="0" />
+      <g transform="translate(30, 30)">
+        <rect x="10" y="10" width="5420" height="3920" fill="none" stroke="rgb(200, 200, 200)" stroke-width="20" />
       </g>
-      <g transform="translate(1620, 970)">
+      <g transform="translate(450, 450)">
         <rect x="0" y="0" width="4600" height="3100" fill="darkorange" stroke="none" stroke-width="0" />
         <rect x="25" y="25" width="4550" height="3050" fill="none" stroke="black" stroke-width="50" />
         <rect x="75" y="75" width="4450" height="2950" fill="none" stroke="white" stroke-width="50" />
         <line x1="2300" y1="100" x2="2300" y2="3000" stroke="white" stroke-width="50" />
       </g>
-      <g transform="translate(1604, 2190) rotate(0)">
+      <g transform="translate(434, 1670) rotate(0)">
         <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
         <circle
           cx="96"
@@ -28,7 +26,7 @@
           stroke-dasharray="none"
         />
       </g>
-      <g transform="translate(6236, 2850) rotate(180)">
+      <g transform="translate(5066, 2330) rotate(180)">
         <rect x="0" y="0" width="16" height="660" fill="white" stroke="none" stroke-width="0" />
         <circle cx="96" cy="330" r="77" fill="none" stroke="rgb(0,124,176)" stroke-width="6" stroke-dasharray="none" />
       </g>
@@ -36,108 +34,72 @@
     <g>
       <g>
         <g>
-          <line x1="28" y1="5180" x2="7812" y2="5180" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="50" y1="3630" x2="442" y2="3630" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="250"
+          y="3680"
+          font-size="160"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="middle"
+          dominant-baseline="hanging"
+          font-family="sans-serif"
+        >
+          400+
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="5130" y1="442" x2="5130" y2="50" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+        </g>
+        <text
+          x="5180"
+          y="250"
+          font-size="160"
+          fill="rgba(0,0,0,0.7)"
+          text-anchor="start"
+          dominant-baseline="central"
+          font-family="sans-serif"
+        >
+          400+
+        </text>
+      </g>
+      <g>
+        <g>
+          <line x1="8" y1="4160" x2="5492" y2="4160" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
           <line
-            x1="19.999999999999996"
-            y1="5130"
-            x2="20.000000000000004"
-            y2="5230"
+            x1="-1.5308084989341915e-15"
+            y1="4135"
+            x2="1.5308084989341915e-15"
+            y2="4185"
             stroke="rgba(0,0,0,0.5)"
             stroke-width="16"
           />
-          <line x1="7820" y1="5130" x2="7820" y2="5230" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5500" y1="4135" x2="5500" y2="4185" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="3920"
-          y="5280"
-          font-size="240"
+          x="2750"
+          y="4210"
+          font-size="160"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
           dominant-baseline="hanging"
           font-family="sans-serif"
         >
-          6500+
+          5500+
         </text>
       </g>
       <g>
         <g>
-          <line x1="7980" y1="5012" x2="7980" y2="28" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="7930" y1="5020" x2="8030" y2="5020" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="7930" y1="20" x2="8030" y2="20" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5660" y1="3992" x2="5660" y2="8" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5635" y1="4000" x2="5685" y2="4000" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5635" y1="0" x2="5685" y2="0" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="8080"
-          y="2520"
-          font-size="240"
+          x="5710"
+          y="2000"
+          font-size="160"
           fill="rgba(0,0,0,0.7)"
-          text-anchor="start"
-          dominant-baseline="central"
-          font-family="sans-serif"
-        >
-          4400+
-        </text>
-      </g>
-      <g>
-        <g>
-          <line x1="20" y1="4680" x2="862" y2="4680" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-        </g>
-        <text
-          x="445"
-          y="4780"
-          font-size="240"
-          fill="rgba(255,255,255,0.7)"
-          text-anchor="middle"
-          dominant-baseline="hanging"
-          font-family="sans-serif"
-        >
-          200+
-        </text>
-      </g>
-      <g>
-        <g>
-          <line x1="7130" y1="512" x2="7130" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-        </g>
-        <text
-          x="7230"
-          y="270"
-          font-size="240"
-          fill="rgba(255,255,255,0.7)"
-          text-anchor="start"
-          dominant-baseline="central"
-          font-family="sans-serif"
-        >
-          200+
-        </text>
-      </g>
-      <g>
-        <g>
-          <line x1="878" y1="4680" x2="6962" y2="4680" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-          <line x1="870" y1="4630" x2="870" y2="4730" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-          <line x1="6970" y1="4630" x2="6970" y2="4730" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-        </g>
-        <text
-          x="3920"
-          y="4780"
-          font-size="240"
-          fill="rgba(255,255,255,0.7)"
-          text-anchor="middle"
-          dominant-baseline="hanging"
-          font-family="sans-serif"
-        >
-          6100
-        </text>
-      </g>
-      <g>
-        <g>
-          <line x1="7130" y1="4512" x2="7130" y2="528" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-          <line x1="7080" y1="4520" x2="7180" y2="4520" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-          <line x1="7080" y1="520" x2="7180" y2="520" stroke="rgba(255,255,255,0.5)" stroke-width="16" />
-        </g>
-        <text
-          x="7230"
-          y="2520"
-          font-size="240"
-          fill="rgba(255,255,255,0.7)"
           text-anchor="start"
           dominant-baseline="central"
           font-family="sans-serif"
@@ -147,14 +109,14 @@
       </g>
       <g>
         <g>
-          <line x1="1628" y1="4150" x2="6212" y2="4150" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="1620" y1="4100" x2="1620" y2="4200" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="6220" y1="4100" x2="6220" y2="4200" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="458" y1="3630" x2="5042" y2="3630" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="450" y1="3605" x2="450" y2="3655" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5050" y1="3605" x2="5050" y2="3655" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="3920"
-          y="4250"
-          font-size="240"
+          x="2750"
+          y="3680"
+          font-size="160"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
           dominant-baseline="hanging"
@@ -165,14 +127,14 @@
       </g>
       <g>
         <g>
-          <line x1="6300" y1="4062" x2="6300" y2="978" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="6250" y1="4070" x2="6350" y2="4070" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="6250" y1="970" x2="6350" y2="970" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5130" y1="3542" x2="5130" y2="458" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5105" y1="3550" x2="5155" y2="3550" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="5105" y1="450" x2="5155" y2="450" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="6400"
-          y="2520"
-          font-size="240"
+          x="5180"
+          y="2000"
+          font-size="160"
           fill="rgba(0,0,0,0.7)"
           text-anchor="start"
           dominant-baseline="central"
@@ -181,18 +143,18 @@
           3100
         </text>
       </g>
-      <circle cx="3080" cy="2520" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
-      <circle cx="4760" cy="2520" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <circle cx="1910" cy="2000" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
+      <circle cx="3590" cy="2000" r="40" fill="none" stroke="black" stroke-width="10" stroke-dasharray="30" />
       <g>
         <g>
-          <line x1="1788" y1="2680" x2="3072" y2="2680" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="1780" y1="2630" x2="1780" y2="2730" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
-          <line x1="3080" y1="2630" x2="3080" y2="2730" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="618" y1="2160" x2="1902" y2="2160" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="610" y1="2135" x2="610" y2="2185" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
+          <line x1="1910" y1="2135" x2="1910" y2="2185" stroke="rgba(0,0,0,0.5)" stroke-width="16" />
         </g>
         <text
-          x="2430"
-          y="2780"
-          font-size="240"
+          x="1260"
+          y="2210"
+          font-size="160"
           fill="rgba(0,0,0,0.7)"
           text-anchor="middle"
           dominant-baseline="hanging"
@@ -202,8 +164,8 @@
         </text>
       </g>
       <text
-        x="3080"
-        y="2440"
+        x="1910"
+        y="1920"
         font-size="120"
         fill="rgba(0,0,0,0.7)"
         text-anchor="middle"
@@ -213,19 +175,8 @@
         Palli asukoht enne vabaviset
       </text>
       <text
-        x="120"
-        y="120"
-        font-size="200"
-        fill="rgba(255,255,255,0.7)"
-        text-anchor="start"
-        dominant-baseline="hanging"
-        font-family="sans-serif"
-      >
-        Võistlusala
-      </text>
-      <text
-        x="970"
-        y="620"
+        x="100"
+        y="100"
         font-size="200"
         fill="rgba(0,0,0,0.7)"
         text-anchor="start"
@@ -235,8 +186,8 @@
         Mänguala
       </text>
       <text
-        x="1820"
-        y="1170"
+        x="650"
+        y="650"
         font-size="200"
         fill="rgba(0,0,0,0.7)"
         text-anchor="start"

@@ -1,0 +1,7 @@
+= Robot basketball rules
+
+== Changelog
+
+=== 2026
+
+. Competitors area (black carpet) around the playing area (orange carpet) has been removed.

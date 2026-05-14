@@ -5,14 +5,10 @@ export default {
         lineWidth: 50,
     },
     playArea: {
-        length: 6100,
+        length: 5500,
         width: 4000,
-    },
-    competitionArea: {
-        length: 7800,
-        width: 5000,
-        lengthMinPadding: 200,
-        widthMinPadding: 200,
+        lengthMinPadding: 400,
+        widthMinPadding: 400,
     },
     freeThrow: {
         fromBasket: 1300

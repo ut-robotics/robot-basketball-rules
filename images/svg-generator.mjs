@@ -16,15 +16,19 @@ const courtWidth = constants.court.width;
 const courtLength = constants.court.length;
 const playAreaWidth = constants.playArea.width;
 const playAreaLength = constants.playArea.length;
-const competitionAreaWidth = constants.competitionArea.width;
-const competitionAreaLength = constants.competitionArea.length;
-const competitionAreaWidthMinPadding = constants.competitionArea.widthMinPadding;
-const competitionAreaLengthMinPadding = constants.competitionArea.lengthMinPadding;
-const competitionAreaWidthPaddingActual = (competitionAreaWidth - playAreaWidth) / 2;
-const competitionAreaLengthPaddingActual = (competitionAreaLength - playAreaLength) / 2;
+const courtWithDimensionsSizeX = playAreaLength + 600;
+const courtWithDimensionsSizeY = playAreaWidth + 400;
+// const competitionAreaWidth = constants.competitionArea.width;
+// const competitionAreaLength = constants.competitionArea.length;
+const wallOffsetX = 30;
+const wallOffsetY = 30;
 const wallThickness = constants.walls.thickness;
-const totalLength = competitionAreaLength + 2 * wallThickness;
-const totalWidth = competitionAreaWidth + 2 * wallThickness;
+const playAreaWidthMinPadding = constants.playArea.widthMinPadding;
+const playAreaLengthMinPadding = constants.playArea.lengthMinPadding;
+const playAreaWidthPaddingActual = (playAreaWidth - courtWidth) / 2 - wallOffsetX - wallThickness;
+const playAreaLengthPaddingActual = (playAreaLength - courtLength) / 2 - wallOffsetY - wallThickness;
+// const totalLength = competitionAreaLength + 2 * wallThickness;
+// const totalWidth = competitionAreaWidth + 2 * wallThickness;
 const basketRadius = (constants.baskets.outerDiameter + constants.baskets.innerDiameter) / 4;
 const basketThickness = (constants.baskets.outerDiameter - constants.baskets.innerDiameter) / 2;
 const markerOnBackboardOffsetY = constants.backboard.height - constants.markers.height - constants.markers.offset;
@@ -181,7 +185,7 @@ const competitionArea = (offsetX, offsetY) => `<g transform="translate(${offsetX
     </g>`;
 
 const walls = (offsetX, offsetY) => `<g transform="translate(${offsetX}, ${offsetY})">
-    ${rect(0.5 * wallThickness, 0.5 * wallThickness, competitionAreaLength + wallThickness, competitionAreaWidth + wallThickness, constants.colors.outsideCourt, constants.colors.walls, wallThickness)}
+    ${rect(0.5 * wallThickness, 0.5 * wallThickness, playAreaLength - wallThickness - 2 * offsetX, playAreaWidth - wallThickness - 2 * offsetY, 'none', constants.colors.walls, wallThickness)}
     </g>`;
 
 const basketTop = (offsetX, offsetY, rotation, color) => `<g transform="translate(${offsetX}, ${offsetY}) rotate(${rotation})">
@@ -308,22 +312,21 @@ const basketSide = (offsetX, offsetY, color) => `<g transform="translate(${offse
     </g>`;
 
 const competitionAreaTop = (offsetX, offsetY, addBaskets = true) => {
-    const courtOffsetX = (totalLength - courtLength) / 2;
-    const courtOffsetY = (totalWidth - courtWidth) / 2;
+    const courtOffsetX = (playAreaLength - courtLength) / 2;
+    const courtOffsetY = (playAreaWidth - courtWidth) / 2;
 
     const backboardThickness = constants.backboard.thickness;
     const backboardWidth = constants.backboard.width;
     const basket1Color = constants.colors.basket1;
     const basket2Color = constants.colors.basket2;
     const baskets = addBaskets
-        ? `${basketTop(courtOffsetX - backboardThickness, (totalWidth - backboardWidth) / 2, 0, basket1Color)}
-            ${basketTop(courtOffsetX + courtLength + backboardThickness, (totalWidth + backboardWidth) / 2, 180, basket2Color)}`
+        ? `${basketTop(courtOffsetX - backboardThickness, (playAreaWidth - backboardWidth) / 2, 0, basket1Color)}
+            ${basketTop(courtOffsetX + courtLength + backboardThickness, (playAreaWidth + backboardWidth) / 2, 180, basket2Color)}`
         : '';
 
     return `<g transform="translate(${offsetX}, ${offsetY})">
-        ${competitionArea(wallThickness, wallThickness)}
-        ${walls(0, 0)}
-        ${playArea((totalLength - playAreaLength) / 2, (totalWidth - playAreaWidth) / 2)}
+        ${playArea(offsetX, offsetY)}
+        ${walls(wallOffsetX, wallOffsetY)}
         ${court(courtOffsetX, courtOffsetY)}
         ${baskets}
         </g>`;
@@ -340,16 +343,9 @@ const playAreaWithMarkingsTop = () => {
 }
 
 const courtTopWithDimensions = (locale = 'en') => {
-    const offset = {x: 0, y: 0};
-    const competitionAreaTopLeft = {x: offset.x + wallThickness, y: offset.y + wallThickness};
-    const competitionAreaBottomRight = moveXY(competitionAreaTopLeft, {x: competitionAreaLength, y: competitionAreaWidth});
-    const competitionAreaZero = moveY(competitionAreaTopLeft, competitionAreaWidth); // bottom left coordinate
-    const playAreaTopLeft = moveXY(
-        competitionAreaTopLeft,
-        {x: (competitionAreaLength - playAreaLength) / 2, y: (competitionAreaWidth - playAreaWidth) / 2}
-        );
-    const playAreaBottomRight = moveXY(playAreaTopLeft, {x: playAreaLength, y: playAreaWidth});
-    const playAreaZero = moveY(playAreaTopLeft, playAreaWidth);
+    const playAreaTopLeft = {x: 0, y: 0};
+    const playAreaBottomRight = {x: playAreaLength, y: playAreaWidth};
+    const playAreaZero = moveY(playAreaTopLeft, playAreaWidth); // bottom left coordinate
     const courtTopLeft = moveXY(
         playAreaTopLeft,
         {x: (playAreaLength - courtLength) / 2, y: (playAreaWidth - courtWidth) / 2}
@@ -357,7 +353,7 @@ const courtTopWithDimensions = (locale = 'en') => {
     const courtBottomRight = moveXY(courtTopLeft, {x: courtLength, y: courtWidth});
     const courtZero = moveY(courtTopLeft, courtWidth);
 
-    const labelSize = 240;
+    const labelSize = 160;
 
     const createDimension = (
         {
@@ -379,7 +375,7 @@ const courtTopWithDimensions = (locale = 'en') => {
             labelSize,
             labelSide,
             lineWidth: 16,
-            width: 100,
+            width: 50,
             startLine,
             endLine,
             startCap,
@@ -387,45 +383,16 @@ const courtTopWithDimensions = (locale = 'en') => {
         });
     };
 
-    const competitionAreaLengthFrom = moveY(competitionAreaZero, 160);
-    const competitionAreaLengthTo = moveX(competitionAreaLengthFrom, competitionAreaLength);
-    const dimensionCompetitionAreaLength = createDimension({
-        from: competitionAreaLengthFrom,
-        to: competitionAreaLengthTo,
-        labelSide: LabelSide.bottom,
-        label: `${playAreaLength + competitionAreaLengthMinPadding * 2}+`,
-    });
-
-    const competitionAreaWidthFrom = moveX(competitionAreaBottomRight, 160);
-    const competitionAreaWidthTo = moveY(competitionAreaWidthFrom, -competitionAreaWidth);
-    const dimensionCompetitionAreaWidth = createDimension({
-        from: competitionAreaWidthFrom,
-        to: competitionAreaWidthTo,
-        labelSide: LabelSide.right,
-        label: `${playAreaWidth + competitionAreaWidthMinPadding * 2}+`,
-    });
-
     const playAreaLengthFrom = moveY(playAreaZero, 160);
     const playAreaLengthTo = moveX(playAreaLengthFrom, playAreaLength);
     const dimensionPlayAreaLength = createDimension({
         from: playAreaLengthFrom,
         to: playAreaLengthTo,
         labelSide: LabelSide.bottom,
-        lineColor: dimensionLineColorLight,
-        labelColor: dimensionTextColorLight,
+        label: `${playAreaLength}+`,
     });
 
-    const dimensionCompetitionAreaLengthPadding = createDimension({
-        from: moveX(playAreaLengthFrom, -competitionAreaLengthPaddingActual),
-        to: playAreaLengthFrom,
-        labelSide: LabelSide.bottom,
-        label: `${competitionAreaLengthMinPadding}+`,
-        lineColor: dimensionLineColorLight,
-        labelColor: dimensionTextColorLight,
-        startLine: false,
-        endLine: false,
-        startCap: true,
-    });
+
 
     const playAreaWidthFrom = moveX(playAreaBottomRight, 160);
     const playAreaWidthTo = moveY(playAreaWidthFrom, -playAreaWidth);
@@ -433,20 +400,6 @@ const courtTopWithDimensions = (locale = 'en') => {
         from: playAreaWidthFrom,
         to: playAreaWidthTo,
         labelSide: LabelSide.right,
-        lineColor: dimensionLineColorLight,
-        labelColor: dimensionTextColorLight,
-    });
-
-    const dimensionCompetitionAreaWidthPadding = createDimension({
-        from: playAreaWidthTo,
-        to: moveY(playAreaWidthTo, -competitionAreaWidthPaddingActual),
-        labelSide: LabelSide.right,
-        label: `${competitionAreaWidthMinPadding}+`,
-        lineColor: dimensionLineColorLight,
-        labelColor: dimensionTextColorLight,
-        startLine: false,
-        endLine: false,
-        endCap: true,
     });
 
     const courtLengthFrom = moveY(courtZero, 80);
@@ -457,12 +410,36 @@ const courtTopWithDimensions = (locale = 'en') => {
         labelSide: LabelSide.bottom,
     });
 
+    const dimensionPlayAreaLengthPadding = createDimension({
+        from: moveX(courtLengthFrom, -playAreaLengthPaddingActual),
+        to: courtLengthFrom,
+        labelSide: LabelSide.bottom,
+        label: `${playAreaLengthMinPadding}+`,
+        lineColor: dimensionLineColor,
+        labelColor: dimensionTextColor,
+        startLine: false,
+        endLine: false,
+        startCap: true,
+    });
+
     const courtWidthFrom = moveX(courtBottomRight, 80);
     const courtWidthTo = moveY(courtWidthFrom, -courtWidth);
     const dimensionCourtWidth = createDimension({
         from: courtWidthFrom,
         to: courtWidthTo,
         labelSide: LabelSide.right,
+    });
+
+    const dimensionPlayAreaWidthPadding = createDimension({
+        from: courtWidthTo,
+        to: moveY(courtWidthTo, -playAreaWidthPaddingActual),
+        labelSide: LabelSide.right,
+        label: `${playAreaWidthMinPadding}+`,
+        lineColor: dimensionLineColor,
+        labelColor: dimensionTextColor,
+        startLine: false,
+        endLine: false,
+        endCap: true,
     });
 
     const courtCenter = moveXY(courtZero, {x: 0.5 * courtLength, y: -0.5 * courtWidth});
@@ -478,13 +455,12 @@ const courtTopWithDimensions = (locale = 'en') => {
         labelSide: LabelSide.bottom,
     });
 
-    return `<g>
-        ${competitionAreaTop(offset.x, offset.y)}
+    return `${rect(0, 0, courtWithDimensionsSizeX, courtWithDimensionsSizeY, 'white', 'none', 0)}
         <g>
-        ${dimensionCompetitionAreaLength}
-        ${dimensionCompetitionAreaWidth}
-        ${dimensionCompetitionAreaLengthPadding}
-        ${dimensionCompetitionAreaWidthPadding}
+        ${competitionAreaTop(0, 0)}
+        <g>
+        ${dimensionPlayAreaLengthPadding}
+        ${dimensionPlayAreaWidthPadding}
         ${dimensionPlayAreaLength}
         ${dimensionPlayAreaWidth}
         ${dimensionCourtLength}
@@ -493,7 +469,6 @@ const courtTopWithDimensions = (locale = 'en') => {
         ${circle(rightFreeThrow, 40, 'none', 'black', 10, "30")}
         ${dimensionFreeThrow}
         ${text(translations.ballLocationBeforeFreeThrow[locale], moveY(leftFreeThrow, -80), 120, dimensionTextColor, TextAnchor.middle, TextDominantBaseline.baseline)}
-        ${text(translations.competitionArea[locale], moveXY(competitionAreaTopLeft, {x: 100, y: 100}), 200, dimensionTextColorLight, TextAnchor.start, TextDominantBaseline.hanging)}
         ${text(translations.playArea[locale], moveXY(playAreaTopLeft, {x: 100, y: 100}), 200, dimensionTextColor, TextAnchor.start, TextDominantBaseline.hanging)}
         ${text(translations.court[locale], moveXY(courtTopLeft, {x: 200, y: 200}), 200, dimensionTextColor, TextAnchor.start, TextDominantBaseline.hanging)}
         </g>
@@ -502,9 +477,9 @@ const courtTopWithDimensions = (locale = 'en') => {
 
 const courtSVG = toSVG(court(0, 0), courtLength, courtWidth);
 const playAreaWithMarkingsTopSVG = toSVG(playAreaWithMarkingsTop(0, 0), playAreaLength, playAreaWidth);
-const competitionAreaSVG = toSVG(competitionAreaTop(0, 0), totalLength, totalWidth);
-const courtWithDimensionsEnglishSVG = toSVG(courtTopWithDimensions('en'), totalLength + 900, totalWidth + 500);
-const courtWithDimensionsEstonianSVG = toSVG(courtTopWithDimensions('et'), totalLength + 900, totalWidth + 500);
+const competitionAreaSVG = toSVG(competitionAreaTop(0, 0), playAreaLength, playAreaWidth);
+const courtWithDimensionsEnglishSVG = toSVG(courtTopWithDimensions('en'), courtWithDimensionsSizeX, courtWithDimensionsSizeY);
+const courtWithDimensionsEstonianSVG = toSVG(courtTopWithDimensions('et'), courtWithDimensionsSizeX, courtWithDimensionsSizeY);
 const basket1FrontSVG = toSVG(basketFront(0, 0, constants.colors.basket1, constants.markers.basket1IDs), constants.backboard.width, constants.backboard.height);
 const basket2FrontSVG = toSVG(basketFront(0, 0, constants.colors.basket2, constants.markers.basket2IDs), constants.backboard.width, constants.backboard.height);
 const basket1FrontWithDimensionsSVG = toSVG(basketFrontWithDimensions(constants.colors.basket1, constants.markers.basket1IDs), constants.backboard.width + 180, constants.backboard.height + 120);
