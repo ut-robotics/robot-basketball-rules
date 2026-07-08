@@ -75,7 +75,7 @@ Markers are identified by marker's ID:
 * *21* on the *left* of the *blue* basket
 * *22* on the *right* of the *blue* basket
 
-ArUco marker generator can be found here: http://chev.me/arucogen/.
+ArUco marker generator can be found here: https://chev.me/arucogen/.
 
 [.float-group]
 --

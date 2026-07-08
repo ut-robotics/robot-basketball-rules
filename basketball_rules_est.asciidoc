@@ -75,7 +75,7 @@ Markerid on tuvastatavad markeri ID järgi:
 * *21* *vasakul* pool *sinist* korvi
 * *22* *paremal* pool *sinist* korvi
 
-ArUco markerite generaator on leitav: http://chev.me/arucogen/.
+ArUco markerite generaator on leitav: https://chev.me/arucogen/.
 
 [.float-group]
 --
