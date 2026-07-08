@@ -143,34 +143,16 @@ Võistkonna suurus registreerimisel on kuni 6 liiget.
 [#being_in_playing_area]
 == Mängualas viibimine
 
-=== Robotid
+<<being_in_playing_area_table>> näitab millised robotid ja inimesed on lubatud mängualas
+vastavalt võistluse olekule.
+Robotitel ja inimestel, kes ei osale võistlusel, ei ole mängualas viibimine lubatud.
 
-. Mängu ajal võivad mängualas viibida ainult selles mängus võistlevad robotid.
-
-=== Kõik inimesed
-
-. Mängude ajal ei tohi mängualas liikujate riietuses olla väljaku ega korvide värve (v.a must).
-
-=== Võistkonna liikmed
-
-. Mängu kestel on lubatud mängualas viibida ainult võistlevate võistkondade liikmetel.
-. Käimasoleva mängu ajal on roboti käivitamiseks lubatud mänguala sisse ulatuda (ilma mängualasse astumata) mõlemast võistkonnast ainult ühel liikmel.
-Pärast roboti käivitamist tuleb mängualast lahkuda.
-. Kui mänguvoor on peatatud, on kummastki võistkonnast lubatud mängualas viibida kuni kahel liikmel.
-. Mänguvoorude vahelisel ajal on lubatud mängualas viibida kogu võistkonnal.
-. Mängude vahelisel ajal on lubatud mängualas viibida ainult algava mängu võistkondadel.
-
-=== Kohtunikud
-
-. Kohtunikel on lubatud mängualas viibida igal ajal, välja arvatud käimasoleva mänguvooru ajal.
-
-=== Korraldajad
-
-. Korraldajatel on lubatud mängusalas viibida ainult voorude ja mängude vahelisel ajal.
-
-=== Ülejäänud inimesed
-
-. Ülejäänutel inimestel ei ole lubatud mängualas viibida.
+[#being_in_playing_area_table]
+.Mängualas viibimine vastavalt võistluse olekule
+[%header,cols="1h,6*",format=tsv]
+|===
+include::being_in_playing_area_est.tsv[]
+|===
 
 [#robot_requirements]
 == Robotile esitatavad nõuded
@@ -181,7 +163,7 @@ Pärast roboti käivitamist tuleb mängualast lahkuda.
 
 Robot on täielikult autonoomne masin, mis kannab oma energiaallikat, liikumismehhanisme ja oma juhtimis- ning kontrollsüsteeme.
 Robotit ei tohi mängu ajal kaugjuhtida.
-Lubatud on ühesuunaline side robotist välja ja stardimärguande saatmine.
+Lubatud on ühesuunaline side robotist välja.
 
 [#robot_requirements_mechanical]
 === Roboti mehaanilised nõuded
@@ -201,7 +183,6 @@ Indikaatorid ja andurites kasutatavad LED-id on lubatud, kui need vastavad väli
 . Juhul kui kasutatakse valgust levitavaid elemente, siis ei tohi nende intensiivsus olla inimese silmale ohtlik või peab olema varjestatud otsevaatluse eest.
 . Juhul kui kasutatakse laserit, siis ei tohi laseri poolt kiiratud kiirgus (keskmistatud üle 1 sekundi) olla suurem kui 1 mW/mm^2^.
 . Robot ei tohi tahtlikult petta vastasroboti optilisi andureid (sealhulgas ka roboti kaamerat).
-. Robot on lubatud käivitada manuaalselt.
 
 === Roboti pääs võistlusele
 :xrefstyle: short
@@ -218,13 +199,13 @@ Samade nõuete vastu eksimine turniiri käigus toob kaasa roboti kõrvaldamise k
 
 ==== Üldine
 
-Palli käsitlemisel roboti poolt otseseid piiranguid ei ole.
 Audis palliga visatud korvi ei loeta.
 
 ==== Roboti karistamine ja eemaldamine
 :xrefstyle: basic
 
 . Robotile määratakse viga kui:
+* robot ei peatu stopp signaali peale (see <<referee_signals>>);
 * robot hoiab korraga rohkem kui ühte palli;
 * robot liigutab korvi;
 * robot kahjustab väljakut või selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid või teisi võistlusväljakut ümbritsevaid inimesi.
@@ -266,8 +247,7 @@ Mängude haldamiseks on loodud tarkvara, mis tegeleb signaalide saatmisega.
 Tarkvara ja dokumentatsioon on saadaval järgnevalt lingilt:
 https://github.com/ut-robotics/robot-basketball-manager
 
-Kohtuniku signaalide reageerimine pole kohustuslik.
-Tarkvara on veel arendamisel ja kohtuniku signaalid võivad muutuda.
+Kohtuniku signaalidele reageerimine on kohustuslik.
 
 == Kohtunikud
 

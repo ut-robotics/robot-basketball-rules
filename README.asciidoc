@@ -5,3 +5,4 @@
 === 2026
 
 . Competitors area (black carpet) around the playing area (orange carpet) has been removed.
+. Reacting to referee signals is now mandatory and manual starting is not allowed.

@@ -143,34 +143,16 @@ Up to 6 members can be registered to a team.
 [#being_in_playing_area]
 == Being in the playing area
 
-=== Robots
+<<being_in_playing_area_table>> shows which robots and people are allowed to be in the playing area
+according to the competition state.
+Robots and people, who are not taking part of the competition, are not allowed to be in the playing area.
 
-. During a game, only robots competing in that game can be in the playing area.
-
-=== All people
-
-. During the games, everyone in the playing area must wear clothes which do not have the same colours that are present in the playing area or baskets (except for black).
-
-=== Team members
-
-. Only team members of the competing robots can be in the playing area during a game.
-. During an active game, only one team member from each team is allowed to reach into playing area (without stepping into it) for starting the robot.
-The team member has to leave the playing area after starting the robot.
-. When a game round is stopped, up to two team members from each team can be in the playing area.
-. Entire team is allowed in the playing area between game rounds.
-. Only teams of the game about to start are allowed in the playing area between the games.
-
-=== Referees
-
-. Referees can be in the playing area during the entire competition, except during the active game round.
-
-=== Organisers
-
-. Organisers are only allowed to be in the playing area between games and game rounds.
-
-=== Other people
-
-. Other people are not allowed in the playing area.
+[#being_in_playing_area_table]
+.Being in playing area according to the state of the competition
+[%header,cols="1h,6*",format=tsv]
+|===
+include::being_in_playing_area_eng.tsv[]
+|===
 
 [#robot_requirements]
 == Requirements for the robot
@@ -181,7 +163,7 @@ The team member has to leave the playing area after starting the robot.
 
 A robot is a fully autonomous machine that carries its own energy source, movement mechanisms, management and control systems.
 It is not allowed to use remote control to move the robot during a game.
-Only one-way communication out of the robot and sending a start signal is allowed.
+Only one-way communication out of the robot is allowed.
 
 [#robot_requirements_mechanical]
 === Mechanical requirements for the robot
@@ -201,7 +183,6 @@ Indicators and LEDs used in sensors are allowed if the LEDs do not violate the e
 . If light spreading elements are used, their intensity must not be harmful to the human eye or they should be shielded from direct observation.
 . If a laser is used, the emission of the laser (averaged over 1 second) must not be more than 1 mW/mm^2^.
 . The robot must not intentionally deceive the optical sensors of the opponent robot (including the camera of the robot).
-. The robot is allowed to be started manually.
 
 === Robot access to the competition
 :xrefstyle: short
@@ -218,13 +199,13 @@ Violating these requirements during the tournament will lead to removal from the
 
 ==== General
 
-The are no direct restrictions for operating a ball.
 Basket is not counted when a ball that is out of play is thrown in the basket.
 
 ==== Robot penalisation and disqualification
 :xrefstyle: basic
 
 . A robot receives a foul when:
+* the robot does not stop on stop signal (see <<referee_signals>>);
 * the robot holds more than one ball at a time;
 * the robot moves a basket:
 * the robot damages the court or its parts, other robots, balls, referees, the opponent's team, spectators or other people surrounding the court.
@@ -266,8 +247,7 @@ Software has been created to manage the games and send the referee's signals.
 Software and documentation is available from the following link:
 https://github.com/ut-robotics/robot-basketball-manager
 
-Reacting to referee's signals is not mandatory.
-Software is still in development and referee's signals can change.
+Reacting to referee's signals is mandatory.
 
 == Referees
 
