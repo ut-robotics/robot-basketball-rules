@@ -207,10 +207,12 @@ Basket is not counted when a ball that is out of play is thrown in the basket.
 . A robot receives a foul when:
 * the robot does not stop on stop signal (see <<referee_signals>>);
 * the robot holds more than one ball at a time;
-* the robot moves a basket:
+* the robot moves a basket;
+* the robot moves the walls surrounding the playing area;
 * the robot damages the court or its parts, other robots, balls, referees, the opponent's team, spectators or other people surrounding the court.
-Non-malicious pushing is allowed.
-It is not allowed to damage the court and the opponent by the confused robot;
+* the robot rams opponent robot.
+Small unintentional collisions are allowed;
+* the robot keeps pushing opponent robot;
 * robot's team member breaks the rules of being in the playing area (see <<being_in_playing_area>>);
 * robot's team member moves the balls in the playing area during game's round.
 

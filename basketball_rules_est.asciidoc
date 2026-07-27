@@ -208,9 +208,11 @@ Audis palliga visatud korvi ei loeta.
 * robot ei peatu stopp signaali peale (see <<referee_signals>>);
 * robot hoiab korraga rohkem kui ühte palli;
 * robot liigutab korvi;
+* robot liigutab mänguväljakut ümbritsevaid seinu;
 * robot kahjustab väljakut või selle osasid, teisi roboteid, palle, kohtunikke, vastasvõistkonda, pealtvaatajaid või teisi võistlusväljakut ümbritsevaid inimesi.
-Lubatud on mittepahatahtlik nügimine.
-Väljaku osade ja vastase kahjustamine segadusse sattunud roboti poolt on keelatud;
+* robot rammib vastasrobotit.
+Lubatud on mittepahatahtlik nügimine;
+* robot jätkab vastasroboti lükkamist;
 * roboti võistkonnaliige rikub mängualas viibimise reegleid (vaata <<being_in_playing_area>>);
 * roboti võistkonnaliige liigutab mänguvooru ajal mängualas olevaid palle.
 
