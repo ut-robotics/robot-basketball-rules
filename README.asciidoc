@@ -6,5 +6,7 @@
 
 . Competitors area (black carpet) around the playing area (orange carpet) has been removed.
 . Reacting to referee signals is now mandatory and manual starting is not allowed.
-* Robot will now receive a foul for moving the walls.
+. Robot will now receive a foul for moving the walls.
 . Robot will now receive a foul for ramming and for keeping pushing the opponent.
+. Minimum wall height changed from 100 mm to 40 mm.
+. Walls can now be black, grey or wood colour in addition to being white.

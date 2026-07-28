@@ -42,7 +42,8 @@ Mänguala pikkus on vähemalt 5400 mm ja laius vähemalt 3900 mm.
 
 Väljaku mänguala katteks on oranž viltmatt.
 Vaibaalune pind on ühtlane ja kõva.
-Mänguala välispiiril on vähemalt 100 mm kõrgused valged seinad.
+Mänguala välispiiril on vähemalt 40 mm kõrgused seinad.
+Seinad on valged, mustad, hallid või puidu värvi.
 
 ==== Mänguväljaku märgistus
 
