@@ -1,12 +1,12 @@
-const {execSync} = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const SimpleGit = require('simple-git/promise');
-let simpleGit = SimpleGit();
-const cheerio = require('cheerio');
-const prettier = require("prettier");
+import {execSync} from "child_process";
+import fs from "fs";
+import fsPromises from "fs/promises";
+import path from "path";
+import SimpleGit from 'simple-git';
+import * as cheerio from "cheerio";
+import prettier from "prettier";
 
-const fsPromises = fs.promises;
+let simpleGit = SimpleGit();
 
 const stdWrite = function (message) {
     process.stdout.write(message);
@@ -66,7 +66,7 @@ async function generate() {
     }
 
     stdWrite(`generate index.html ... `);
-    generateIndexHTML(tags);
+    await generateIndexHTML(tags);
     stdWrite(`done\n`);
 
     cleanGitRepo();
@@ -189,7 +189,7 @@ function renderTag(tag, activeTag, lang) {
     </div>`;
 }
 
-function generateIndexHTML(tags) {
+async function generateIndexHTML(tags) {
     function renderTagLinks(tag) {
         return `<div>
             <h1>${tag}</h1>
@@ -251,7 +251,7 @@ function generateIndexHTML(tags) {
         </body>
         </html>`;
 
-    fs.writeFileSync(path.join(generatedFolder, 'index.html'), prettier.format(html, {parser: 'html'}));
+    fs.writeFileSync(path.join(generatedFolder, 'index.html'), await prettier.format(html, {parser: 'html'}));
 }
 
-generate();
+await generate();
