@@ -10,3 +10,6 @@
 . Robot will now receive a foul for ramming and for keeping pushing the opponent.
 . Minimum wall height changed from 100 mm to 40 mm.
 . Walls can now be black, grey or wood colour in addition to being white.
+. Bye in Swiss-system tournament does not reward victory any more.
+Robot basketball management software defines the scoring system,
+and it can change without changes in the rules.

@@ -280,18 +280,20 @@ Võistluse läbiviimisel on kasutusel kaks erinevat turniirisüsteemi.
 Esialgu viiakse võistlus läbi Šveitsi süsteemi reeglite järgi 4 parima roboti selgitamiseks.
 Šveitsi süsteemi järgi on esimeses voorus robotid juhuslikult valitud.
 Kõigi järgnevate voorude puhul pannakse vastamisi robotid, kellel on varasemad võistlustulemused sarnased.
-Paaritu arvu võistlejate puhul on võimalik saada ühes voorus _bye_, mis tähendab automaatset võitu.
-Mitte ükski robot ei võistle teise robotiga kaks korda ning ei saa võistluse jooksul kahte _bye_'d.
+Mitte ükski robot ei võistle teise robotiga kaks korda.
 
 Minimaalne Šveitsi süsteemi voorude arv on asciimath:[ceil(log_2 n_(rob\ot))]:
 
 * 1 - 4 robotiga Šveitsi süsteemi mänge ei toimu.
-* 5 - 8 robotiga mängitakse 3 vooru.
-* 9 - 16 robotiga mängitakse 4 vooru.
-* 17 - 32 robotiga mängitakse 5 vooru.
+* 5 - 8 robotiga mängitakse vähemalt 3 vooru.
+* 9 - 16 robotiga mängitakse vähemalt 4 vooru.
+* 17 - 32 robotiga mängitakse vähemalt 5 vooru.
 
 Seejärel toimub 4 parima võistleja vahel kahe kaotuse süsteemis turniir,
 mille käigus selgub lõplik pingerida.
+
+Võistluse haldamiseks kasutatakse tarkvara, mis on saadaval järgnevalt lingilt:
+https://github.com/ut-robotics/robot-basketball-manager
 
 == Mängukorraldus
 
