@@ -169,7 +169,7 @@ Only one-way communication out of the robot is allowed.
 [#robot_requirements_mechanical]
 === Mechanical requirements for the robot
 
-. The robot has to fit in an upright cylinder with a diameter of 350 mm and height of 350 mm the entire time during the game.
+. The robot has to fit in an upright cylinder with a diameter of 300 mm and height of 300 mm the entire time during the game.
 . The robot's mass must not exceed 8 kg.
 . Majority of the robot's external design must consist of black, white or grey colours.
 It is not allowed to use ball and basket colours in the external design.

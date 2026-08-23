@@ -169,7 +169,7 @@ Lubatud on ühesuunaline side robotist välja.
 [#robot_requirements_mechanical]
 === Roboti mehaanilised nõuded
 
-. Robot peab mahtuma terve võistluse jooksul mängusituatsioonis püstisesse silindrisse, mille diameeter on 350 mm ja kõrgus 350 mm.
+. Robot peab mahtuma terve võistluse jooksul mängusituatsioonis püstisesse silindrisse, mille diameeter on 300 mm ja kõrgus 300 mm.
 . Roboti mass ei tohi olla suurem kui 8 kg.
 . Roboti väliskujunduses peab kasutama suuremas osas musta, valget või halli värvi.
 Keelatud on kasutada väliskujunduses pallide ja korvide värve.

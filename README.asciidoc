@@ -4,6 +4,7 @@
 
 === 2026
 
+. Robot size limits changed from 350 mm diameter and height to 300 mm diameter and height.
 . Competitors area (black carpet) around the playing area (orange carpet) has been removed.
 . Reacting to referee signals is now mandatory and manual starting is not allowed.
 . Robot will now receive a foul for moving the walls.
